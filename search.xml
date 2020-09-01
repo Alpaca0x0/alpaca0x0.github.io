@@ -102,7 +102,7 @@
       
       <categories>
           
-          <category> CurrentEvents (時事分享) </category>
+          <category> Current-Events (時事分享) </category>
           
       </categories>
       
@@ -160,7 +160,7 @@
       
       <categories>
           
-          <category> PopularScience (科普) </category>
+          <category> Popular-Science (科普) </category>
           
       </categories>
       
@@ -272,15 +272,15 @@
             
             <tag> 18+ (含有成人內容) </tag>
             
-            <tag> DeepWeb (深網) </tag>
+            <tag> Deep Web (深網) </tag>
             
-            <tag> DarkWeb (暗網) </tag>
+            <tag> Dark Web (暗網) </tag>
             
-            <tag> RedRoom (紅房) </tag>
+            <tag> Red Room (紅房) </tag>
             
-            <tag> SilkRoad (絲綢之路) </tag>
+            <tag> Silk Road (絲綢之路) </tag>
             
-            <tag> LolitaCity (蘿莉塔之城) </tag>
+            <tag> Lolita City (蘿莉塔之城) </tag>
             
         </tags>
       
@@ -298,7 +298,7 @@
       
       <categories>
           
-          <category> PopularScience (科普) </category>
+          <category> Popular-Science (科普) </category>
           
       </categories>
       
@@ -309,17 +309,17 @@
             
             <tag> 18+ (含有成人內容) </tag>
             
-            <tag> DeepWeb (深網) </tag>
-            
-            <tag> DarkWeb (暗網) </tag>
-            
             <tag> Mariana&#39;s Web (馬里亞納網絡) </tag>
             
-            <tag> RedRoom (紅房) </tag>
+            <tag> Deep Web (深網) </tag>
             
-            <tag> SilkRoad (絲綢之路) </tag>
+            <tag> Dark Web (暗網) </tag>
             
-            <tag> LolitaCity (蘿莉塔之城) </tag>
+            <tag> Red Room (紅房) </tag>
+            
+            <tag> Silk Road (絲綢之路) </tag>
+            
+            <tag> Lolita City (蘿莉塔之城) </tag>
             
         </tags>
       
@@ -397,7 +397,7 @@
       
       <categories>
           
-          <category> PopularScience (科普) </category>
+          <category> Popular-Science (科普) </category>
           
       </categories>
       
@@ -472,13 +472,13 @@
             
             <tag> 4chan </tag>
             
-            <tag> LolitaCity (蘿莉塔之城) </tag>
-            
             <tag> Anonymous (匿名者) </tag>
             
             <tag> V for Vendetta (V怪客) </tag>
             
             <tag> Guy Fawkes (蓋伊·福克斯) </tag>
+            
+            <tag> Lolita City (蘿莉塔之城) </tag>
             
         </tags>
       
@@ -496,7 +496,7 @@
       
       <categories>
           
-          <category> CurrentEvents (時事分享) </category>
+          <category> Current-Events (時事分享) </category>
           
       </categories>
       
@@ -562,7 +562,7 @@
       
       <categories>
           
-          <category> PopularScience (科普) </category>
+          <category> Popular-Science (科普) </category>
           
       </categories>
       
@@ -735,7 +735,7 @@
     
     
     <entry>
-      <title>RC語音XSS漏洞</title>
+      <title>RC 語音 XSS 漏洞</title>
       <link href="/2019/12/23/RC%E8%AA%9E%E9%9F%B3XSS%E6%BC%8F%E6%B4%9E/"/>
       <url>/2019/12/23/RC%E8%AA%9E%E9%9F%B3XSS%E6%BC%8F%E6%B4%9E/</url>
       
@@ -744,7 +744,7 @@
       
       <categories>
           
-          <category> SecurityFlaw (安全漏洞) </category>
+          <category> Security-Flaw (安全漏洞) </category>
           
       </categories>
       
@@ -770,7 +770,7 @@
     
     
     <entry>
-      <title>匿名交友 — HeyMandi網頁版XSS</title>
+      <title>匿名交友 — HeyMandi 網頁版 XSS</title>
       <link href="/2019/12/22/HeyMandi%E7%B6%B2%E9%A0%81%E7%89%88XSS/"/>
       <url>/2019/12/22/HeyMandi%E7%B6%B2%E9%A0%81%E7%89%88XSS/</url>
       
@@ -779,7 +779,7 @@
       
       <categories>
           
-          <category> SecurityFlaw (安全漏洞) </category>
+          <category> Security-Flaw (安全漏洞) </category>
           
       </categories>
       
@@ -797,31 +797,6 @@
             <tag> XSS (Cross-Site-Scripting) </tag>
             
             <tag> Web </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>重點不在身障，而是你的態度</title>
-      <link href="/2019/12/21/%E9%87%8D%E9%BB%9E%E4%B8%8D%E5%9C%A8%E8%BA%AB%E9%9A%9C-%E8%80%8C%E6%98%AF%E4%BD%A0%E7%9A%84%E6%85%8B%E5%BA%A6/"/>
-      <url>/2019/12/21/%E9%87%8D%E9%BB%9E%E4%B8%8D%E5%9C%A8%E8%BA%AB%E9%9A%9C-%E8%80%8C%E6%98%AF%E4%BD%A0%E7%9A%84%E6%85%8B%E5%BA%A6/</url>
-      
-        <content type="html"><![CDATA[<h3 id="我一直以來都很包容身障人士"><a href="#我一直以來都很包容身障人士" class="headerlink" title="我一直以來都很包容身障人士"></a>我一直以來都很包容身障人士</h3><p>儘管有些態度不u，但只要是我可接受的不爆氣範圍內，<br>我都盡量告訴自己他們可能只是很辛苦，所以情緒上比較需要發洩。</p><hr><a id="more"></a><h3 id="2019-11-28"><a href="#2019-11-28" class="headerlink" title="2019/11/28"></a>2019/11/28</h3><p>然而就在剛剛，有個身障的同學右手拿手機在玩手遊，左手操控著電動輪椅的搖桿緩慢地開到會議廳出口，我在後面耐心地等，排我後面的同學們也都很包容的排隊不催促，結果他突然在門口停下來，幾秒後，想說他是遇到什麼困難，輪子卡住了? 往前一步詢問是否要幫忙時…..</p><p>哦~ 原來他媽的是左手也跑去玩手機了阿~<br>怪不得停下來了呢~<br>點了幾下之後才又前進，一開始速度很慢也只是因為他一下看螢幕一下看前面的路這樣前進，會議廳出口就兩人寬，他一個輪椅擋在正中間，後面的人乖乖等他玩爽了才前進。</p><p>阿請問這狀況我該嘴嗎OuO<br>阿嘴了是不是就會召喚正義魔人出現</p><hr>]]></content>
-      
-      
-      <categories>
-          
-          <category> Complain (抱怨) </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> zh-tw </tag>
             
         </tags>
       
