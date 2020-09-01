@@ -84,8 +84,6 @@
             
             <tag> Motorcycle (摩托車) </tag>
             
-            <tag> 檔車 </tag>
-            
         </tags>
       
     </entry>
@@ -176,8 +174,6 @@
             <tag> E-Cigarette (電子煙) </tag>
             
             <tag> Marijuana (大麻) </tag>
-            
-            <tag> Weed (大麻) </tag>
             
         </tags>
       
@@ -699,8 +695,6 @@
             
             <tag> Crawler (爬蟲) </tag>
             
-            <tag> Xvideos </tag>
-            
         </tags>
       
     </entry>
@@ -856,13 +850,13 @@
             
             <tag> Albert Einstein (阿爾伯特·愛因斯坦) </tag>
             
-            <tag> TheoreticalPhysics (理論物理學) </tag>
-            
             <tag> Scientist (科學家) </tag>
             
             <tag> IQ (智商) </tag>
             
             <tag> Wiki (維基百科) </tag>
+            
+            <tag> Theoretical Physics (理論物理學) </tag>
             
         </tags>
       
@@ -891,13 +885,13 @@
             
             <tag> AI (人工智慧) </tag>
             
-            <tag> NeuralNetwork(神經網絡) </tag>
+            <tag> Neural Network(神經網絡) </tag>
             
-            <tag> DeepLearning (深度學習) </tag>
+            <tag> Deep Learning (深度學習) </tag>
             
-            <tag> MachineLearning (機器學習) </tag>
+            <tag> Machine Learning (機器學習) </tag>
             
-            <tag> BigData (大數據) </tag>
+            <tag> Big Data (大數據) </tag>
             
         </tags>
       
