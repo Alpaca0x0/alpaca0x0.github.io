@@ -751,10 +751,6 @@
             
             <tag> XSS (Cross-Site-Scripting) </tag>
             
-            <tag> Web </tag>
-            
-            <tag> RC語音 </tag>
-            
             <tag> Forum (論壇) </tag>
             
         </tags>
@@ -784,13 +780,9 @@
             
             <tag> ReportedFromMe (我的通報) </tag>
             
-            <tag> HeyMandi </tag>
-            
             <tag> 交友軟體 </tag>
             
             <tag> XSS (Cross-Site-Scripting) </tag>
-            
-            <tag> Web </tag>
             
         </tags>
       
