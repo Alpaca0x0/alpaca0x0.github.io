@@ -315,270 +315,125 @@ VALUES('<span class="token interpolation"><span class="token variable">$title</s
       </tags>
   </entry>
   <entry>
-    <title>Github 檔案太大無法推送！？安裝「Git-LFS」馬上解決！</title>
-    <url>/posts/Git-LFS/</url>
-    <content><![CDATA[<p>使用 git push 推送檔案到 Github 上時，被告知<strong>檔案太大</strong>無法推送！？馬上教你怎麼解決！</p>
+    <title>Linux + Win 雙系統卻不見 Grub 開機選單？</title>
+    <url>/posts/Dual-Boot-with-Grub/</url>
+    <content><![CDATA[安裝了 Linux + Windows 的雙系統，但卻不見開機選單？放心，很多人跟你一樣。
 <span id="more"></span>
 <hr>
-<h2 id="報錯">報錯</h2>
-<p>當你嘗試使用  <code>git push</code>  推送超過 <code>100 MB</code>  的檔案時，沒意外就會收到這樣的錯誤。<br>
-這是因為 Github <strong>一個檔案最大上傳限制</strong>就是 <code>100 MB</code> 。(ps. 分開上傳可以，但不能同個檔案 100 MB)</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ remote: error: GH001: Large files detected.
-$ remote: error: Trace: xxxxxxxxxxxxxxxxxxxx
-$ remote: error: See http://git.io/iEPt8g <span class="token keyword">for</span> <span class="token function">more</span> information.
-$ remote: error: File xxxxxxxxxxxxx is <span class="token number">101.00</span> MB<span class="token punctuation">;</span> this exceeds GitHub's <span class="token function">file</span> size limit of <span class="token number">100</span> MB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="安裝-git-lfs-解決">安裝 Git-LFS 解決！</h2>
-<p>為此 Github 也提供解決方法 - 「<strong>Large File Storage</strong>」。</p>
-<h3 id="debian-and-ubuntu">Debian and Ubuntu</h3>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">bash</span>
-<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> git-lfs
-<span class="token function">git</span> lfs <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h3 id="mac-osx">Mac OSX</h3>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew update
-brew <span class="token function">install</span> git-lfs
-<span class="token function">git</span> lfs <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h3 id="rhelcentos">RHEL/CentOS</h3>
-<h4 id="step1-安裝-git-182">Step.1 安裝 git &gt;= <strong>1.8.2</strong></h4>
-<blockquote>
-<p>如果你的版本是 <strong>RHEL/CentOS</strong>  <code>5</code>  或  <code>7</code>  (而不是  <code>6</code> ) 的話：<br>
-a. 可以<a href="https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F">按這裡</a>安裝 (如果是 CentOS 那麼你只需要執行  <code>sudo yum install epel-release</code> )<br>
-b.  <code>sudo yum install git</code></p>
-</blockquote>
-<blockquote>
-<p>如果你的版本是 <strong>RHEL/CentOS</strong>  <code>6</code> <br>
-a.  <code>curl -s https://setup.ius.io/ | sudo bash</code> <br>
-b.  <code>sudo yum install git2u</code></p>
-</blockquote>
-<blockquote>
-<p>如果你想，你也可以自己建構原始碼。您將需要手動下載 Git-lfs rpm 並進行安裝  <code>rpm -i --nodeps git-lfs*.rpm</code> 。</p>
-</blockquote>
-<h4 id="step2-安裝-git-lfs">Step.2 安裝 <strong>git-lfs</strong></h4>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">bash</span>
-<span class="token function">sudo</span> yum <span class="token function">install</span> git-lfs
-<span class="token function">git</span> lfs <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h3 id="windows">Windows</h3>
-<h4 id="step1-下載安裝檔">Step.1 下載安裝檔</h4>
-<p>可以從 <a href="https://github.com/git-lfs/git-lfs/releases">https://github.com/git-lfs/git-lfs/releases</a> 選擇你要的版本進行下載。</p>
-<h4 id="step2-執行安裝檔">Step.2 執行安裝檔</h4>
-<h4 id="step3-在-cmd-或者-git-bash-執行-git-lfs-install">Step.3 在 CMD 或者 Git-Bash 執行  <code>git lfs install</code></h4>
-<hr>
-<h2 id="開始使用">開始使用</h2>
-<blockquote>
-<p>在下 git 指令時，你只需要將追蹤大檔案 (超過 100 MB) 的指令  <code>git add</code>  改成  <code>git lfs track</code> 。<br>
-舉例來說，如果要追蹤副檔名為 <code>.psd</code>  的大檔案，那請使用</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> lfs track <span class="token string">"*.psd"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>而<strong>不是</strong>  <code>git add &quot;*.psd&quot;</code>  ！</p>
-</blockquote>
-<blockquote>
-<p>並且確保檔案  <code>.gitattributes</code>  有被追蹤。 (這是用來告知 github 此為大型檔案的文件)</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> .gitattributes<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</blockquote>
-<p>之後呢？後面的指令都是一樣的。<br>
-直接  <code>git add</code>  &gt;  <code>git commit</code>  &gt;  <code>git push</code>  ！<br>
-回到 Github Repository 就可以發現成功被推送了。</p>
-<hr>
-<h2 id="如何取消-lfs">如何取消 LFS ？</h2>
+<h2 id="事先聲明">事先聲明</h2>
 <ul>
-<li>刪除單個檔案<br>
-如果你是要刪除 <code>單個檔案</code> ，那麼就需要麻煩點到「<strong> <code>.gitattributes</code> </strong>」這個檔案中去刪除單筆資料，使 Github 知道該檔案不用再被 LFS 給追蹤。</li>
-<li>移除全部 (不使用 LFS 了)<br>
- 你需要使用指令「<strong> <code>git lfs uninstall</code> </strong>」，如果你是較舊的版本則是使用指令「<strong> <code>git lfs uninit</code> </strong>」來刪除該 Repository 中的 LFS 。<br>
-另外也請確保檔案「<strong> <code>.gitattributes</code> </strong>」不再被追蹤。(建議如果不需要，請直接下 <strong> <code>git rm .gitattributes</code> </strong> 刪除它)</li>
+<li>在磁區間操作有一定風險，若操作不當導致不可逆的後果，本站概不負責。</li>
+<li>本文全程以  <code>Ubuntu 20.04.3 LTS</code>  操作，其他版本不一定適用。</li>
 </ul>
-<p>範例:</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> lfs uninstall
-<span class="token function">git</span> <span class="token function">rm</span> .gitattributes
-<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-<span class="token function">git</span> commit <span class="token string">"Uninstall LFS"</span>
-<span class="token function">git</span> push origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
-<h2 id="參考資料">參考資料</h2>
-<p>《Git Large File Storage》<a href="https://git-lfs.github.com/">https://git-lfs.github.com/</a><br>
-《Cover Image》<a href="https://git-lfs.github.com/images/graphic.gif">https://git-lfs.github.com/images/graphic.gif</a></p>
+<h2 id="mbr-master-boot-record-主啟動磁區">MBR (Master Boot Record, 主啟動磁區)</h2>
+<p>首先，一般計算機在開機時，會先執行  <code>BIOS</code>  之後才進入 OS。<br>
+但其實準確的說，在進入 OS 前，會先經過  <code>MBR (Master Boot Record)</code> ，也就是  <code>主啟動磁區</code> 。</p>
+<p>至於進入哪個作業系統，這就靠 MBR 的設定了。</p>
+<hr>
+<h2 id="boot-loader-開機引導">Boot Loader (開機引導)</h2>
+<p>雙系統並非什麼新鮮事，但對新手來說，可能會持續糾結 Dual Booting 的問題好一陣子。</p>
+<p>為了方便使用雙系統，大多數的作法是在進入 OS 前，載入一個選單，由使用者手動選擇來決定使用哪個 OS 以達到雙系統的目的。而這個選單就是大家所說的 <strong>Boot Loader (開機引導)</strong>。</p>
+<p>其中  <code>GNU Project</code>  中的程式「<a href="https://zh.wikipedia.org/wiki/GNU_GRUB"> <code>GRUB (GRand Unified Bootloader)</code> </a>」極具代表性。</p>
+<p>而  <code>Ubuntu</code>  預設就會安裝 Grub (以下以 Ubuntu 做解說)</p>
+<hr>
+<h2 id="linux-windows-雙系統">Linux + Windows 雙系統</h2>
+<blockquote>
+<p>若使用者在已有 Windows System 下的計算機安裝第二 (或更多) 個系統，那對 MBR 會有什麼影響？<br>
+當計算機只有<strong>單一系統</strong>時，MBR 理所當然的只會進入該系統。<br>
+但若是安裝了<strong>第二個系統</strong>，這時 MBR 有著極大的可能會<strong>被第二個系統所覆寫</strong>，進而導致一個「MBR 會指向越晚安裝的系統」的現象。</p>
+</blockquote>
+<hr>
+<h2 id="安裝-os-的順序也有關係">安裝 OS 的順序也有關係？</h2>
+<p>正因為大多數情況下 MBR 會被最後一個安裝的系統給覆蓋設定，因此若是最後一個安裝的系統有如 GURB 之類的開機引導，那麼就可以成功顯示開機選單。</p>
+<p>因此大多數情況下都會建議使用者<strong>先安裝 Windows 後，才安裝 Linux</strong>。</p>
+<p>由於前面提到的，Ubuntu 預設會自動為使用者安裝 Grub，因此若是先安裝 Windows 再安裝 Ubuntu 的話，那麼 MBR 將會指向 Linux 的 Boot Loader 也就是 Grub。</p>
+<hr>
+<h2 id="我偏要先安裝-linux-再裝-windows">我偏要先安裝 Linux 再裝 Windows</h2>
+<p>同理，若是讓 MBR 指向 Windows 的 Boot Loader，那將不會有 Grub，也就是會直接進入 Windows。<br>
+即便如此，在某些情況下仍然有著<strong>需要最後安裝 Windows</strong> 的需求。</p>
+<p>而大多數的新手玩家在安裝完雙系統後，發現開機選單消失，大多數都是因為上述原因。<br>
+這時候其實只需要手動再安裝一次 Grub 即可。</p>
+<hr>
+<h2 id="正式開始-手動安裝-grub-以覆寫-mbr-設定">正式開始 - 手動安裝 Grub 以覆寫 MBR 設定</h2>
+<blockquote>
+<h3 id="step-1-準備-ubuntu-live-cd">Step. 1 - 準備 Ubuntu Live CD</h3>
+<p>你需要準備一個裝有 Ubuntu OS 的開機碟，靠它來協助你手動安裝 Grub。</p>
+</blockquote>
+<blockquote>
+<h3 id="step-2-進入-ubuntu">Step. 2 - 進入 Ubuntu</h3>
+<p>利用開機碟進入 Ubuntu 的安裝界面。<br>
+<strong>注意</strong>！<br>
+別急著按下安裝，我們僅需要使用試用模式即可，按下「 <code>Try Ubuntu (試用 Ubuntu)</code> 」後進入 Ubuntu 桌面環境。</p>
+</blockquote>
+<blockquote>
+<h3 id="step-3-確定-efi-ubuntu-及-ubuntus-boot-所在磁區">Step. 3 - 確定 EFI、Ubuntu 及 Ubuntu’s Boot 所在磁區</h3>
+<p>接著掛載原有的 Ubuntu 安裝區。<br>
+使用  <code>fdisk -l</code>  指令查看當前磁區狀況。記得使用 root 權限執行。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">sudo</span> <span class="token function">fdisk</span> -l
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+Device          Start        End   Sectors   Size Type
+/dev/sda1        <span class="token number">2048</span>     <span class="token number">624639</span>    <span class="token number">622592</span>   304M EFI System
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+/dev/sda4   <span class="token number">173963264</span>  <span class="token number">886562815</span> <span class="token number">712599552</span> <span class="token number">339</span>.8G Linux filesystem
+/dev/sda5   <span class="token number">886562816</span>  <span class="token number">891875327</span>   <span class="token number">5312512</span>   <span class="token number">2</span>.5G Linux filesystem
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>每個人的磁區編號不同，以上面例子來說：</p>
+<ul>
+<li><code>/dev/sda1</code>  為  <code>EFI System</code> 。EFI 的磁區編號不重要，記得是在哪個硬碟就好，如上述為  <code>/dev/sda</code> 。</li>
+<li>而  <code>Ubuntu</code>  則是裝在  <code>/dev/sda4</code> 。</li>
+<li>若當初在安裝  <code>Ubuntu</code>  時，有選擇另外分割  <code>Boot</code> ，那麼就會看到如例子中的  <code>/dev/sda5</code> ，反之則沒有。</li>
+</ul>
+</blockquote>
+<blockquote>
+<h3 id="step-4-mount-ubuntu-and-its-boot">Step. 4 - Mount Ubuntu and its Boot</h3>
+<p>確認完計算機上的磁區後，就可以開始操作了。<br>
+首先先將  <code>Ubuntu</code>  mount 起來，以下的磁區請依個人在  <code>Step. 3</code>  所見更改。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">mount</span> /dev/sda4 /mnt
+<span class="token function">sudo</span> <span class="token function">mount</span> /dev/sda5 /mnt/boot/efi <span class="token comment"># 若 Boot 有獨立分割才需要</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</blockquote>
+<blockquote>
+<h3 id="step-5-安裝-grub">Step. 5 - 安裝 Grub</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">sudo</span> <span class="token function">chroot</span> /mnt
+$ grub-install /dev/sda <span class="token comment"># 請自行依照個人在 `Step. 3` 所見的 EFI 磁碟編號更改。</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+$ <span class="token function">update-grub</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</blockquote>
+<blockquote>
+<h3 id="step-6-重新開機迎接-grub-的到來">Step. 6 - 重新開機，迎接 Grub 的到來 😃</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</blockquote>
+<hr>
+<h2 id="安裝過程報錯">安裝過程報錯</h2>
+<ul>
+<li><code>cannot find efi directory</code>
+<ul>
+<li>這可能是因為 Grub 安裝程式抓不到你掛載下來的 EFI 目錄，這時請在  <code>grub-install</code>  後加上參數「 <code>--efi-directory=/mnt/boot/efi</code> 」來指定。</li>
+</ul>
+</li>
+</ul>
+<p>若還有其他錯誤，那麼請試著將路徑參數手動指定 (請自行確認計算機上的路徑)：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">grub-install --boot-directory<span class="token operator">=</span>/mnt/boot --efi-directory<span class="token operator">=</span>/mnt/boot/efi --target<span class="token operator">=</span>x86_64-efi
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>若錯誤依舊無法解決，那麼可能是在前面幾個步驟出錯，請自行再檢查一次，或者將錯誤訊息丟上 Google，以及到 Ubuntu 社群「<a href="https://askubuntu.com">askubuntu.com</a>」看看大家的討論。</p>
+<hr>
+<h2 id="不再自動進入-windows改為自動進入-ubuntu-開機選單呢">不再自動進入 Windows，改為自動進入 Ubuntu ！？開機選單呢！！</h2>
+<p>編輯以下檔案：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vim</span> /etc/default/grub 
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>找到「 <code>GRUB_TIMEOUT_STYLE=hidden</code> 」在前方加上「 <code>#</code> 」註解掉，即「 <code>#GRUB_TIMEOUT_STYLE=hidden</code> 」，保存並關閉。</p>
+<p>在更早的版本中則是「 <code>GRUB_HIDDEN_TIMEOUT=0</code> 」，一樣將其註解為「 <code>#GRUB_HIDDEN_TIMEOUT=0</code> 」後保存。</p>
+<p>沒意外的話就可以在 Reboot 之後看見 Grub 選單了！</p>
 ]]></content>
       <categories>
         <category>Notes</category>
         <category>Computer Science</category>
       </categories>
       <tags>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>How to use GnuPG to generate PGP key？</title>
-    <url>/posts/GnuPG-Generating-PGP-Key/</url>
-    <content><![CDATA[<p><a href="https://zh.wikipedia.org/wiki/GnuPG#/media/File:Gnupg_logo.svg"><img src="cover.jpg" alt="GnuPG Logo, 圖源於 Wiki 維基百科"></a></p>
-怎麼使用 GnuPG 生成 PGP 金鑰？
-<span id="more"></span>
-<hr>
-<h2 id="what-is-gnupg">What is GnuPG？</h2>
-<p><code>GNU Privacy Guard</code>  簡稱  <code>GnuPG</code> 、 <code>GPG</code> ，主要是用於數位 <code>加密</code> 、 <code>簽章</code> 的軟體。(<a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86"> <code>Asymmetric cryptography</code> </a> 金鑰的管理)</p>
-<p>更詳細介紹請見《<a href="https://zh.wikipedia.org/zh-tw/GnuPG">Wiki 維基百科 - GnuPG</a>》</p>
-<hr>
-<h2 id="install">Install</h2>
-<p>Ubuntu</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt-get</span> <span class="token function">install</span> gnupg2
-<span class="token comment"># OR</span>
-<span class="token function">apt-get</span> <span class="token function">install</span> gnupg<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>Mac</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew <span class="token function">install</span> gnupg<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<hr>
-<h2 id="generating-a-new-keypair">Generating a new keypair</h2>
-<ul>
-<li>如果你想 <code>簡單快速</code> 的 <code>生成金鑰</code> ，可以使用指令：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --gen-key<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>想 <code>手動選擇</code> 更完整的選項可以使用指令：</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --full-gen-key<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<hr>
-<p>如果是  <code>--full-gen-key</code>  則會顯示：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Please <span class="token keyword">select</span> what kind of key you want:
-   <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> RSA and RSA <span class="token punctuation">(</span>default<span class="token punctuation">)</span>
-   <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> DSA and Elgamal
-   <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> DSA <span class="token punctuation">(</span>sign only<span class="token punctuation">)</span>
-   <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span> RSA <span class="token punctuation">(</span>sign only<span class="token punctuation">)</span>
-  <span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">)</span> Existing key from card
-Your selection?<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>輸入數字選擇自己要的 <code>加密演算法類型</code> ，或者直接按下 Enter 使用預設。</p>
-<p>接著是輸入 <code>金鑰的長度</code> 及 <code>金鑰時效</code> 設定：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">RSA keys may be between <span class="token number">1024</span> and <span class="token number">4096</span> bits long.
-What keysize <span class="token keyword">do</span> you want? <span class="token punctuation">(</span><span class="token number">3072</span><span class="token punctuation">)</span> <span class="token comment"># 輸入金鑰位元長度，1024 ～ 4096 之間</span>
-Requested keysize is <span class="token number">3072</span> bits<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Please specify how long the key should be valid.
-         <span class="token number">0</span> <span class="token operator">=</span> key does not expire
-      <span class="token operator">&lt;</span>n<span class="token operator">></span>  <span class="token operator">=</span> key expires <span class="token keyword">in</span> n days
-      <span class="token operator">&lt;</span>n<span class="token operator">></span>w <span class="token operator">=</span> key expires <span class="token keyword">in</span> n weeks
-      <span class="token operator">&lt;</span>n<span class="token operator">></span>m <span class="token operator">=</span> key expires <span class="token keyword">in</span> n months
-      <span class="token operator">&lt;</span>n<span class="token operator">></span>y <span class="token operator">=</span> key expires <span class="token keyword">in</span> n years
-Key is valid for? <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment"># 選擇金鑰過期設定</span>
-Key does not expire at all
-Is this correct? <span class="token punctuation">(</span>y/N<span class="token punctuation">)</span> y <span class="token comment"># 輸入「y」確認</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>接著就是輸入主要的資訊了 (使用  <code>--gen-key</code>  參數會直接跳到這)</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Terminal</span>
-Real name: Alpaca0x0 <span class="token comment"># 你的名稱</span>
-Email address: alpaca0x0@example.com <span class="token comment"># 你的 Email</span>
-Comment: My First PGP Key. <span class="token comment"># 註釋 (使用 full-gen-key 參數才會顯示)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>最後確認資訊<br>
-若有誤可以輸入「 <code>N</code> 」修改 <code>名稱</code> ，輸入「 <code>E</code> 」修改  <code>Email</code> 。</p>
-<p>輸入「 <code>O</code> 」進行確認</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">You selected this <span class="token environment constant">USER</span>-ID:
-    <span class="token string">"Alpaca0x0 &lt;alpaca0x0@example.com>"</span>
-
-Change <span class="token punctuation">(</span>N<span class="token punctuation">)</span>ame, <span class="token punctuation">(</span>E<span class="token punctuation">)</span>mail, or <span class="token punctuation">(</span>O<span class="token punctuation">)</span>kay/<span class="token punctuation">(</span>Q<span class="token punctuation">)</span>uit? O<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>之後會要求你輸入密碼，可以設定也可以留空。</p>
-<p>完成後會顯示該金鑰的資訊：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pub   rsa3072 <span class="token number">2021</span>-07-16 <span class="token punctuation">[</span>SC<span class="token punctuation">]</span> <span class="token punctuation">[</span>expires: <span class="token number">2023</span>-07-16<span class="token punctuation">]</span>
-      36EECBC209A936F5AF9B25A469219C5CB53AF7C3
-uid                      Alpaca0x0 <span class="token operator">&lt;</span>alpaca0x0@example.com<span class="token operator">></span>
-sub   rsa3072 <span class="token number">2021</span>-07-16 <span class="token punctuation">[</span>E<span class="token punctuation">]</span> <span class="token punctuation">[</span>expires: <span class="token number">2023</span>-07-16<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li>「 <code>rsa3072</code> 」指的是「 <code>RSA</code> 」算法，金鑰長度「 <code>3072</code> 」位元</li>
-<li>「 <code>36EECBC209A936F5AF9B25A469219C5CB53AF7C3</code> 」就是  <code>Key ID</code></li>
-</ul>
-<hr>
-<h2 id="displaying-keys">Displaying keys</h2>
-<h3 id="displaying-public-keys">Displaying public keys</h3>
-<p>要 <code>查看</code> 已有的 <code>公鑰</code> ，使用指令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --list-public-keys
-<span class="token comment"># OR</span>
-gpg --list-keys
-<span class="token comment"># OR</span>
-gpg -k<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>顯示</code> 已有的 <code>公鑰</code> ：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pub   rsa3072 <span class="token number">2021</span>-07-16 <span class="token punctuation">[</span>SC<span class="token punctuation">]</span> <span class="token punctuation">[</span>expires: <span class="token number">2023</span>-07-16<span class="token punctuation">]</span>
-      36EECBC209A936F5AF9B25A469219C5CB53AF7C3
-uid           <span class="token punctuation">[</span>ultimate<span class="token punctuation">]</span> Alpaca0x0 <span class="token operator">&lt;</span>alpaca0x0@example.com<span class="token operator">></span>
-sub   rsa3072 <span class="token number">2021</span>-07-16 <span class="token punctuation">[</span>E<span class="token punctuation">]</span> <span class="token punctuation">[</span>expires: <span class="token number">2023</span>-07-16<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>也可以在後方加上 <code>關鍵字</code>  ( <code>名稱</code> 、 <code>Email</code> )：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --list-keys &lt;Keyword></span>
-gpg --list-keys alpaca0x0
-<span class="token comment"># OR</span>
-gpg --list-keys alpaca
-<span class="token comment"># OR</span>
-gpg --list-keys example.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="displaying-secret-keys">Displaying secret keys</h3>
-<p><code>查看</code> 已有的 <code>私鑰</code> ，使用指令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --list-secret-keys <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>與  <code>--list-public-keys</code>  用法類似，一樣可以加入關鍵字查詢：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --list-secret-keys &lt;Keyword></span>
-gpg --list-secret-keys alpaca0x0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="exporting-key">Exporting key</h2>
-<h3 id="exporting-public-key">Exporting public key</h3>
-<p>若要 <code>導出公鑰</code> ，則使用指令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --export <span class="token operator">&lt;</span>Key-ID<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>但這樣導出的密鑰是  <code>binary format</code> ，所以使用參數「 <code>--armor, -a</code> 」來使其輸出為  <code>ASCII-Code format</code> 。<br>
-使用「 <code>--output, -o</code> 」或者「 <code>&gt;</code> 」將輸出結果寫入檔案：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --export --armor &lt;Key-ID> > &lt;Output-File-Name></span>
-<span class="token comment"># gpg --export --armor --output &lt;Output-File-Name> &lt;Key-ID></span>
-gpg --export --armor --output public_key.pub 36EECBC209A936F5AF9B25A469219C5CB53AF7C3
-<span class="token comment"># OR</span>
-gpg --export --armor 36EECBC209A936F5AF9B25A469219C5CB53AF7C3 <span class="token operator">></span> public_key.pub
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="exporting-secret-key">Exporting secret key</h3>
-<p><code>導出私鑰</code> 使用指令：</p>
-<pre class="line-numbers language-none"><code class="language-none">gpg --export-secret-keys &lt;Key-ID&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>與  <code>--export</code>  用法相同<br>
- p.s. 若是當初生成鑰匙時有輸入密碼，則導出時也需要輸入驗證。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># e.g.</span>
-gpg --export-secret-keys --armor 36EECBC209A936F5AF9B25A469219C5CB53AF7C3 <span class="token operator">></span> secret_key.asc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="sending-the-key-to-the-key-server">Sending the key to the key server</h2>
-<p><code>公鑰</code> 可以上傳至公開的  <code>Keyserver</code>  上讓他人能方便下載你的公鑰。<br>
-上傳的指令是：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --send-keys 0x<span class="token operator">&lt;</span>Key-ID<span class="token operator">></span>
-<span class="token comment"># 可以使用「--keyserver」參數指定上傳的伺服器</span>
-gpg --send-keys --keyserver <span class="token operator">&lt;</span>Server<span class="token operator">></span> 0x<span class="token operator">&lt;</span>Key-ID<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>這邊要特別注意的是，大多數時候，在  <code>&lt;Key-ID&gt;</code>  的前方要加上「 <code>0x</code> 」(Hexadecimal)。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># e.g.</span>
-gpg --send-keys --keyserver pgp.mit.edu 0x36EECBC209A936F5AF9B25A469219C5CB53AF7C3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="deleting-key">Deleting key</h2>
-<p><code>刪除</code> 本地的 <code>公鑰</code> ，使用指令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --delete-key &lt;Key-ID></span>
-gpg --delete-keys 36EECBC209A936F5AF9B25A469219C5CB53AF7C3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>但當我們執行時，會發現終端返回這則訊息：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg: there is a secret key <span class="token keyword">for</span> public key <span class="token string">"36EECBC209A936F5AF9B25A469219C5CB53AF7C3"</span><span class="token operator">!</span>
-gpg: use option <span class="token string">"--delete-secret-keys"</span> to delete it first.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>這是因為你還留有該 <code>公鑰</code> 的 <code>私鑰</code> ，所以先刪除 <code>私鑰</code> ，再刪除 <code>公鑰</code> ：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Delete secret keys</span>
-gpg --delete-secret-keys <span class="token operator">&lt;</span>Key-ID<span class="token operator">></span>
-<span class="token comment"># Delete public keys</span>
-gpg --delete-keys <span class="token operator">&lt;</span>Key-ID<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># e.g.</span>
-gpg --delete-secret-keys 36EECBC209A936F5AF9B25A469219C5CB53AF7C3
-gpg --delete-keys 36EECBC209A936F5AF9B25A469219C5CB53AF7C3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>或者使用「 <code>--delete-secret-and-public-keys</code> 」一次刪除 <code>公私鑰</code> ：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --delete-secret-and-public-keys &lt;Key-ID></span>
-gpg --delete-secret-and-public-keys 36EECBC209A936F5AF9B25A469219C5CB53AF7C3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="importing-key">Importing key</h2>
-<p>要匯入金鑰主要有兩種方式</p>
-<p>從檔案匯入 (本地端匯入)：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --import &lt;Key-File></span>
-gpg --import Private_OR_Public.key<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>從 Key-Server 上匯入 (遠端匯入)：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --keyserver &lt;Server> --recv-key 0x&lt;Key-ID></span>
-gpg --keyserver keyserver.ubuntu.com --recv-key 0xA91A9E8A0EE6BAB3742464861DF369D42499F3F1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>如果要查詢該 Key-Server 上的鑰匙資訊，可以使用指令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --keyserver &lt;Server> --search-key &lt;Key-ID></span>
-gpg --keyserver keyserver.ubuntu.com --search-key 0xA91A9E8A0EE6BAB3742464861DF369D42499F3F1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="reference">Reference</h2>
-<p>《GnuPG documentation》<a href="https://gnupg.org/documentation/manpage.html">https://gnupg.org/documentation/manpage.html</a></p>
-]]></content>
-      <categories>
-        <category>Tools Using</category>
-      </categories>
-      <tags>
-        <tag>Cryptography</tag>
-        <tag>PGP</tag>
+        <tag>Windows</tag>
+        <tag>Linux</tag>
+        <tag>Grub</tag>
       </tags>
   </entry>
   <entry>
@@ -836,125 +691,97 @@ gpg --armor --sign --sign-with 36EECBC209A936F5AF9B25A469219C5CB53AF7C3 --recipi
       </tags>
   </entry>
   <entry>
-    <title>Linux + Win 雙系統卻不見 Grub 開機選單？</title>
-    <url>/posts/Dual-Boot-with-Grub/</url>
-    <content><![CDATA[安裝了 Linux + Windows 的雙系統，但卻不見開機選單？放心，很多人跟你一樣。
+    <title>Github 檔案太大無法推送！？安裝「Git-LFS」馬上解決！</title>
+    <url>/posts/Git-LFS/</url>
+    <content><![CDATA[<p>使用 git push 推送檔案到 Github 上時，被告知<strong>檔案太大</strong>無法推送！？馬上教你怎麼解決！</p>
 <span id="more"></span>
 <hr>
-<h2 id="事先聲明">事先聲明</h2>
+<h2 id="報錯">報錯</h2>
+<p>當你嘗試使用  <code>git push</code>  推送超過 <code>100 MB</code>  的檔案時，沒意外就會收到這樣的錯誤。<br>
+這是因為 Github <strong>一個檔案最大上傳限制</strong>就是 <code>100 MB</code> 。(ps. 分開上傳可以，但不能同個檔案 100 MB)</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ remote: error: GH001: Large files detected.
+$ remote: error: Trace: xxxxxxxxxxxxxxxxxxxx
+$ remote: error: See http://git.io/iEPt8g <span class="token keyword">for</span> <span class="token function">more</span> information.
+$ remote: error: File xxxxxxxxxxxxx is <span class="token number">101.00</span> MB<span class="token punctuation">;</span> this exceeds GitHub's <span class="token function">file</span> size limit of <span class="token number">100</span> MB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="安裝-git-lfs-解決">安裝 Git-LFS 解決！</h2>
+<p>為此 Github 也提供解決方法 - 「<strong>Large File Storage</strong>」。</p>
+<h3 id="debian-and-ubuntu">Debian and Ubuntu</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">bash</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> git-lfs
+<span class="token function">git</span> lfs <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="mac-osx">Mac OSX</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew update
+brew <span class="token function">install</span> git-lfs
+<span class="token function">git</span> lfs <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="rhelcentos">RHEL/CentOS</h3>
+<h4 id="step1-安裝-git-182">Step.1 安裝 git &gt;= <strong>1.8.2</strong></h4>
+<blockquote>
+<p>如果你的版本是 <strong>RHEL/CentOS</strong>  <code>5</code>  或  <code>7</code>  (而不是  <code>6</code> ) 的話：<br>
+a. 可以<a href="https://fedoraproject.org/wiki/EPEL#How_can_I_use_these_extra_packages.3F">按這裡</a>安裝 (如果是 CentOS 那麼你只需要執行  <code>sudo yum install epel-release</code> )<br>
+b.  <code>sudo yum install git</code></p>
+</blockquote>
+<blockquote>
+<p>如果你的版本是 <strong>RHEL/CentOS</strong>  <code>6</code> <br>
+a.  <code>curl -s https://setup.ius.io/ | sudo bash</code> <br>
+b.  <code>sudo yum install git2u</code></p>
+</blockquote>
+<blockquote>
+<p>如果你想，你也可以自己建構原始碼。您將需要手動下載 Git-lfs rpm 並進行安裝  <code>rpm -i --nodeps git-lfs*.rpm</code> 。</p>
+</blockquote>
+<h4 id="step2-安裝-git-lfs">Step.2 安裝 <strong>git-lfs</strong></h4>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">bash</span>
+<span class="token function">sudo</span> yum <span class="token function">install</span> git-lfs
+<span class="token function">git</span> lfs <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="windows">Windows</h3>
+<h4 id="step1-下載安裝檔">Step.1 下載安裝檔</h4>
+<p>可以從 <a href="https://github.com/git-lfs/git-lfs/releases">https://github.com/git-lfs/git-lfs/releases</a> 選擇你要的版本進行下載。</p>
+<h4 id="step2-執行安裝檔">Step.2 執行安裝檔</h4>
+<h4 id="step3-在-cmd-或者-git-bash-執行-git-lfs-install">Step.3 在 CMD 或者 Git-Bash 執行  <code>git lfs install</code></h4>
+<hr>
+<h2 id="開始使用">開始使用</h2>
+<blockquote>
+<p>在下 git 指令時，你只需要將追蹤大檔案 (超過 100 MB) 的指令  <code>git add</code>  改成  <code>git lfs track</code> 。<br>
+舉例來說，如果要追蹤副檔名為 <code>.psd</code>  的大檔案，那請使用</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> lfs track <span class="token string">"*.psd"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>而<strong>不是</strong>  <code>git add &quot;*.psd&quot;</code>  ！</p>
+</blockquote>
+<blockquote>
+<p>並且確保檔案  <code>.gitattributes</code>  有被追蹤。 (這是用來告知 github 此為大型檔案的文件)</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> .gitattributes<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</blockquote>
+<p>之後呢？後面的指令都是一樣的。<br>
+直接  <code>git add</code>  &gt;  <code>git commit</code>  &gt;  <code>git push</code>  ！<br>
+回到 Github Repository 就可以發現成功被推送了。</p>
+<hr>
+<h2 id="如何取消-lfs">如何取消 LFS ？</h2>
 <ul>
-<li>在磁區間操作有一定風險，若操作不當導致不可逆的後果，本站概不負責。</li>
-<li>本文全程以  <code>Ubuntu 20.04.3 LTS</code>  操作，其他版本不一定適用。</li>
+<li>刪除單個檔案<br>
+如果你是要刪除 <code>單個檔案</code> ，那麼就需要麻煩點到「<strong> <code>.gitattributes</code> </strong>」這個檔案中去刪除單筆資料，使 Github 知道該檔案不用再被 LFS 給追蹤。</li>
+<li>移除全部 (不使用 LFS 了)<br>
+ 你需要使用指令「<strong> <code>git lfs uninstall</code> </strong>」，如果你是較舊的版本則是使用指令「<strong> <code>git lfs uninit</code> </strong>」來刪除該 Repository 中的 LFS 。<br>
+另外也請確保檔案「<strong> <code>.gitattributes</code> </strong>」不再被追蹤。(建議如果不需要，請直接下 <strong> <code>git rm .gitattributes</code> </strong> 刪除它)</li>
 </ul>
+<p>範例:</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> lfs uninstall
+<span class="token function">git</span> <span class="token function">rm</span> .gitattributes
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token string">"Uninstall LFS"</span>
+<span class="token function">git</span> push origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
-<h2 id="mbr-master-boot-record-主啟動磁區">MBR (Master Boot Record, 主啟動磁區)</h2>
-<p>首先，一般計算機在開機時，會先執行  <code>BIOS</code>  之後才進入 OS。<br>
-但其實準確的說，在進入 OS 前，會先經過  <code>MBR (Master Boot Record)</code> ，也就是  <code>主啟動磁區</code> 。</p>
-<p>至於進入哪個作業系統，這就靠 MBR 的設定了。</p>
-<hr>
-<h2 id="boot-loader-開機引導">Boot Loader (開機引導)</h2>
-<p>雙系統並非什麼新鮮事，但對新手來說，可能會持續糾結 Dual Booting 的問題好一陣子。</p>
-<p>為了方便使用雙系統，大多數的作法是在進入 OS 前，載入一個選單，由使用者手動選擇來決定使用哪個 OS 以達到雙系統的目的。而這個選單就是大家所說的 <strong>Boot Loader (開機引導)</strong>。</p>
-<p>其中  <code>GNU Project</code>  中的程式「<a href="https://zh.wikipedia.org/wiki/GNU_GRUB"> <code>GRUB (GRand Unified Bootloader)</code> </a>」極具代表性。</p>
-<p>而  <code>Ubuntu</code>  預設就會安裝 Grub (以下以 Ubuntu 做解說)</p>
-<hr>
-<h2 id="linux-windows-雙系統">Linux + Windows 雙系統</h2>
-<blockquote>
-<p>若使用者在已有 Windows System 下的計算機安裝第二 (或更多) 個系統，那對 MBR 會有什麼影響？<br>
-當計算機只有<strong>單一系統</strong>時，MBR 理所當然的只會進入該系統。<br>
-但若是安裝了<strong>第二個系統</strong>，這時 MBR 有著極大的可能會<strong>被第二個系統所覆寫</strong>，進而導致一個「MBR 會指向越晚安裝的系統」的現象。</p>
-</blockquote>
-<hr>
-<h2 id="安裝-os-的順序也有關係">安裝 OS 的順序也有關係？</h2>
-<p>正因為大多數情況下 MBR 會被最後一個安裝的系統給覆蓋設定，因此若是最後一個安裝的系統有如 GURB 之類的開機引導，那麼就可以成功顯示開機選單。</p>
-<p>因此大多數情況下都會建議使用者<strong>先安裝 Windows 後，才安裝 Linux</strong>。</p>
-<p>由於前面提到的，Ubuntu 預設會自動為使用者安裝 Grub，因此若是先安裝 Windows 再安裝 Ubuntu 的話，那麼 MBR 將會指向 Linux 的 Boot Loader 也就是 Grub。</p>
-<hr>
-<h2 id="我偏要先安裝-linux-再裝-windows">我偏要先安裝 Linux 再裝 Windows</h2>
-<p>同理，若是讓 MBR 指向 Windows 的 Boot Loader，那將不會有 Grub，也就是會直接進入 Windows。<br>
-即便如此，在某些情況下仍然有著<strong>需要最後安裝 Windows</strong> 的需求。</p>
-<p>而大多數的新手玩家在安裝完雙系統後，發現開機選單消失，大多數都是因為上述原因。<br>
-這時候其實只需要手動再安裝一次 Grub 即可。</p>
-<hr>
-<h2 id="正式開始-手動安裝-grub-以覆寫-mbr-設定">正式開始 - 手動安裝 Grub 以覆寫 MBR 設定</h2>
-<blockquote>
-<h3 id="step-1-準備-ubuntu-live-cd">Step. 1 - 準備 Ubuntu Live CD</h3>
-<p>你需要準備一個裝有 Ubuntu OS 的開機碟，靠它來協助你手動安裝 Grub。</p>
-</blockquote>
-<blockquote>
-<h3 id="step-2-進入-ubuntu">Step. 2 - 進入 Ubuntu</h3>
-<p>利用開機碟進入 Ubuntu 的安裝界面。<br>
-<strong>注意</strong>！<br>
-別急著按下安裝，我們僅需要使用試用模式即可，按下「 <code>Try Ubuntu (試用 Ubuntu)</code> 」後進入 Ubuntu 桌面環境。</p>
-</blockquote>
-<blockquote>
-<h3 id="step-3-確定-efi-ubuntu-及-ubuntus-boot-所在磁區">Step. 3 - 確定 EFI、Ubuntu 及 Ubuntu’s Boot 所在磁區</h3>
-<p>接著掛載原有的 Ubuntu 安裝區。<br>
-使用  <code>fdisk -l</code>  指令查看當前磁區狀況。記得使用 root 權限執行。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">sudo</span> <span class="token function">fdisk</span> -l
-<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
-Device          Start        End   Sectors   Size Type
-/dev/sda1        <span class="token number">2048</span>     <span class="token number">624639</span>    <span class="token number">622592</span>   304M EFI System
-<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
-/dev/sda4   <span class="token number">173963264</span>  <span class="token number">886562815</span> <span class="token number">712599552</span> <span class="token number">339</span>.8G Linux filesystem
-/dev/sda5   <span class="token number">886562816</span>  <span class="token number">891875327</span>   <span class="token number">5312512</span>   <span class="token number">2</span>.5G Linux filesystem
-<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>每個人的磁區編號不同，以上面例子來說：</p>
-<ul>
-<li><code>/dev/sda1</code>  為  <code>EFI System</code> 。EFI 的磁區編號不重要，記得是在哪個硬碟就好，如上述為  <code>/dev/sda</code> 。</li>
-<li>而  <code>Ubuntu</code>  則是裝在  <code>/dev/sda4</code> 。</li>
-<li>若當初在安裝  <code>Ubuntu</code>  時，有選擇另外分割  <code>Boot</code> ，那麼就會看到如例子中的  <code>/dev/sda5</code> ，反之則沒有。</li>
-</ul>
-</blockquote>
-<blockquote>
-<h3 id="step-4-mount-ubuntu-and-its-boot">Step. 4 - Mount Ubuntu and its Boot</h3>
-<p>確認完計算機上的磁區後，就可以開始操作了。<br>
-首先先將  <code>Ubuntu</code>  mount 起來，以下的磁區請依個人在  <code>Step. 3</code>  所見更改。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">mount</span> /dev/sda4 /mnt
-<span class="token function">sudo</span> <span class="token function">mount</span> /dev/sda5 /mnt/boot/efi <span class="token comment"># 若 Boot 有獨立分割才需要</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</blockquote>
-<blockquote>
-<h3 id="step-5-安裝-grub">Step. 5 - 安裝 Grub</h3>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">sudo</span> <span class="token function">chroot</span> /mnt
-$ grub-install /dev/sda <span class="token comment"># 請自行依照個人在 `Step. 3` 所見的 EFI 磁碟編號更改。</span>
-<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
-$ <span class="token function">update-grub</span>
-<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</blockquote>
-<blockquote>
-<h3 id="step-6-重新開機迎接-grub-的到來">Step. 6 - 重新開機，迎接 Grub 的到來 😃</h3>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">reboot</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</blockquote>
-<hr>
-<h2 id="安裝過程報錯">安裝過程報錯</h2>
-<ul>
-<li><code>cannot find efi directory</code>
-<ul>
-<li>這可能是因為 Grub 安裝程式抓不到你掛載下來的 EFI 目錄，這時請在  <code>grub-install</code>  後加上參數「 <code>--efi-directory=/mnt/boot/efi</code> 」來指定。</li>
-</ul>
-</li>
-</ul>
-<p>若還有其他錯誤，那麼請試著將路徑參數手動指定 (請自行確認計算機上的路徑)：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">grub-install --boot-directory<span class="token operator">=</span>/mnt/boot --efi-directory<span class="token operator">=</span>/mnt/boot/efi --target<span class="token operator">=</span>x86_64-efi
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>若錯誤依舊無法解決，那麼可能是在前面幾個步驟出錯，請自行再檢查一次，或者將錯誤訊息丟上 Google，以及到 Ubuntu 社群「<a href="https://askubuntu.com">askubuntu.com</a>」看看大家的討論。</p>
-<hr>
-<h2 id="不再自動進入-windows改為自動進入-ubuntu-開機選單呢">不再自動進入 Windows，改為自動進入 Ubuntu ！？開機選單呢！！</h2>
-<p>編輯以下檔案：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vim</span> /etc/default/grub 
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>找到「 <code>GRUB_TIMEOUT_STYLE=hidden</code> 」在前方加上「 <code>#</code> 」註解掉，即「 <code>#GRUB_TIMEOUT_STYLE=hidden</code> 」，保存並關閉。</p>
-<p>在更早的版本中則是「 <code>GRUB_HIDDEN_TIMEOUT=0</code> 」，一樣將其註解為「 <code>#GRUB_HIDDEN_TIMEOUT=0</code> 」後保存。</p>
-<p>沒意外的話就可以在 Reboot 之後看見 Grub 選單了！</p>
+<h2 id="參考資料">參考資料</h2>
+<p>《Git Large File Storage》<a href="https://git-lfs.github.com/">https://git-lfs.github.com/</a><br>
+《Cover Image》<a href="https://git-lfs.github.com/images/graphic.gif">https://git-lfs.github.com/images/graphic.gif</a></p>
 ]]></content>
       <categories>
         <category>Notes</category>
         <category>Computer Science</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
-        <tag>Linux</tag>
-        <tag>Grub</tag>
+        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
@@ -1198,177 +1025,176 @@ deploy:
       </tags>
   </entry>
   <entry>
-    <title>《Manage-Sci 01》組織、管理者、四大功能｜管理 與 被管理</title>
-    <url>/posts/Management-Science-01/</url>
-    <content><![CDATA[<p>為什麼學習<strong>管理學</strong>？因為在這個<strong>社會</strong>，你不是<strong>管理別人</strong>、就是<strong>被人管理</strong>！你打算怎麼選擇？</p>
+    <title>How to use GnuPG to generate PGP key？</title>
+    <url>/posts/GnuPG-Generating-PGP-Key/</url>
+    <content><![CDATA[<p><a href="https://zh.wikipedia.org/wiki/GnuPG#/media/File:Gnupg_logo.svg"><img src="cover.jpg" alt="GnuPG Logo, 圖源於 Wiki 維基百科"></a></p>
+怎麼使用 GnuPG 生成 PGP 金鑰？
 <span id="more"></span>
 <hr>
-<h1 id="學習目的">學習目的</h1>
-<p><strong>管理 (Management)</strong> 指的是 <strong>協調</strong> 及 <strong>監督</strong> 與他人的 <strong>業務</strong>，讓其有 <strong>效率</strong>、有 <strong>效能</strong> 地完成。</p>
-<p>至於何謂「<strong>效能</strong>」、「<strong>效率</strong>」？<br>
-管理大師 <a href="https://zh.wikipedia.org/wiki/%E5%BD%BC%E5%BE%97%C2%B7%E5%BE%B7%E9%B2%81%E5%85%8B"><strong>彼得・杜拉克 (Peter Ferdinand Drucker)</strong></a> 是這麼說的：</p>
-<blockquote>
-<ul>
-<li><strong>效率 (Efficiency)</strong><br>
-<strong> 把事情做對 (Doing the thing right)</strong> 。<br>
-強調<strong>資源</strong>的<strong>有效利用</strong>，以<strong>最少投入</strong>得到<strong>最大產出</strong>。</li>
-<li><strong>效能 (Effectiveness)</strong><br>
-<strong> 做對的事情 (Doing the right thing)</strong> 。<br>
-追求<strong>目標</strong>與<strong>方向正確性</strong>，將「<strong>完成工作活動以達成組織目標</strong>」看的比「<strong>資源的運用</strong>」更為<strong>重要</strong>。</li>
-</ul>
-</blockquote>
+<h2 id="what-is-gnupg">What is GnuPG？</h2>
+<p><code>GNU Privacy Guard</code>  簡稱  <code>GnuPG</code> 、 <code>GPG</code> ，主要是用於數位 <code>加密</code> 、 <code>簽章</code> 的軟體。(<a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86"> <code>Asymmetric cryptography</code> </a> 金鑰的管理)</p>
+<p>更詳細介紹請見《<a href="https://zh.wikipedia.org/zh-tw/GnuPG">Wiki 維基百科 - GnuPG</a>》</p>
 <hr>
-<h1 id="廣義-狹義-的-組織結構">廣義、狹義 的 組織結構</h1>
-<blockquote>
-<ul>
-<li><strong>狹義</strong>
-<ul>
-<li>指為了<strong>實現</strong>組織的<strong>目標</strong>，組織理念下經過組織設計所形成的<strong>組織內部部門</strong>、各個層次之間的排列方式，即<strong>組織內部的構成方式</strong>。</li>
-</ul>
-</li>
-<li><strong>廣義</strong>
-<ul>
-<li>包含<strong>狹義</strong>的組織結構。</li>
-<li>「<strong>組織</strong>」主要是指有<strong>目的</strong>、<strong>系統</strong>的<strong>集合</strong>。</li>
-<li>簡單來說，<strong>組織</strong>就是指為了實現<strong>一致的目標</strong>，而<strong>互相合作</strong>，集結而成的<strong>集體</strong>或<strong>團體</strong>， 如<strong>企業</strong>、<strong>黨團</strong>… 等。</li>
-</ul>
-</li>
-</ul>
-</blockquote>
+<h2 id="install">Install</h2>
+<p>Ubuntu</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt-get</span> <span class="token function">install</span> gnupg2
+<span class="token comment"># OR</span>
+<span class="token function">apt-get</span> <span class="token function">install</span> gnupg<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>Mac</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew <span class="token function">install</span> gnupg<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <hr>
-<h1 id="管理-與-被管理">管理 與 被管理</h1>
-<blockquote>
+<h2 id="generating-a-new-keypair">Generating a new keypair</h2>
 <ul>
-<li><strong>非管理者員工</strong>
+<li>如果你想 <code>簡單快速</code> 的 <code>生成金鑰</code> ，可以使用指令：</li>
+</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --gen-key<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>直接<strong>從事工作</strong>與<strong>執行任務</strong>的人員，<strong>沒</strong>有<strong>監督</strong>其他人工作的責任。</li>
+<li>想 <code>手動選擇</code> 更完整的選項可以使用指令：</li>
 </ul>
-</li>
-<li><strong>管理者 (Managers)</strong>
-<ul>
-<li>在組織中負責<strong>指揮</strong>及<strong>監督</strong>下屬<strong>工作活動</strong>的人員，藉由<strong>協調他人</strong>來<strong>完成工作</strong>，以便<strong>達成組織目標</strong>，必要時也會<strong>親自執行任務</strong>。</li>
-<li>管理者的工作著重在<strong>協助他人進行工作</strong>。</li>
-</ul>
-</li>
-</ul>
-</blockquote>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --full-gen-key<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <hr>
-<h1 id="管理者階級">管理者階級</h1>
-<blockquote>
+<p>如果是  <code>--full-gen-key</code>  則會顯示：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Please <span class="token keyword">select</span> what kind of key you want:
+   <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> RSA and RSA <span class="token punctuation">(</span>default<span class="token punctuation">)</span>
+   <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> DSA and Elgamal
+   <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span> DSA <span class="token punctuation">(</span>sign only<span class="token punctuation">)</span>
+   <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span> RSA <span class="token punctuation">(</span>sign only<span class="token punctuation">)</span>
+  <span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">)</span> Existing key from card
+Your selection?<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>輸入數字選擇自己要的 <code>加密演算法類型</code> ，或者直接按下 Enter 使用預設。</p>
+<p>接著是輸入 <code>金鑰的長度</code> 及 <code>金鑰時效</code> 設定：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">RSA keys may be between <span class="token number">1024</span> and <span class="token number">4096</span> bits long.
+What keysize <span class="token keyword">do</span> you want? <span class="token punctuation">(</span><span class="token number">3072</span><span class="token punctuation">)</span> <span class="token comment"># 輸入金鑰位元長度，1024 ～ 4096 之間</span>
+Requested keysize is <span class="token number">3072</span> bits<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Please specify how long the key should be valid.
+         <span class="token number">0</span> <span class="token operator">=</span> key does not expire
+      <span class="token operator">&lt;</span>n<span class="token operator">></span>  <span class="token operator">=</span> key expires <span class="token keyword">in</span> n days
+      <span class="token operator">&lt;</span>n<span class="token operator">></span>w <span class="token operator">=</span> key expires <span class="token keyword">in</span> n weeks
+      <span class="token operator">&lt;</span>n<span class="token operator">></span>m <span class="token operator">=</span> key expires <span class="token keyword">in</span> n months
+      <span class="token operator">&lt;</span>n<span class="token operator">></span>y <span class="token operator">=</span> key expires <span class="token keyword">in</span> n years
+Key is valid for? <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment"># 選擇金鑰過期設定</span>
+Key does not expire at all
+Is this correct? <span class="token punctuation">(</span>y/N<span class="token punctuation">)</span> y <span class="token comment"># 輸入「y」確認</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>接著就是輸入主要的資訊了 (使用  <code>--gen-key</code>  參數會直接跳到這)</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Terminal</span>
+Real name: Alpaca0x0 <span class="token comment"># 你的名稱</span>
+Email address: alpaca0x0@example.com <span class="token comment"># 你的 Email</span>
+Comment: My First PGP Key. <span class="token comment"># 註釋 (使用 full-gen-key 參數才會顯示)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>最後確認資訊<br>
+若有誤可以輸入「 <code>N</code> 」修改 <code>名稱</code> ，輸入「 <code>E</code> 」修改  <code>Email</code> 。</p>
+<p>輸入「 <code>O</code> 」進行確認</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">You selected this <span class="token environment constant">USER</span>-ID:
+    <span class="token string">"Alpaca0x0 &lt;alpaca0x0@example.com>"</span>
+
+Change <span class="token punctuation">(</span>N<span class="token punctuation">)</span>ame, <span class="token punctuation">(</span>E<span class="token punctuation">)</span>mail, or <span class="token punctuation">(</span>O<span class="token punctuation">)</span>kay/<span class="token punctuation">(</span>Q<span class="token punctuation">)</span>uit? O<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>之後會要求你輸入密碼，可以設定也可以留空。</p>
+<p>完成後會顯示該金鑰的資訊：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pub   rsa3072 <span class="token number">2021</span>-07-16 <span class="token punctuation">[</span>SC<span class="token punctuation">]</span> <span class="token punctuation">[</span>expires: <span class="token number">2023</span>-07-16<span class="token punctuation">]</span>
+      36EECBC209A936F5AF9B25A469219C5CB53AF7C3
+uid                      Alpaca0x0 <span class="token operator">&lt;</span>alpaca0x0@example.com<span class="token operator">></span>
+sub   rsa3072 <span class="token number">2021</span>-07-16 <span class="token punctuation">[</span>E<span class="token punctuation">]</span> <span class="token punctuation">[</span>expires: <span class="token number">2023</span>-07-16<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li><strong>基層管理者 (First-Line Managers)</strong>
-<ul>
-<li>又稱<strong>第一線管理者</strong> 。負責<strong>非管理職員工作的管理</strong>，通常負責指揮他們的<strong>日常作業</strong>。</li>
-<li>常見的<strong>基層管理者</strong>職位：
-<ul>
-<li>領班 (Supervisors)</li>
-<li>組長 (Shift Managers)</li>
-<li>課長 (Office Managers)</li>
-<li>部門經理 (Department Managers)</li>
-<li>單位協調者 (Unit Coordinators)</li>
+<li>「 <code>rsa3072</code> 」指的是「 <code>RSA</code> 」算法，金鑰長度「 <code>3072</code> 」位元</li>
+<li>「 <code>36EECBC209A936F5AF9B25A469219C5CB53AF7C3</code> 」就是  <code>Key ID</code></li>
 </ul>
-</li>
-</ul>
-</li>
-<li><strong>中階管理者 (Middle Managers)</strong>
-<ul>
-<li>負責管理基層管理者的活動。在管理者職位中，介於<strong>基層</strong>與<strong>高層</strong>之間 (<s>難做人</s>)。</li>
-<li>常見的<strong>中階管理者</strong>職位：
-<ul>
-<li>部門經理或局長 (Department Or Agency Head)</li>
-<li>專案領導者 (Project Leader)</li>
-<li>單位主管 (Unit Chief)</li>
-<li>地區經理 (District Manager)</li>
-<li>事業部經理 (Division Manager)</li>
-<li>店經理 (Store Manager)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>高階管理者 (Top Managers)</strong>
-<ul>
-<li>屬於<strong>組織架構</strong>中<strong>位於</strong>或<strong>接近</strong>組織<strong>頂端</strong>的管理者。負責全公司的<strong>決策</strong>，訂定全公司的<strong>計劃</strong>和<strong>目標</strong>。</li>
-<li>常見的<strong>高階管理者</strong>職位：
-<ul>
-<li>副總經理 (Vice President)</li>
-<li>總經理 (President)</li>
-<li>校長 (Chancellor)</li>
-<li>執行董事 (Managing Director)</li>
-<li>營運長 (Chief Operating Officer)</li>
-<li>執行長 (Chief Executive Officer)</li>
-<li>董事長 (Chairperson Of The Board)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</blockquote>
 <hr>
-<h1 id="管理者該做些什麼管理學四大功能">管理者該做些什麼？管理學四大功能！</h1>
-<p>起初，法國的管理學理論學家 <a href="https://zh.wikipedia.org/wiki/%E4%BA%A8%E5%88%A9%C2%B7%E6%B3%95%E7%BA%A6%E5%B0%94"><strong>Henri Fayol (亨利・法約爾)</strong></a> 歸類出的「<strong>古典管理理論 (法約爾主義)</strong>」為：<strong> <code>規劃 (Plan)</code> </strong>、<strong> <code>組織 (Organize)</code> </strong>、<strong> <code>命令 (Command)</code> </strong>、<strong> <code>協調 (Coordinated)</code> </strong>、<strong> <code>控制 (Control)</code> </strong>。</p>
-<p>隨後，美國 <a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%A4%A7%E5%AD%A6%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%88%86%E6%A0%A1"><strong>UCLA</strong></a> 的教授 <a href="https://en.wikipedia.org/wiki/Harold_Koontz"><strong>Harold Koontz</strong></a> 和 <a href="https://en.wikipedia.org/wiki/Cyril_J._O'Donnell"><strong>Cyril O’Donnell</strong></a> 提出<strong>管理五大功能</strong>：<strong> <code>規劃 (Planning)</code> </strong>、<strong> <code>組織 (Organizing)</code> </strong>、<strong> <code>人事 (Staffing)</code> </strong>、<strong> <code>領導 (Leading)</code> </strong>、<strong> <code>控制 (Controlling)</code> </strong>。</p>
-<p>而在<strong>現代管理理論</strong>中，管理功能已被濃縮成<strong>四項</strong>：<strong> <code>規劃 (Planning)</code> </strong>、<strong> <code>組織 (Organizing)</code> </strong>、<strong> <code>領導 (Leading)</code> </strong>、<strong> <code>控制 (Controlling)</code> </strong>。</p>
-<blockquote>
-<ul>
-<li><strong>規劃 (Planning)</strong>
-<ul>
-<li>訂定組織發展的<strong>目標</strong>及<strong>方向</strong>及達成目的的方法。(錯的方向努力等同徒勞)</li>
-</ul>
-</li>
-<li><strong>組織 (Organizing)</strong>
-<ul>
-<li>界定部門間的<strong>職掌</strong>、<strong>權責</strong>，透過<strong>安排</strong>和<strong>架構工作</strong>完成組織目標。</li>
-</ul>
-</li>
-<li><strong>領導 (Leading)</strong>
-<ul>
-<li>目的在於<strong>激勵員工</strong>，使其自發性朝向組織目標努力，以提供<strong>最大貢獻</strong>。</li>
-</ul>
-</li>
-<li><strong>控制 (Controlling)</strong>
-<ul>
-<li>檢視<strong>執行過程</strong>及<strong>結果</strong>，對重大差異<strong>提出修正</strong>，將錯誤的方向導回正軌，以確保組織目標的達成。</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<p>每個階層對於這四項管理功能的比重都有所不同：<br>
-<img src="POLC-first-line-managers.png" alt="first-line-managers" width="85%"><br>
-<img src="POLC-middle-managers.png" alt="middle-managers" width="85%"><br>
-<img src="POLC-top-managers.png" alt="top-managers" width="85%"></p>
+<h2 id="displaying-keys">Displaying keys</h2>
+<h3 id="displaying-public-keys">Displaying public keys</h3>
+<p>要 <code>查看</code> 已有的 <code>公鑰</code> ，使用指令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --list-public-keys
+<span class="token comment"># OR</span>
+gpg --list-keys
+<span class="token comment"># OR</span>
+gpg -k<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>顯示</code> 已有的 <code>公鑰</code> ：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pub   rsa3072 <span class="token number">2021</span>-07-16 <span class="token punctuation">[</span>SC<span class="token punctuation">]</span> <span class="token punctuation">[</span>expires: <span class="token number">2023</span>-07-16<span class="token punctuation">]</span>
+      36EECBC209A936F5AF9B25A469219C5CB53AF7C3
+uid           <span class="token punctuation">[</span>ultimate<span class="token punctuation">]</span> Alpaca0x0 <span class="token operator">&lt;</span>alpaca0x0@example.com<span class="token operator">></span>
+sub   rsa3072 <span class="token number">2021</span>-07-16 <span class="token punctuation">[</span>E<span class="token punctuation">]</span> <span class="token punctuation">[</span>expires: <span class="token number">2023</span>-07-16<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>也可以在後方加上 <code>關鍵字</code>  ( <code>名稱</code> 、 <code>Email</code> )：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --list-keys &lt;Keyword></span>
+gpg --list-keys alpaca0x0
+<span class="token comment"># OR</span>
+gpg --list-keys alpaca
+<span class="token comment"># OR</span>
+gpg --list-keys example.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="displaying-secret-keys">Displaying secret keys</h3>
+<p><code>查看</code> 已有的 <code>私鑰</code> ，使用指令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --list-secret-keys <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>與  <code>--list-public-keys</code>  用法類似，一樣可以加入關鍵字查詢：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --list-secret-keys &lt;Keyword></span>
+gpg --list-secret-keys alpaca0x0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <hr>
-<h1 id="管理者該具備什麼">管理者該具備什麼？</h1>
-<blockquote>
-<ul>
-<li><strong>概念能力 (Conceptual Competencies)</strong>
-<ul>
-<li><strong>掌握</strong>和<strong>協調</strong>組織的<strong>整體利益</strong>和<strong>活動</strong>。</li>
-</ul>
-</li>
-<li><strong>人際關係能力 (Human Competencies)</strong>
-<ul>
-<li>以<strong>領導</strong>、<strong>激勵</strong>和<strong>溝通</strong>來達成<strong>組織的目標</strong>。</li>
-</ul>
-</li>
-<li><strong>技術能力 (Technical Competencies)</strong>
-<ul>
-<li>利用特殊的技術，以完成<strong>特定的管理任務</strong>。</li>
-</ul>
-</li>
-<li><strong>政治能力 (Political Competencies)</strong>
-<ul>
-<li>建立正確的<strong>關係</strong>或<strong>權力</strong>基礎。</li>
-</ul>
-</li>
-</ul>
-</blockquote>
+<h2 id="exporting-key">Exporting key</h2>
+<h3 id="exporting-public-key">Exporting public key</h3>
+<p>若要 <code>導出公鑰</code> ，則使用指令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --export <span class="token operator">&lt;</span>Key-ID<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>但這樣導出的密鑰是  <code>binary format</code> ，所以使用參數「 <code>--armor, -a</code> 」來使其輸出為  <code>ASCII-Code format</code> 。<br>
+使用「 <code>--output, -o</code> 」或者「 <code>&gt;</code> 」將輸出結果寫入檔案：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --export --armor &lt;Key-ID> > &lt;Output-File-Name></span>
+<span class="token comment"># gpg --export --armor --output &lt;Output-File-Name> &lt;Key-ID></span>
+gpg --export --armor --output public_key.pub 36EECBC209A936F5AF9B25A469219C5CB53AF7C3
+<span class="token comment"># OR</span>
+gpg --export --armor 36EECBC209A936F5AF9B25A469219C5CB53AF7C3 <span class="token operator">></span> public_key.pub
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="exporting-secret-key">Exporting secret key</h3>
+<p><code>導出私鑰</code> 使用指令：</p>
+<pre class="line-numbers language-none"><code class="language-none">gpg --export-secret-keys &lt;Key-ID&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>與  <code>--export</code>  用法相同<br>
+ p.s. 若是當初生成鑰匙時有輸入密碼，則導出時也需要輸入驗證。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># e.g.</span>
+gpg --export-secret-keys --armor 36EECBC209A936F5AF9B25A469219C5CB53AF7C3 <span class="token operator">></span> secret_key.asc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="sending-the-key-to-the-key-server">Sending the key to the key server</h2>
+<p><code>公鑰</code> 可以上傳至公開的  <code>Keyserver</code>  上讓他人能方便下載你的公鑰。<br>
+上傳的指令是：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg --send-keys 0x<span class="token operator">&lt;</span>Key-ID<span class="token operator">></span>
+<span class="token comment"># 可以使用「--keyserver」參數指定上傳的伺服器</span>
+gpg --send-keys --keyserver <span class="token operator">&lt;</span>Server<span class="token operator">></span> 0x<span class="token operator">&lt;</span>Key-ID<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>這邊要特別注意的是，大多數時候，在  <code>&lt;Key-ID&gt;</code>  的前方要加上「 <code>0x</code> 」(Hexadecimal)。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># e.g.</span>
+gpg --send-keys --keyserver pgp.mit.edu 0x36EECBC209A936F5AF9B25A469219C5CB53AF7C3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="deleting-key">Deleting key</h2>
+<p><code>刪除</code> 本地的 <code>公鑰</code> ，使用指令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --delete-key &lt;Key-ID></span>
+gpg --delete-keys 36EECBC209A936F5AF9B25A469219C5CB53AF7C3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>但當我們執行時，會發現終端返回這則訊息：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gpg: there is a secret key <span class="token keyword">for</span> public key <span class="token string">"36EECBC209A936F5AF9B25A469219C5CB53AF7C3"</span><span class="token operator">!</span>
+gpg: use option <span class="token string">"--delete-secret-keys"</span> to delete it first.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>這是因為你還留有該 <code>公鑰</code> 的 <code>私鑰</code> ，所以先刪除 <code>私鑰</code> ，再刪除 <code>公鑰</code> ：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Delete secret keys</span>
+gpg --delete-secret-keys <span class="token operator">&lt;</span>Key-ID<span class="token operator">></span>
+<span class="token comment"># Delete public keys</span>
+gpg --delete-keys <span class="token operator">&lt;</span>Key-ID<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># e.g.</span>
+gpg --delete-secret-keys 36EECBC209A936F5AF9B25A469219C5CB53AF7C3
+gpg --delete-keys 36EECBC209A936F5AF9B25A469219C5CB53AF7C3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>或者使用「 <code>--delete-secret-and-public-keys</code> 」一次刪除 <code>公私鑰</code> ：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --delete-secret-and-public-keys &lt;Key-ID></span>
+gpg --delete-secret-and-public-keys 36EECBC209A936F5AF9B25A469219C5CB53AF7C3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="importing-key">Importing key</h2>
+<p>要匯入金鑰主要有兩種方式</p>
+<p>從檔案匯入 (本地端匯入)：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --import &lt;Key-File></span>
+gpg --import Private_OR_Public.key<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>從 Key-Server 上匯入 (遠端匯入)：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --keyserver &lt;Server> --recv-key 0x&lt;Key-ID></span>
+gpg --keyserver keyserver.ubuntu.com --recv-key 0xA91A9E8A0EE6BAB3742464861DF369D42499F3F1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>如果要查詢該 Key-Server 上的鑰匙資訊，可以使用指令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># gpg --keyserver &lt;Server> --search-key &lt;Key-ID></span>
+gpg --keyserver keyserver.ubuntu.com --search-key 0xA91A9E8A0EE6BAB3742464861DF369D42499F3F1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="reference">Reference</h2>
+<p>《GnuPG documentation》<a href="https://gnupg.org/documentation/manpage.html">https://gnupg.org/documentation/manpage.html</a></p>
 ]]></content>
       <categories>
-        <category>Learning</category>
-        <category>Management Science</category>
+        <category>Tools Using</category>
       </categories>
       <tags>
-        <tag>Management-Science</tag>
+        <tag>Cryptography</tag>
+        <tag>PGP</tag>
       </tags>
   </entry>
   <entry>
@@ -1539,6 +1365,180 @@ deploy:
 <blockquote>
 <p>Wiki 維基百科：<a href="https://zh.wikipedia.org/wiki/%E8%A1%8C%E6%94%BF%E7%AE%A1%E7%90%86%E5%AD%B8%E6%B4%BE">https://zh.wikipedia.org/wiki/ 行政管理學派</a><br>
  MBA 智庫百科：<a href="https://wiki.mbalib.com/zh-tw/14%E9%A1%B9%E7%AE%A1%E7%90%86%E5%8E%9F%E5%88%99">https://wiki.mbalib.com/zh-tw/14 项管理原则</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Learning</category>
+        <category>Management Science</category>
+      </categories>
+      <tags>
+        <tag>Management-Science</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Manage-Sci 01》組織、管理者、四大功能｜管理 與 被管理</title>
+    <url>/posts/Management-Science-01/</url>
+    <content><![CDATA[<p>為什麼學習<strong>管理學</strong>？因為在這個<strong>社會</strong>，你不是<strong>管理別人</strong>、就是<strong>被人管理</strong>！你打算怎麼選擇？</p>
+<span id="more"></span>
+<hr>
+<h1 id="學習目的">學習目的</h1>
+<p><strong>管理 (Management)</strong> 指的是 <strong>協調</strong> 及 <strong>監督</strong> 與他人的 <strong>業務</strong>，讓其有 <strong>效率</strong>、有 <strong>效能</strong> 地完成。</p>
+<p>至於何謂「<strong>效能</strong>」、「<strong>效率</strong>」？<br>
+管理大師 <a href="https://zh.wikipedia.org/wiki/%E5%BD%BC%E5%BE%97%C2%B7%E5%BE%B7%E9%B2%81%E5%85%8B"><strong>彼得・杜拉克 (Peter Ferdinand Drucker)</strong></a> 是這麼說的：</p>
+<blockquote>
+<ul>
+<li><strong>效率 (Efficiency)</strong><br>
+<strong> 把事情做對 (Doing the thing right)</strong> 。<br>
+強調<strong>資源</strong>的<strong>有效利用</strong>，以<strong>最少投入</strong>得到<strong>最大產出</strong>。</li>
+<li><strong>效能 (Effectiveness)</strong><br>
+<strong> 做對的事情 (Doing the right thing)</strong> 。<br>
+追求<strong>目標</strong>與<strong>方向正確性</strong>，將「<strong>完成工作活動以達成組織目標</strong>」看的比「<strong>資源的運用</strong>」更為<strong>重要</strong>。</li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="廣義-狹義-的-組織結構">廣義、狹義 的 組織結構</h1>
+<blockquote>
+<ul>
+<li><strong>狹義</strong>
+<ul>
+<li>指為了<strong>實現</strong>組織的<strong>目標</strong>，組織理念下經過組織設計所形成的<strong>組織內部部門</strong>、各個層次之間的排列方式，即<strong>組織內部的構成方式</strong>。</li>
+</ul>
+</li>
+<li><strong>廣義</strong>
+<ul>
+<li>包含<strong>狹義</strong>的組織結構。</li>
+<li>「<strong>組織</strong>」主要是指有<strong>目的</strong>、<strong>系統</strong>的<strong>集合</strong>。</li>
+<li>簡單來說，<strong>組織</strong>就是指為了實現<strong>一致的目標</strong>，而<strong>互相合作</strong>，集結而成的<strong>集體</strong>或<strong>團體</strong>， 如<strong>企業</strong>、<strong>黨團</strong>… 等。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="管理-與-被管理">管理 與 被管理</h1>
+<blockquote>
+<ul>
+<li><strong>非管理者員工</strong>
+<ul>
+<li>直接<strong>從事工作</strong>與<strong>執行任務</strong>的人員，<strong>沒</strong>有<strong>監督</strong>其他人工作的責任。</li>
+</ul>
+</li>
+<li><strong>管理者 (Managers)</strong>
+<ul>
+<li>在組織中負責<strong>指揮</strong>及<strong>監督</strong>下屬<strong>工作活動</strong>的人員，藉由<strong>協調他人</strong>來<strong>完成工作</strong>，以便<strong>達成組織目標</strong>，必要時也會<strong>親自執行任務</strong>。</li>
+<li>管理者的工作著重在<strong>協助他人進行工作</strong>。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="管理者階級">管理者階級</h1>
+<blockquote>
+<ul>
+<li><strong>基層管理者 (First-Line Managers)</strong>
+<ul>
+<li>又稱<strong>第一線管理者</strong> 。負責<strong>非管理職員工作的管理</strong>，通常負責指揮他們的<strong>日常作業</strong>。</li>
+<li>常見的<strong>基層管理者</strong>職位：
+<ul>
+<li>領班 (Supervisors)</li>
+<li>組長 (Shift Managers)</li>
+<li>課長 (Office Managers)</li>
+<li>部門經理 (Department Managers)</li>
+<li>單位協調者 (Unit Coordinators)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>中階管理者 (Middle Managers)</strong>
+<ul>
+<li>負責管理基層管理者的活動。在管理者職位中，介於<strong>基層</strong>與<strong>高層</strong>之間 (<s>難做人</s>)。</li>
+<li>常見的<strong>中階管理者</strong>職位：
+<ul>
+<li>部門經理或局長 (Department Or Agency Head)</li>
+<li>專案領導者 (Project Leader)</li>
+<li>單位主管 (Unit Chief)</li>
+<li>地區經理 (District Manager)</li>
+<li>事業部經理 (Division Manager)</li>
+<li>店經理 (Store Manager)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>高階管理者 (Top Managers)</strong>
+<ul>
+<li>屬於<strong>組織架構</strong>中<strong>位於</strong>或<strong>接近</strong>組織<strong>頂端</strong>的管理者。負責全公司的<strong>決策</strong>，訂定全公司的<strong>計劃</strong>和<strong>目標</strong>。</li>
+<li>常見的<strong>高階管理者</strong>職位：
+<ul>
+<li>副總經理 (Vice President)</li>
+<li>總經理 (President)</li>
+<li>校長 (Chancellor)</li>
+<li>執行董事 (Managing Director)</li>
+<li>營運長 (Chief Operating Officer)</li>
+<li>執行長 (Chief Executive Officer)</li>
+<li>董事長 (Chairperson Of The Board)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="管理者該做些什麼管理學四大功能">管理者該做些什麼？管理學四大功能！</h1>
+<p>起初，法國的管理學理論學家 <a href="https://zh.wikipedia.org/wiki/%E4%BA%A8%E5%88%A9%C2%B7%E6%B3%95%E7%BA%A6%E5%B0%94"><strong>Henri Fayol (亨利・法約爾)</strong></a> 歸類出的「<strong>古典管理理論 (法約爾主義)</strong>」為：<strong> <code>規劃 (Plan)</code> </strong>、<strong> <code>組織 (Organize)</code> </strong>、<strong> <code>命令 (Command)</code> </strong>、<strong> <code>協調 (Coordinated)</code> </strong>、<strong> <code>控制 (Control)</code> </strong>。</p>
+<p>隨後，美國 <a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E5%88%A9%E7%A6%8F%E5%B0%BC%E4%BA%9A%E5%A4%A7%E5%AD%A6%E6%B4%9B%E6%9D%89%E7%9F%B6%E5%88%86%E6%A0%A1"><strong>UCLA</strong></a> 的教授 <a href="https://en.wikipedia.org/wiki/Harold_Koontz"><strong>Harold Koontz</strong></a> 和 <a href="https://en.wikipedia.org/wiki/Cyril_J._O'Donnell"><strong>Cyril O’Donnell</strong></a> 提出<strong>管理五大功能</strong>：<strong> <code>規劃 (Planning)</code> </strong>、<strong> <code>組織 (Organizing)</code> </strong>、<strong> <code>人事 (Staffing)</code> </strong>、<strong> <code>領導 (Leading)</code> </strong>、<strong> <code>控制 (Controlling)</code> </strong>。</p>
+<p>而在<strong>現代管理理論</strong>中，管理功能已被濃縮成<strong>四項</strong>：<strong> <code>規劃 (Planning)</code> </strong>、<strong> <code>組織 (Organizing)</code> </strong>、<strong> <code>領導 (Leading)</code> </strong>、<strong> <code>控制 (Controlling)</code> </strong>。</p>
+<blockquote>
+<ul>
+<li><strong>規劃 (Planning)</strong>
+<ul>
+<li>訂定組織發展的<strong>目標</strong>及<strong>方向</strong>及達成目的的方法。(錯的方向努力等同徒勞)</li>
+</ul>
+</li>
+<li><strong>組織 (Organizing)</strong>
+<ul>
+<li>界定部門間的<strong>職掌</strong>、<strong>權責</strong>，透過<strong>安排</strong>和<strong>架構工作</strong>完成組織目標。</li>
+</ul>
+</li>
+<li><strong>領導 (Leading)</strong>
+<ul>
+<li>目的在於<strong>激勵員工</strong>，使其自發性朝向組織目標努力，以提供<strong>最大貢獻</strong>。</li>
+</ul>
+</li>
+<li><strong>控制 (Controlling)</strong>
+<ul>
+<li>檢視<strong>執行過程</strong>及<strong>結果</strong>，對重大差異<strong>提出修正</strong>，將錯誤的方向導回正軌，以確保組織目標的達成。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>每個階層對於這四項管理功能的比重都有所不同：<br>
+<img src="POLC-first-line-managers.png" alt="first-line-managers" width="85%"><br>
+<img src="POLC-middle-managers.png" alt="middle-managers" width="85%"><br>
+<img src="POLC-top-managers.png" alt="top-managers" width="85%"></p>
+<hr>
+<h1 id="管理者該具備什麼">管理者該具備什麼？</h1>
+<blockquote>
+<ul>
+<li><strong>概念能力 (Conceptual Competencies)</strong>
+<ul>
+<li><strong>掌握</strong>和<strong>協調</strong>組織的<strong>整體利益</strong>和<strong>活動</strong>。</li>
+</ul>
+</li>
+<li><strong>人際關係能力 (Human Competencies)</strong>
+<ul>
+<li>以<strong>領導</strong>、<strong>激勵</strong>和<strong>溝通</strong>來達成<strong>組織的目標</strong>。</li>
+</ul>
+</li>
+<li><strong>技術能力 (Technical Competencies)</strong>
+<ul>
+<li>利用特殊的技術，以完成<strong>特定的管理任務</strong>。</li>
+</ul>
+</li>
+<li><strong>政治能力 (Political Competencies)</strong>
+<ul>
+<li>建立正確的<strong>關係</strong>或<strong>權力</strong>基礎。</li>
+</ul>
+</li>
+</ul>
 </blockquote>
 ]]></content>
       <categories>
