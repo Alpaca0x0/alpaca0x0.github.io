@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Linux 常見壓縮指令整理</title>
+      <link href="/posts/Linux-Compress-File-Commands/"/>
+      <url>/posts/Linux-Compress-File-Commands/</url>
+      
+        <content type="html"><![CDATA[How to use compress file commands in linux ?<span id="more"></span><hr><h4 id="本文源自-chu-siang-lai-chusiang-之文章gnu-linux-各種壓縮與解壓縮指令在此備份作為個人筆記用途-h1">本文源自  <code>Chu-Siang Lai, @chusiang</code>  之文章「<a href="http://note.drx.tw/2008/04/command.html">GNU / Linux 各種壓縮與解壓縮指令</a>」，在此備份作為個人筆記用途。</h1></h4><hr><h2 id="commands">Commands</h2><table><thead><tr><th>Format</th><th>Zip</th><th>Unzip</th></tr></thead><tbody><tr><td>.zip</td><td><code>zip -r</code>  <em>filename.zip ./path</em></td><td><code>unzip</code>  <em>filename.zip</em></td></tr><tr><td>.rar</td><td><code>rar a</code>  <em>filename.rar ./path</em></td><td><code>rar e</code>  <em>filename.rar</em><br> <code>unrar e</code>  <em>filename.rar</em><br> <code>rar x</code>  <em>filename.rar ./path</em></td></tr><tr><td>.7z</td><td><code>7z a</code>  <em>filename.7z filename</em><br>(<strong>for encrypto</strong>:  <code>-p</code> )</td><td><code>7z x</code>  <em>filename.7z</em></td></tr><tr><td>.tar</td><td><code>tar cvf</code>  <em>filename.tar ./path</em></td><td><code>tar xvf</code>  <em>filename.tar</em></td></tr><tr><td>.tar.xz</td><td><code>tar Jcvf</code>  <em>filename.tar.xz ./path</em></td><td><code>tar Jxvf</code>  <em>filename.tar.xz</em></td></tr><tr><td>.gz</td><td><code>gzip</code>  <em>filename</em></td><td><code>gunzip</code>  <em>filename.gz</em><br> <code>gzip -d</code>  <em>filename.gz</em></td></tr><tr><td>.tar.gz</td><td><code>tar zcvf</code>  <em>filename.tar.gz ./path</em></td><td><code>tar zxvf</code>  <em>filename.tar.gz</em></td></tr><tr><td>.tar.bz</td><td>-</td><td><code>tar jxvf</code>  <em>filename.tar.bz</em></td></tr><tr><td>.bz2</td><td><code>bzip2 -z</code>  <em>filename</em></td><td><code>bzip2 -d</code>  <em>filename.bz2</em><br> <code>bunzip2</code>  <em>filename.bz2</em></td></tr><tr><td>.tar.bz2</td><td><code>tar jcvf</code>  <em>filename.tar.bz2 ./path</em></td><td><code>tar jxvf</code>  <em>filename.tar.bz2</em></td></tr><tr><td>.xz</td><td><code>xz -z</code>  <em>filename</em></td><td><code>xz -d</code>  <em>filename.xz</em></td></tr><tr><td>.z</td><td><code>compress</code>  <em>filename</em></td><td><code>uncompress</code>  <em>filename.Z</em></td></tr><tr><td>.tar.Z</td><td><code>tar Zcvf</code>  <em>filename.tar.Z ./path</em></td><td><code>tar Zxvf</code>  <em>filename.tar.Z</em></td></tr><tr><td>.tgz</td><td><code>tar zcvf</code>  <em>filename.tgz filename</em></td><td><code>tar zxvf</code>  <em>filename.tgz</em></td></tr><tr><td>.tar.tgz</td><td><code>tar zcvf</code>  <em>filename.tar.tgz filename</em></td><td><code>tar zxvf</code>  <em>filename.tar.tgz</em></td></tr><tr><td>.lha</td><td><code>lha -a</code>  <em>filename.lha filename</em></td><td><code>lha -e</code>  <em>filename.lha</em></td></tr><tr><td>.zst</td><td><code>zst</code>  <em>filename</em></td><td><code>zstd -d</code>  <em>filename.zst</em></td></tr><tr><td>.tar.zst</td><td><code>tar -I zst -cvf</code>  <em>filename.tar.zst ./path</em><br> <code>tar -I zst -cvf</code>  <em>filename.tar.zst File1 File2</em></td><td><code>tar -I zstd -xvf</code>  <em>filename.tar.zst</em></td></tr></tbody></table><hr><h2 id="reference">Reference</h2><ul><li>《GNU / Linux 各種壓縮與解壓縮指令 - chusiang》<a href="http://note.drx.tw/2008/04/command.html">http://note.drx.tw/2008/04/command.html</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Computer Science </category>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《Pwn - 0x03》Tools - GDB, Pwntools</title>
       <link href="/posts/Pwn-0x03-Tools/"/>
       <url>/posts/Pwn-0x03-Tools/</url>
@@ -44,7 +65,7 @@
           
           <category> Computer Science </category>
           
-          <category> Ubuntu </category>
+          <category> Linux </category>
           
       </categories>
       
@@ -71,7 +92,7 @@
           
           <category> Computer Science </category>
           
-          <category> Ubuntu </category>
+          <category> Linux </category>
           
       </categories>
       
@@ -210,7 +231,7 @@
           
           <category> Computer Science </category>
           
-          <category> Ubuntu </category>
+          <category> Linux </category>
           
       </categories>
       
@@ -297,7 +318,7 @@
           
           <category> Computer Science </category>
           
-          <category> Ubuntu </category>
+          <category> Linux </category>
           
       </categories>
       
@@ -395,7 +416,7 @@
           
           <category> Computer Science </category>
           
-          <category> Ubuntu </category>
+          <category> Linux </category>
           
       </categories>
       
@@ -424,7 +445,7 @@
           
           <category> Computer Science </category>
           
-          <category> Ubuntu </category>
+          <category> Linux </category>
           
       </categories>
       
@@ -478,7 +499,7 @@
           
           <category> Computer Science </category>
           
-          <category> Ubuntu </category>
+          <category> Linux </category>
           
       </categories>
       
@@ -509,7 +530,7 @@
           
           <category> Computer Science </category>
           
-          <category> Ubuntu </category>
+          <category> Linux </category>
           
       </categories>
       

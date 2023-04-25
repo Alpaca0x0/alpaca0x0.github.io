@@ -9,8 +9,29 @@
     <atom:link href="https://blog.alpaca.tw/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>學如逆水行舟，不進則退到你媽都認不得。</description>
-    <pubDate>Tue, 28 Mar 2023 04:59:22 GMT</pubDate>
+    <pubDate>Tue, 25 Apr 2023 14:06:10 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Linux 常見壓縮指令整理</title>
+      <link>https://blog.alpaca.tw/posts/Linux-Compress-File-Commands/</link>
+      <guid>https://blog.alpaca.tw/posts/Linux-Compress-File-Commands/</guid>
+      <pubDate>Tue, 25 Apr 2023 12:56:37 GMT</pubDate>
+      
+      <description>How to use compress file commands in linux ?</description>
+      
+      
+      
+      
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
+      
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
+      
+      
+      
+      <comments>https://blog.alpaca.tw/posts/Linux-Compress-File-Commands/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>《Pwn - 0x03》Tools - GDB, Pwntools</title>
@@ -66,7 +87,7 @@
       
       <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
       
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Ubuntu/">Ubuntu</category>
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
       
       
       <category domain="https://blog.alpaca.tw/tags/Ubuntu/">Ubuntu</category>
@@ -98,7 +119,7 @@
       
       <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
       
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Ubuntu/">Ubuntu</category>
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
       
       
       <category domain="https://blog.alpaca.tw/tags/Ubuntu/">Ubuntu</category>
@@ -247,7 +268,7 @@
       
       <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
       
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Ubuntu/">Ubuntu</category>
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
       
       
       <category domain="https://blog.alpaca.tw/tags/Ubuntu/">Ubuntu</category>
@@ -330,7 +351,7 @@
       
       <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
       
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Ubuntu/">Ubuntu</category>
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
       
       
       <category domain="https://blog.alpaca.tw/tags/Ubuntu/">Ubuntu</category>
@@ -432,7 +453,7 @@
       
       <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
       
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Ubuntu/">Ubuntu</category>
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
       
       
       <category domain="https://blog.alpaca.tw/tags/Ubuntu/">Ubuntu</category>
@@ -457,7 +478,7 @@
       
       <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
       
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Ubuntu/">Ubuntu</category>
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
       
       
       <category domain="https://blog.alpaca.tw/tags/Ubuntu/">Ubuntu</category>
@@ -503,7 +524,7 @@
       
       <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
       
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Ubuntu/">Ubuntu</category>
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
       
       
       <category domain="https://blog.alpaca.tw/tags/Ubuntu/">Ubuntu</category>
@@ -530,7 +551,7 @@
       
       <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
       
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Ubuntu/">Ubuntu</category>
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
       
       
       <category domain="https://blog.alpaca.tw/tags/Windows/">Windows</category>
@@ -541,27 +562,6 @@
       
       
       <comments>https://blog.alpaca.tw/posts/Dual-Boot-with-Grub/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Simply setting up a Proxy Server with SSH</title>
-      <link>https://blog.alpaca.tw/posts/SSH-Proxy/</link>
-      <guid>https://blog.alpaca.tw/posts/SSH-Proxy/</guid>
-      <pubDate>Sun, 29 Aug 2021 15:57:57 GMT</pubDate>
-      
-      <description>Did you know that SSH can make your host as a proxy server?</description>
-      
-      
-      
-      
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
-      
-      
-      <category domain="https://blog.alpaca.tw/tags/SSH/">SSH</category>
-      
-      
-      <comments>https://blog.alpaca.tw/posts/SSH-Proxy/#disqus_thread</comments>
       
     </item>
     
