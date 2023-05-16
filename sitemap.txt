@@ -1,3 +1,4 @@
+https://blog.alpaca.tw/posts/Nginx-set-Access-password/
 https://blog.alpaca.tw/posts/Linux-Compress-File-Commands/
 https://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/
 https://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/
@@ -14,8 +15,8 @@ https://blog.alpaca.tw/posts/Pwn-0x02-Compile-and-ELF/
 https://blog.alpaca.tw/posts/screen-command/
 https://blog.alpaca.tw/about/index.html
 https://blog.alpaca.tw/categories/index.html
-https://blog.alpaca.tw/tags/index.html
 https://blog.alpaca.tw/links/index.html
+https://blog.alpaca.tw/tags/index.html
 https://blog.alpaca.tw/posts/hacker/
 https://blog.alpaca.tw/posts/Trap-Signals/
 https://blog.alpaca.tw/posts/Spotlight-Effect/
@@ -70,6 +71,7 @@ https://blog.alpaca.tw/tags/Management-Science/
 https://blog.alpaca.tw/tags/Psychology/
 https://blog.alpaca.tw/tags/Mathematics/
 https://blog.alpaca.tw/tags/MySQL/
+https://blog.alpaca.tw/tags/Nginx/
 https://blog.alpaca.tw/tags/PHP/
 https://blog.alpaca.tw/tags/PDO/
 https://blog.alpaca.tw/tags/Pwn/
@@ -90,6 +92,7 @@ https://blog.alpaca.tw/categories/Computer-Science/Linux/
 https://blog.alpaca.tw/categories/Management-Science/
 https://blog.alpaca.tw/categories/Interesting/
 https://blog.alpaca.tw/categories/Computer-Science/Web-Security/XSS/
+https://blog.alpaca.tw/categories/Computer-Science/Web-Server/
 https://blog.alpaca.tw/categories/Computer-Science/PHP/
 https://blog.alpaca.tw/categories/Mathematics/
 https://blog.alpaca.tw/categories/Cryptography/

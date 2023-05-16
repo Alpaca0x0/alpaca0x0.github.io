@@ -9,8 +9,31 @@
     <atom:link href="https://blog.alpaca.tw/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>學如逆水行舟，不進則退到你媽都認不得。</description>
-    <pubDate>Tue, 25 Apr 2023 14:06:10 GMT</pubDate>
+    <pubDate>Tue, 16 May 2023 13:42:05 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Set nginx access password</title>
+      <link>https://blog.alpaca.tw/posts/Nginx-set-Access-password/</link>
+      <guid>https://blog.alpaca.tw/posts/Nginx-set-Access-password/</guid>
+      <pubDate>Tue, 16 May 2023 13:41:27 GMT</pubDate>
+      
+      <description>How to make nginx website require password to access ?</description>
+      
+      
+      
+      
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
+      
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Web-Server/">Web Server</category>
+      
+      
+      <category domain="https://blog.alpaca.tw/tags/Nginx/">Nginx</category>
+      
+      
+      <comments>https://blog.alpaca.tw/posts/Nginx-set-Access-password/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Linux 常見壓縮指令整理</title>
@@ -535,33 +558,6 @@
       
       
       <comments>https://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Linux + Win 雙系統卻不見 Grub 開機選單？</title>
-      <link>https://blog.alpaca.tw/posts/Dual-Boot-with-Grub/</link>
-      <guid>https://blog.alpaca.tw/posts/Dual-Boot-with-Grub/</guid>
-      <pubDate>Fri, 24 Sep 2021 15:27:14 GMT</pubDate>
-      
-      <description>安裝了 Linux + Windows 的雙系統，但卻不見開機選單？放心，很多人跟你一樣。</description>
-      
-      
-      
-      
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
-      
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
-      
-      
-      <category domain="https://blog.alpaca.tw/tags/Windows/">Windows</category>
-      
-      <category domain="https://blog.alpaca.tw/tags/Ubuntu/">Ubuntu</category>
-      
-      <category domain="https://blog.alpaca.tw/tags/Grub/">Grub</category>
-      
-      
-      <comments>https://blog.alpaca.tw/posts/Dual-Boot-with-Grub/#disqus_thread</comments>
       
     </item>
     
