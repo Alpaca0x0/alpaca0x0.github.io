@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Change username and home folder in ubuntu</title>
+      <link href="/posts/Change-Ubuntu-Username-and-Home-folder-path/"/>
+      <url>/posts/Change-Ubuntu-Username-and-Home-folder-path/</url>
+      
+        <content type="html"><![CDATA[<span id="more"></span><hr><h2 id="permission">Permission</h2><blockquote><p><b style="color:red;">Note that the following commands may need to be run with root permission.</b></p></blockquote><hr><h2 id="logout-the-user">Logout the user</h2><p>You need to logout the user before change username.</p><p>Change user and group name, for example, change username from  <code>older</code>  to  <code>newer</code> :</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">usermod</span> <span class="token parameter variable">-l</span> newer older<span class="token function">groupmod</span> <span class="token parameter variable">-n</span> newer older<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>If system show the message  <code>usermod: user older is currently used by process xxxx</code>  when you trying to enter the commands above, it means that you have not fully logged out all of this user.</p><p>You can check what process is hogging the user by  <code>htop</code> (or  <code>top</code> ), and kill the process.<br>Or just kill the all processes which is run on this user, for example, to kill the all processes running by user  <code>older</code> :</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">killall</span> <span class="token parameter variable">-u</span> older<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Btw, you can also use the  <code>w</code> (or  <code>who</code> ) command to check which users are logged in.</p><hr><h2 id="change-home-holder">Change home holder</h2><p>For example, the new username is  <code>newer</code> , enter the command:</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">usermod</span> <span class="token parameter variable">-d</span> /home/newer <span class="token parameter variable">-m</span> newer<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>If nothing else, the home folder of the user  <code>newer</code>  has been changed to  <code>/home/newer</code> .</p><hr><h2 id="reference">Reference</h2><ul><li>《permissions - How do I change my username? - Ask Ubuntu》<a href="https://askubuntu.com/questions/34074/how-do-i-change-my-username">https://askubuntu.com/questions/34074/how-do-i-change-my-username</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Computer Science </category>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Set nginx access password</title>
       <link href="/posts/Nginx-set-Access-password/"/>
       <url>/posts/Nginx-set-Access-password/</url>
@@ -564,9 +591,9 @@
       
         <tags>
             
-            <tag> Windows </tag>
-            
             <tag> Ubuntu </tag>
+            
+            <tag> Windows </tag>
             
             <tag> Grub </tag>
             

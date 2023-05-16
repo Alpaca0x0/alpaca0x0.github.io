@@ -9,8 +9,39 @@
     <atom:link href="https://blog.alpaca.tw/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>學如逆水行舟，不進則退到你媽都認不得。</description>
-    <pubDate>Tue, 16 May 2023 13:42:05 GMT</pubDate>
+    <pubDate>Tue, 16 May 2023 14:23:06 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Change username and home folder in ubuntu</title>
+      <link>https://blog.alpaca.tw/posts/Change-Ubuntu-Username-and-Home-folder-path/</link>
+      <guid>https://blog.alpaca.tw/posts/Change-Ubuntu-Username-and-Home-folder-path/</guid>
+      <pubDate>Tue, 16 May 2023 14:23:37 GMT</pubDate>
+      
+        
+        
+      <description>
+&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;permission&quot;&gt;Permission&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;b style=&quot;color:red;&quot;&gt;Note that the following commands may</description>
+        
+      
+      
+      
+      
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
+      
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
+      
+      
+      <category domain="https://blog.alpaca.tw/tags/Ubuntu/">Ubuntu</category>
+      
+      
+      <comments>https://blog.alpaca.tw/posts/Change-Ubuntu-Username-and-Home-folder-path/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Set nginx access password</title>
@@ -531,33 +562,6 @@
       
       
       <comments>https://blog.alpaca.tw/posts/FTP-Server-vsftpd/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Raspberry Pi 4 (Ubuntu) configure auto connect to wifi</title>
-      <link>https://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/</link>
-      <guid>https://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/</guid>
-      <pubDate>Wed, 19 Jan 2022 07:11:57 GMT</pubDate>
-      
-      <description>How to make ubuntu auto connect to wifi in raspberry pi 4?</description>
-      
-      
-      
-      
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
-      
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
-      
-      
-      <category domain="https://blog.alpaca.tw/tags/Ubuntu/">Ubuntu</category>
-      
-      <category domain="https://blog.alpaca.tw/tags/Raspberry-PI/">Raspberry PI</category>
-      
-      <category domain="https://blog.alpaca.tw/tags/Wi-Fi/">Wi-Fi</category>
-      
-      
-      <comments>https://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/#disqus_thread</comments>
       
     </item>
     
