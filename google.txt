@@ -1,4 +1,4 @@
-https://blog.alpaca.tw/posts/tmux-command/
+https://blog.alpaca.tw/posts/Tmux-Command/
 https://blog.alpaca.tw/posts/screen-command/
 https://blog.alpaca.tw/posts/Change-Ubuntu-Username-and-Home-folder-path/
 https://blog.alpaca.tw/posts/Ubuntu-Change-Home-Folder-Language/
