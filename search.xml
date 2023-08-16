@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>&quot;Tmux&quot; 指令，建立多個終端 Sessions，登出也能保留背景運作</title>
+      <link href="/posts/tmux-command/"/>
+      <url>/posts/tmux-command/</url>
+      
+        <content type="html"><![CDATA[在伺服器上建立多個程序時，該如何有效率的管理及切換每個程序的終端界面呢？Tmux 不僅能做到這點，還能在使用者登出後，使程序於背景繼續運作。<span id="more"></span><hr><h2 id="screen">Screen</h2><p>先前有介紹過指令「 <code>Screen</code> 」(在「<a href="/posts/screen-command/" title="&quot;Screen&quot; Command 讓程式在背景執行，並隨意切換，即便登出也不會中斷！">&quot;Screen&quot; Command 讓程式在背景執行，並隨意切換，即便登出也不會中斷！</a>」這篇文章中)，但比起該指令，接下來要介紹的「 <code>Tmux</code> 」相對更多人使用，也更為出名。</p><hr><h2 id="tmux">Tmux</h2><p>「 <code>Tmux</code> 」由「Nicholas Marriott」開發，於 2009 年 9 月 22 日釋出第一版本。<br>該指令類似於先前介紹過的「 <code>Screen</code> 」，可以建立多個終端 Session，並方便的將程序於背景及前台間切換。</p><p>可以透過以下方法安裝 (具體選擇請依照不同平台決定)：</p><ul><li>apt install tmux</li><li>yum install tmux</li><li>brew install tmux</li></ul><p>或是於 Github 下載原始檔自行編譯：<a href="https://github.com/tmux/tmux">https://github.com/tmux/tmux</a></p><hr><h2 id="create-a-session">Create a session</h2><p>要創建一個 tmux session，你只需要輸入指令「 <code>tmux</code> 」，便會創建並進入一個 tmux session。</p><p><img src="tmux-session.png" alt="乍看與一般終端無異，只是多了底下的綠色區域"></p><p>如果要退出 session 則像一般的終端一樣直接輸入「 <code>exit</code> 」即可 (部份情況支援使用  <code>ctrl</code> + <code>d</code>  的快捷鍵)。</p><p>其預設的 session 名稱是以數字 0、1、2 以此類推命名創建，例如上述的範例，圖中可見左下角顯示著「 <code>[0]</code> 」，那便是該 session 的名稱 (ID)。<br>如果要自訂 session 名稱，可以透過指令「 <code>tmux new -s &lt;name&gt;</code> 」來指定，e.g.</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 創建名為「hello」的 tmux session</span>tmux new <span class="token parameter variable">-s</span> hello<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><img src="tmux-session-specify-name.png" alt="可以看見左下角 sessino 名稱變成指定的「hello」了"></p><hr><h2 id="background-session-show-sessions-list">Background Session &amp; Show Sessions list</h2><p>補充說明一下，<br>如果要創建一個一開始就在背景執行的 session，則在創建時加入參數「 <code>-d</code> 」，e.g.</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 創建一個名為 "bg" 的背景 tmux session</span>tmux new <span class="token parameter variable">-d</span> <span class="token parameter variable">-s</span> <span class="token function">bg</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>p.s. 切記「 <code>-d</code> 」不能緊跟在「 <code>-s</code> 」後方，會被當成是 session id 處理。(但 <code>tmux new -s bg -d</code>  這麼寫是可以的)</p><p>如果要使當前的 session 於背景執行，可以透過 tmux 特殊的組合鍵來完成。<br>tmux 的組合鍵為  <code>ctrl</code> + <code>b</code>  然後釋放按鍵後，接著按下其他功能按鍵。</p><p>例如要使當前 session 於背景處理，則是使用功能「 <code>d</code>  (detach)」。<br>因此組合按鍵為  <code>ctrl</code> + <code>b</code> ,  <code>d</code> ，即同時按下  <code>ctrl</code> + <code>b</code>  後釋放，接著按下  <code>d</code> 。<br>沒意外應該就會退回原本所在的終端了。</p><p>要查看當前背景正在運作的 tmux sessions，則可以透過指令「 <code>tmux ls</code> 」來查看：</p><p><img src="tmux-ls.png" alt="可以看見目前背景有兩個 tmux sessions：「hello」、「alpaca」"></p><hr><h2 id="attach-background-session">Attach Background Session</h2><p>要 attach 回背景的 tmux session，則需要使用指令「 <code>tmux a -t &lt;session-id&gt;</code> 」，e.g.</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># attach 上名為「alpaca」的 session</span>tmux a <span class="token parameter variable">-t</span> alpaca<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>p.s. 其中「 <code>a</code> 」指的是「 <code>attach</code> 」；「 <code>-t</code> 」指的是「 <code>target</code> 」。</p><p>並且當你在 tmux 的 session 當中時，tmux 也提供一個有趣的切換方式。<br>使用組合鍵  <code>ctrl</code> + <code>b</code> ,  <code>w</code> ，接著便可以用方向鍵在不同的 sessions 間切換 (按 <code>enter</code>  即可快速 attach session)：</p><p><img src="tmux-windows-1.png" alt=""></p><p>按下方向鍵「 <code>🠖</code> 」來展開 session 的程序：</p><p><img src="tmux-windows-2.png" alt=""></p><p>p.s. 方向鍵「 <code>🠔</code> 」可以收回展開。</p><hr><h2 id="kill-session">Kill Session</h2><p>要刪除 session 則使用「 <code>tmux kill-session -t &lt;session-id&gt;</code> 」，e.g.</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 刪除名為 "hello" 的 tmux session</span>tmux kill-session <span class="token parameter variable">-t</span> hello<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>另外也有一個參數，可以用來刪除「除了指定的 session 外的所有 sessions」，e.g.</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 刪除除了 "alpaca" 外的所有 tmux sessions</span>tmux kill-session <span class="token parameter variable">-a</span> <span class="token parameter variable">-t</span> alpaca<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>要刪除 <code>所有 tmux sessions</code> ，則使用「 <code>tmux kill-server</code> 」。<br>p.s. 這會刪除所有 tmux 程序</p><hr><h2 id="split-windows">Split Windows</h2><p>而 tmux 最廣為人之的用法則是可以將一個終端劃分多個 windows (每個 window 都是一個 session)。<br>分割視窗的組合鍵有兩種，分別是用於 <code>垂直分割</code> 的「 <code>ctrl</code> + <code>b</code> ,  <code>&quot;</code> 」；及 <code>水平分割</code> 的「 <code>ctrl</code> + <code>b</code> ,  <code>%</code> 」。<br>(p.s. 注意英文雙引號「 <code>&quot;</code> 」及百分號「 <code>%</code> 」，通常需要按住 <code>shift</code>  來觸發)</p><p>水平分割效果如下：</p><p><img src="tmux-split-horizontal.png" alt=""></p><p>垂直分割：</p><p><img src="tmux-split-vertical.png" alt=""></p><p>要在不同的 windows 間切換，則可以使用組合鍵  <code>ctrl</code> + <code>b</code> ,  <code>&lt;方向鍵&gt;</code> 。<br>(如果你不喜歡這種方式，可以看看最後補充的滑鼠操作方式)</p><hr><h2 id="others">Others</h2><h3 id="tmux-session-指令">tmux session 指令</h3><p>tmux 提供一系列的指令可做使用 (詳細不多做介紹，請自行搜索相關資料)。<br>其指令輸入方式為組合鍵「 <code>ctrl</code> + <code>b</code> ,  <code>:</code> 」，接著輸入指令並按下 enter。</p><p>舉例前面介紹的刪除 tmux session 的方式，使用 tmux 內部指令也可以辦到：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># attach 上一個 tmux session (attach "hello")</span>tmux a <span class="token parameter variable">-t</span> hello<span class="token comment"># 按下 &lt;ctrl> + &lt;b>, ":"，然後輸入「kill-session」</span>:kill-session<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><hr><h3 id="重新命名-session">重新命名 session</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 重新命名 session "old-name" 為 "new-name"</span>tmux <span class="token function">rename</span> <span class="token parameter variable">-t</span> old-name new-name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><hr><h3 id="啟用滑鼠操作模式">啟用滑鼠操作模式</h3><p>在滑鼠操作模式下，可以直接用滑鼠點擊 tmux windows 來切換，並且選取文字時可以自動複製。</p><p>該功能通常預設是關閉的，可以透過上述的 tmux session 指令輸入方法來啟用。<br>使用組合鍵  <code>ctrl</code> + <code>b</code> ,  <code>:</code>  後，便可以開始輸入 tmux 內部指令「 <code>set -g mouse on</code> 」，即可使用滑鼠操作模式。</p><p>如果需要 tmux 記住該設定，每次都自動啟用，則可以在 tmux config 檔案中設定。<br>tmux config 檔案通常位於「 <code>~/.tmux.conf</code> 」，如果不存在則自行創建即可。<br>並在檔案中寫上「 <code>set -g mouse on</code> 」。</p><p>這裡有兩點需要注意：</p><ul><li><code>~/.tmux.conf</code>  的檔名前方有個 <code>.</code></li><li>tmux config 當中寫的  <code>set -g mouse on</code>  前方並<strong>沒有</strong>冒號「 <code>:</code> 」</li></ul><p>並且，當更改完設定後，有幾種方式讓 tmux 讀取該設定。<br>最暴力的方式就是直接重開 tmux，使用先前提到的「 <code>tmux kill-server</code> 」。</p><p>或者於終端輸入  <code>tmux source-file ~/.tmux.conf</code>  來強制 tmux 讀取設定檔。</p><hr><h3 id="豐富-tmux-終端顏色">豐富 tmux 終端顏色</h3><p>如果 tmux 終端顯示的文字顏色不像平常使用的終端來的豐富，<br>可以試試使用 tmux 設定「 <code>set -g default-terminal &quot;screen-256color&quot;</code> 」來使用更多顏色。</p><p>與滑鼠操作的部份一樣，可以直接使用 tmux 內部指令，或者加入 tmux config 當中。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Computer Science </category>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SSH </tag>
+            
+            <tag> Tmux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Change username and home folder in ubuntu</title>
       <link href="/posts/Change-Ubuntu-Username-and-Home-folder-path/"/>
       <url>/posts/Change-Ubuntu-Username-and-Home-folder-path/</url>
@@ -259,6 +288,8 @@
       <categories>
           
           <category> Computer Science </category>
+          
+          <category> Linux </category>
           
       </categories>
       

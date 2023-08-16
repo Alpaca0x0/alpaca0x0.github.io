@@ -9,8 +9,33 @@
     <atom:link href="https://blog.alpaca.tw/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>學如逆水行舟，不進則退到你媽都認不得。</description>
-    <pubDate>Tue, 16 May 2023 14:23:06 GMT</pubDate>
+    <pubDate>Wed, 16 Aug 2023 11:41:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>&quot;Tmux&quot; 指令，建立多個終端 Sessions，登出也能保留背景運作</title>
+      <link>https://blog.alpaca.tw/posts/tmux-command/</link>
+      <guid>https://blog.alpaca.tw/posts/tmux-command/</guid>
+      <pubDate>Wed, 16 Aug 2023 11:40:15 GMT</pubDate>
+      
+      <description>在伺服器上建立多個程序時，該如何有效率的管理及切換每個程序的終端界面呢？Tmux 不僅能做到這點，還能在使用者登出後，使程序於背景繼續運作。</description>
+      
+      
+      
+      
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
+      
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
+      
+      
+      <category domain="https://blog.alpaca.tw/tags/SSH/">SSH</category>
+      
+      <category domain="https://blog.alpaca.tw/tags/Tmux/">Tmux</category>
+      
+      
+      <comments>https://blog.alpaca.tw/posts/tmux-command/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Change username and home folder in ubuntu</title>
@@ -294,6 +319,8 @@
       
       <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
       
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
+      
       
       <category domain="https://blog.alpaca.tw/tags/SSH/">SSH</category>
       
@@ -541,27 +568,6 @@
       
       
       <comments>https://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Build a FTP Server with 「vsftpd」</title>
-      <link>https://blog.alpaca.tw/posts/FTP-Server-vsftpd/</link>
-      <guid>https://blog.alpaca.tw/posts/FTP-Server-vsftpd/</guid>
-      <pubDate>Wed, 19 Jan 2022 13:03:36 GMT</pubDate>
-      
-      <description>How to build the FTP Server quicly with 「vsftpd」?</description>
-      
-      
-      
-      
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
-      
-      
-      <category domain="https://blog.alpaca.tw/tags/FTP/">FTP</category>
-      
-      
-      <comments>https://blog.alpaca.tw/posts/FTP-Server-vsftpd/#disqus_thread</comments>
       
     </item>
     
