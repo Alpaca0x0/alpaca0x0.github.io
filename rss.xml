@@ -9,7 +9,7 @@
     <atom:link href="https://blog.alpaca.tw/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>學如逆水行舟，不進則退到你媽都認不得。</description>
-    <pubDate>Wed, 16 Aug 2023 11:55:58 GMT</pubDate>
+    <pubDate>Wed, 16 Aug 2023 12:05:37 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -301,8 +301,8 @@
     
     <item>
       <title>&quot;Screen&quot; Command 讓程式在背景執行，並隨意切換，即便登出也不會中斷！</title>
-      <link>https://blog.alpaca.tw/posts/screen-command/</link>
-      <guid>https://blog.alpaca.tw/posts/screen-command/</guid>
+      <link>https://blog.alpaca.tw/posts/Screen-Command/</link>
+      <guid>https://blog.alpaca.tw/posts/Screen-Command/</guid>
       <pubDate>Thu, 15 Sep 2022 05:09:33 GMT</pubDate>
       
         
@@ -325,7 +325,7 @@
       <category domain="https://blog.alpaca.tw/tags/SSH/">SSH</category>
       
       
-      <comments>https://blog.alpaca.tw/posts/screen-command/#disqus_thread</comments>
+      <comments>https://blog.alpaca.tw/posts/Screen-Command/#disqus_thread</comments>
       
     </item>
     
