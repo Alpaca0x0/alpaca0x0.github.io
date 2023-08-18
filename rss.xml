@@ -9,8 +9,33 @@
     <atom:link href="https://blog.alpaca.tw/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>學如逆水行舟，不進則退到你媽都認不得。</description>
-    <pubDate>Fri, 18 Aug 2023 06:27:22 GMT</pubDate>
+    <pubDate>Fri, 18 Aug 2023 08:04:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>git diff 顯示一堆「^M」？</title>
+      <link>https://blog.alpaca.tw/posts/Git-CRLF/</link>
+      <guid>https://blog.alpaca.tw/posts/Git-CRLF/</guid>
+      <pubDate>Fri, 18 Aug 2023 08:00:39 GMT</pubDate>
+      
+      <description>在不同 OS 底下共同編輯一個 git repository 時，可能就會出現這個問題，要解決該問題其實也很簡單，其原理及解決方法敬請聽我娓娓道來。</description>
+      
+      
+      
+      
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
+      
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
+      
+      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Git/">Git</category>
+      
+      
+      <category domain="https://blog.alpaca.tw/tags/Git/">Git</category>
+      
+      
+      <comments>https://blog.alpaca.tw/posts/Git-CRLF/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>&quot;Tmux&quot; 指令，建立多個終端 Sessions，登出也能保留背景運作</title>
@@ -543,31 +568,6 @@
       
       
       <comments>https://blog.alpaca.tw/posts/Ubuntu-Move-Home-To-New-Disk/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>How to use PPPoE to connect network on Ubuntu?</title>
-      <link>https://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/</link>
-      <guid>https://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/</guid>
-      <pubDate>Fri, 21 Jan 2022 08:55:18 GMT</pubDate>
-      
-      <description>在 Ubuntu 用 PPPoE 連線中華電信固定 IP。</description>
-      
-      
-      
-      
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
-      
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/Linux/">Linux</category>
-      
-      
-      <category domain="https://blog.alpaca.tw/tags/Ubuntu/">Ubuntu</category>
-      
-      <category domain="https://blog.alpaca.tw/tags/PPPoE/">PPPoE</category>
-      
-      
-      <comments>https://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/#disqus_thread</comments>
       
     </item>
     
