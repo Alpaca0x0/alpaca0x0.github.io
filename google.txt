@@ -1,3 +1,4 @@
+https://blog.alpaca.tw/posts/Wifi-Connect-with-Command/
 https://blog.alpaca.tw/posts/Git-CRLF/
 https://blog.alpaca.tw/posts/Tmux-Command/
 https://blog.alpaca.tw/posts/Screen-Command/
@@ -7,4 +8,3 @@ https://blog.alpaca.tw/posts/Nginx-set-Access-password/
 https://blog.alpaca.tw/posts/Linux-Compress-File-Commands/
 https://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/
 https://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/
-https://blog.alpaca.tw/posts/Ubuntu-Move-Home-To-New-Disk/
