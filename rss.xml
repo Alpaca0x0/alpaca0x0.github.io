@@ -9,8 +9,66 @@
     <atom:link href="https://blog.alpaca.tw/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>學如逆水行舟，不進則退到你媽都認不得。</description>
-    <pubDate>Mon, 11 Sep 2023 05:08:30 GMT</pubDate>
+    <pubDate>Tue, 24 Oct 2023 01:43:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>創建一個 LVM 邏輯捲管理｜一個更有彈性的硬碟分割方式</title>
+      <link>https://blog.alpaca.tw/posts/LVM/</link>
+      <guid>https://blog.alpaca.tw/posts/LVM/</guid>
+      <pubDate>Mon, 23 Oct 2023 06:11:15 GMT</pubDate>
+      
+        
+        
+      <description>
+&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;注意&quot;&gt;注意&lt;/h1&gt;
+&lt;p style=&quot;font-size: 24px;&quot;&gt;
+  以下操作可能需要 root 權限執行，且&lt;text style=&quot;color: red;&quot;&gt;若執行不當，則具有毀損硬碟</description>
+        
+      
+      
+      
+      
+      <category domain="https://blog.alpaca.tw/categories/Editing/">Editing</category>
+      
+      
+      <category domain="https://blog.alpaca.tw/tags/Editing/">Editing</category>
+      
+      
+      <comments>https://blog.alpaca.tw/posts/LVM/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>OSI 7 Layers</title>
+      <link>https://blog.alpaca.tw/posts/OSI-7-Layers/</link>
+      <guid>https://blog.alpaca.tw/posts/OSI-7-Layers/</guid>
+      <pubDate>Tue, 26 Sep 2023 01:02:42 GMT</pubDate>
+      
+        
+        
+      <description>
+&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;title&quot;&gt;title&lt;/h2&gt;
+&lt;p&gt;content&lt;/p&gt;
+</description>
+        
+      
+      
+      
+      
+      <category domain="https://blog.alpaca.tw/categories/Editing/">Editing</category>
+      
+      
+      <category domain="https://blog.alpaca.tw/tags/Editing/">Editing</category>
+      
+      
+      <comments>https://blog.alpaca.tw/posts/OSI-7-Layers/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Ubuntu 使用指令連接 Wifi</title>
@@ -513,59 +571,6 @@
       
       
       <comments>https://blog.alpaca.tw/posts/Trap-Signals/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>CTF 「hackme」Web Write Up</title>
-      <link>https://blog.alpaca.tw/posts/CTF-hackme-web-Write-Up/</link>
-      <guid>https://blog.alpaca.tw/posts/CTF-hackme-web-Write-Up/</guid>
-      <pubDate>Mon, 11 Apr 2022 02:53:47 GMT</pubDate>
-      
-        
-        
-      <description>
-&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
-&lt;p&gt;之前沒有打 CTF，這陣子心血來潮想說也來玩玩看好了，順便做個紀錄。&lt;br&gt;
-有些題目真的設計的蠻有趣的，後悔沒有早點接觸。&lt;/p&gt;
-&lt;p&gt;以下的內容包含 &lt;code&gt;解答&lt;</description>
-        
-      
-      
-      
-      
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
-      
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/CTF/">CTF</category>
-      
-      
-      <category domain="https://blog.alpaca.tw/tags/CTF/">CTF</category>
-      
-      
-      <comments>https://blog.alpaca.tw/posts/CTF-hackme-web-Write-Up/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Change root password in MySQL 8</title>
-      <link>https://blog.alpaca.tw/posts/MySQL-8-Change-Root-Password/</link>
-      <guid>https://blog.alpaca.tw/posts/MySQL-8-Change-Root-Password/</guid>
-      <pubDate>Sat, 29 Jan 2022 08:46:05 GMT</pubDate>
-      
-      <description>Change the password of root in mysql version 8</description>
-      
-      
-      
-      
-      <category domain="https://blog.alpaca.tw/categories/Computer-Science/">Computer Science</category>
-      
-      
-      <category domain="https://blog.alpaca.tw/tags/MySQL/">MySQL</category>
-      
-      
-      <comments>https://blog.alpaca.tw/posts/MySQL-8-Change-Root-Password/#disqus_thread</comments>
       
     </item>
     
