@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hexo on Alpaca&#39;s Notes</title>
+    <link>http://blog.alpaca.tw/tags/Hexo/</link>
+    <description>Recent content in Hexo on Alpaca&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>版權所有 翻印必究 
+ Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 15 May 2021 15:57:36 +0000</lastBuildDate><atom:link href="http://blog.alpaca.tw/tags/Hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用 Hexo 在 Github Pages 上部署部落格？</title>
+      <link>http://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/</link>
+      <pubDate>Sat, 15 May 2021 15:57:36 +0000</pubDate>
+      
+      <guid>http://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/</guid>
+      <description>&lt;p&gt;想要創建部落格，但又不想要一堆複雜又用不到的功能，輕盈的靜態頁面及 Git 版本控制，使用 Markdown 來撰寫文章，用 Hexo 架設部落格並發布在 Github Pages 這一切就是那麼容易且方便。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/cover.jpg" />
+    </item>
+    
+  </channel>
+</rss>

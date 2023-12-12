@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on Alpaca&#39;s Notes</title>
+    <link>http://blog.alpaca.tw/tags/Github/</link>
+    <description>Recent content in Github on Alpaca&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>版權所有 翻印必究 
+ Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 15 May 2021 15:57:36 +0000</lastBuildDate><atom:link href="http://blog.alpaca.tw/tags/Github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用 Hexo 在 Github Pages 上部署部落格？</title>
+      <link>http://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/</link>
+      <pubDate>Sat, 15 May 2021 15:57:36 +0000</pubDate>
+      
+      <guid>http://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/</guid>
+      <description>&lt;p&gt;想要創建部落格，但又不想要一堆複雜又用不到的功能，輕盈的靜態頁面及 Git 版本控制，使用 Markdown 來撰寫文章，用 Hexo 架設部落格並發布在 Github Pages 這一切就是那麼容易且方便。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/cover.jpg" />
+    </item>
+    
+    <item>
+      <title>Github 檔案太大無法推送！？安裝「Git-LFS」馬上解決！</title>
+      <link>http://blog.alpaca.tw/posts/Git-LFS/</link>
+      <pubDate>Sun, 28 Mar 2021 12:54:04 +0000</pubDate>
+      
+      <guid>http://blog.alpaca.tw/posts/Git-LFS/</guid>
+      <description>&lt;p&gt;使用 git push 推送檔案到 Github 上時，被告知&lt;strong&gt;檔案太大&lt;/strong&gt;無法推送！？馬上教你怎麼解決！&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Git-LFS/cover.png" />
+    </item>
+    
+  </channel>
+</rss>

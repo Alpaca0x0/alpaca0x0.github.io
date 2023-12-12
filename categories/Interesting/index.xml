@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interesting on Alpaca&#39;s Notes</title>
+    <link>http://blog.alpaca.tw/categories/Interesting/</link>
+    <description>Recent content in Interesting on Alpaca&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>版權所有 翻印必究 
+ Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 04 Mar 2021 00:18:00 +0000</lastBuildDate><atom:link href="http://blog.alpaca.tw/categories/Interesting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Monty-Hall Problem 三門問題｜選擇的順序改變了機率？並非如此！</title>
+      <link>http://blog.alpaca.tw/posts/MontyHall-Problem/</link>
+      <pubDate>Thu, 04 Mar 2021 00:18:00 +0000</pubDate>
+      
+      <guid>http://blog.alpaca.tw/posts/MontyHall-Problem/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;三分之一&lt;/strong&gt;的機率中，可以透過&lt;strong&gt;更換選擇&lt;/strong&gt;來&lt;strong&gt;提高機率&lt;/strong&gt;，這是曾經讓許多人摸不著頭緒的 Monty-Hall Problem (三門問題)，你能參透其中的答案嗎？&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/MontyHall-Problem/cover.jpg" />
+    </item>
+    
+  </channel>
+</rss>

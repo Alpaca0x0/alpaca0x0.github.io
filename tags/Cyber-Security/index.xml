@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cyber Security on Alpaca&#39;s Notes</title>
+    <link>http://blog.alpaca.tw/tags/Cyber-Security/</link>
+    <description>Recent content in Cyber Security on Alpaca&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>版權所有 翻印必究 
+ Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 20 Apr 2021 00:55:42 +0000</lastBuildDate><atom:link href="http://blog.alpaca.tw/tags/Cyber-Security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Encode、Encrypt and Hash are different！</title>
+      <link>http://blog.alpaca.tw/posts/Encode-Encrypt-Hash/</link>
+      <pubDate>Tue, 20 Apr 2021 00:55:42 +0000</pubDate>
+      
+      <guid>http://blog.alpaca.tw/posts/Encode-Encrypt-Hash/</guid>
+      <description>&lt;p&gt;Encode (編碼)、Encrypt (加密)、Hash (雜湊) 一直令許多新手們搞混，雖然說可能運算後的結果看起來都是一串亂碼，但原理及使用場合卻天差地遠，千萬不要再分不清處了！&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Encode-Encrypt-Hash/cover.jpg" />
+    </item>
+    
+    <item>
+      <title>Hacker 駭客的定義｜白帽？黑帽？灰帽？｜各種帽子顏色所代表的含意</title>
+      <link>http://blog.alpaca.tw/posts/Hacker/</link>
+      <pubDate>Tue, 20 Oct 2020 09:47:21 +0000</pubDate>
+      
+      <guid>http://blog.alpaca.tw/posts/Hacker/</guid>
+      <description>&lt;p&gt;時常在好萊塢電影中看到駭客的身影，他們給人的形象往往都是負面、惡意且具有強烈人格特質的，這不僅讓人被那獨特的魅力吸引，更多的是那讓人想一探究竟卻又不敢接近的神秘，因此「駭客」一詞也常受到大家尊敬及崇拜。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Hacker/cover.jpg" />
+    </item>
+    
+    <item>
+      <title>What is CTF？</title>
+      <link>http://blog.alpaca.tw/posts/CTF/</link>
+      <pubDate>Tue, 20 Oct 2020 00:47:21 +0000</pubDate>
+      
+      <guid>http://blog.alpaca.tw/posts/CTF/</guid>
+      <description>&lt;p&gt;一個讓&lt;strong&gt;駭客&lt;/strong&gt;及&lt;strong&gt;資安人員&lt;/strong&gt;都&lt;strong&gt;熱血沸騰&lt;/strong&gt;的競賽&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/CTF/cover.jpg" />
+    </item>
+    
+  </channel>
+</rss>

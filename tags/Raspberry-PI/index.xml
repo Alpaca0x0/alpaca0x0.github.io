@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberry PI on Alpaca&#39;s Notes</title>
+    <link>http://blog.alpaca.tw/tags/Raspberry-PI/</link>
+    <description>Recent content in Raspberry PI on Alpaca&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>版權所有 翻印必究 
+ Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 19 Jan 2022 15:11:57 +0000</lastBuildDate><atom:link href="http://blog.alpaca.tw/tags/Raspberry-PI/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry Pi 4 (Ubuntu) configure auto connect to wifi</title>
+      <link>http://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/</link>
+      <pubDate>Wed, 19 Jan 2022 15:11:57 +0000</pubDate>
+      
+      <guid>http://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/</guid>
+      <description>&lt;p&gt;How to make ubuntu auto connect to wifi in raspberry pi 4?&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/cover.jpg" />
+    </item>
+    
+  </channel>
+</rss>

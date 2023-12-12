@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Alpaca&#39;s Notes</title>
+    <link>http://blog.alpaca.tw/tags/Windows/</link>
+    <description>Recent content in Windows on Alpaca&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>版權所有 翻印必究 
+ Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 24 Sep 2021 23:27:14 +0000</lastBuildDate><atom:link href="http://blog.alpaca.tw/tags/Windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux &#43; Win 雙系統卻不見 Grub 開機選單？</title>
+      <link>http://blog.alpaca.tw/posts/Dual-Boot-with-Grub/</link>
+      <pubDate>Fri, 24 Sep 2021 23:27:14 +0000</pubDate>
+      
+      <guid>http://blog.alpaca.tw/posts/Dual-Boot-with-Grub/</guid>
+      <description>&lt;p&gt;安裝了 Linux + Windows 的雙系統，但卻不見開機選單？放心，很多人跟你一樣。&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Dual-Boot-with-Grub/cover.png" />
+    </item>
+    
+  </channel>
+</rss>
