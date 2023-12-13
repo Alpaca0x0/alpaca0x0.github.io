@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.82867bf47a612d7462e3555f4fccb5ab28e2bd4b18c37131afdf5ba4d21396ab08ac679cae8e0ae71b26835b657ce022e7aafd352b1ecf7ce672512e5cb25882.js"
-    integrity="sha512-goZ79HphLXRi41VfT8y1qyjivUsYw3Exr99bpNITlqsIrGecro4K5xsmg1tlfOAi56r9NSsez3zmclEuXLJYgg==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
+    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["xss","網頁漏洞","Cross Site Scripting","security flaw"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "303"
+    "wordCount": "335"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2020-01-24 13:25:39 &#43;0000 UTC">2020/01/24</time><span class="px-2 text-primary-500">&middot;</span><span>303 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2020-01-24 13:25:39 &#43;0000 UTC">2020/01/24</time><span class="px-2 text-primary-500">&middot;</span><span>335 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Cross-Site-Scripting/index.md" title="views">0</span> 
     
@@ -847,24 +847,57 @@
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic">&lt;!-- index.html --&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>&lt;<span style="color:#7ee787">form</span> action<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;name.php&#34;</span> method<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;POST&#34;</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>	&lt;<span style="color:#7ee787">input</span> type<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;input&#34;</span> name<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;my_name&#34;</span> value<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;abc123&#34;</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>&lt;/<span style="color:#7ee787">form</span>&gt;
-</span></span></code></pre></div><ul>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">&lt;!-- index.html --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">form</span> action<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;name.php&#34;</span> method<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;POST&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#7ee787">input</span> type<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;input&#34;</span> name<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;my_name&#34;</span> value<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;abc123&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">form</span>&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>【PHP 頁面 顯示傳入值】</li>
 </ul>
 <!-- raw HTML omitted -->
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic">//name.php
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#79c0ff">$name</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#79c0ff">$_POST</span>[<span style="color:#a5d6ff">&#39;my_name&#39;</span>];			<span style="color:#8b949e;font-style:italic">//接收參數
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">echo</span> <span style="color:#a5d6ff">&#34;&lt;p&gt;你的名字：&#34;</span><span style="color:#ff7b72;font-weight:bold">.</span><span style="color:#79c0ff">$name</span><span style="color:#ff7b72;font-weight:bold">.</span><span style="color:#a5d6ff">&#34;&lt;/p&gt;&#34;</span>;	<span style="color:#8b949e;font-style:italic">//沒過濾直接顯示
-</span></span></span></code></pre></div><hr>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">//name.php
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#79c0ff">$name</span><span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#79c0ff">$_POST</span>[<span style="color:#a5d6ff">&#39;my_name&#39;</span>];			<span style="color:#8b949e;font-style:italic">//接收參數
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">echo</span> <span style="color:#a5d6ff">&#34;&lt;p&gt;你的名字：&#34;</span><span style="color:#ff7b72;font-weight:bold">.</span><span style="color:#79c0ff">$name</span><span style="color:#ff7b72;font-weight:bold">.</span><span style="color:#a5d6ff">&#34;&lt;/p&gt;&#34;</span>;	<span style="color:#8b949e;font-style:italic">//沒過濾直接顯示
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <p>我們放大重點來討論，也就是說我們輸入什麼，就會反應在標籤上。
 當使用者輸入「 <strong>def456</strong> 」則 HTML 標籤會長這樣</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>&lt;<span style="color:#7ee787">p</span>&gt;def456&lt;/<span style="color:#7ee787">p</span>&gt;
-</span></span></code></pre></div><p>輸入「 <strong>ghi789</strong> 」</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>&lt;<span style="color:#7ee787">p</span>&gt;ghi789&lt;/<span style="color:#7ee787">p</span>&gt;
-</span></span></code></pre></div><p>注意！上述都是一般使用者的作法，中規中矩的按造設計者的想法去做。
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">p</span>&gt;def456&lt;/<span style="color:#7ee787">p</span>&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>輸入「 <strong>ghi789</strong> 」</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">p</span>&gt;ghi789&lt;/<span style="color:#7ee787">p</span>&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意！上述都是一般使用者的作法，中規中矩的按造設計者的想法去做。
 但&hellip; 駭客會這麼乖嗎？</p>
 <hr>
 <div id="駭客操作的html" class="anchor"></div>
@@ -878,16 +911,37 @@
 <p>人家常說調皮的小孩是聰明的，有時候換個思路，調皮點，一個漏洞就這麼發現了。
 設計者要求這樣做，我就該這樣做嗎？
 正常輸入「 <strong>abc123</strong> 」如此標籤：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>&lt;<span style="color:#7ee787">p</span>&gt;abc123&lt;/<span style="color:#7ee787">p</span>&gt;
-</span></span></code></pre></div><p>你可以發現標籤內包著我們的語法，包著的是&lt;p&gt;標籤及標籤結尾&lt;/p&gt;
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">p</span>&gt;abc123&lt;/<span style="color:#7ee787">p</span>&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>你可以發現標籤內包著我們的語法，包著的是&lt;p&gt;標籤及標籤結尾&lt;/p&gt;
 那如果今天我們輸入「 <strong>abc123&lt;/p&gt;</strong> 」呢？</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>&lt;<span style="color:#7ee787">p</span>&gt;abc123&lt;/<span style="color:#7ee787">p</span>&gt;&lt;/<span style="color:#7ee787">p</span>&gt;
-</span></span></code></pre></div><p>你會發現我們所輸入的&lt;/p&gt;居然被解釋成標籤結尾了！？
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">p</span>&gt;abc123&lt;/<span style="color:#7ee787">p</span>&gt;&lt;/<span style="color:#7ee787">p</span>&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>你會發現我們所輸入的&lt;/p&gt;居然被解釋成標籤結尾了！？
 這是否意味著我輸入什麼語法他就執行什麼語法？
 那我們將輸入的參數稍做修改，改成具有影響力的語法！
 輸入「 <strong>abc123&lt;/p&gt;&lt;script&gt;alert(1)&lt;/script&gt;&lt;p&gt;</strong> 」</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>&lt;<span style="color:#7ee787">p</span>&gt;abc123&lt;/<span style="color:#7ee787">p</span>&gt;&lt;<span style="color:#7ee787">script</span>&gt;alert(<span style="color:#a5d6ff">1</span>)&lt;/<span style="color:#7ee787">script</span>&gt;&lt;<span style="color:#7ee787">p</span>&gt;&lt;/<span style="color:#7ee787">p</span>&gt;
-</span></span></code></pre></div><p>這則語法中的 <strong>alert(1)</strong> 是彈出警告視窗，其顯示內容為「1」
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#7ee787">p</span>&gt;abc123&lt;/<span style="color:#7ee787">p</span>&gt;&lt;<span style="color:#7ee787">script</span>&gt;alert(<span style="color:#a5d6ff">1</span>)&lt;/<span style="color:#7ee787">script</span>&gt;&lt;<span style="color:#7ee787">p</span>&gt;&lt;/<span style="color:#7ee787">p</span>&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>這則語法中的 <strong>alert(1)</strong> 是彈出警告視窗，其顯示內容為「1」
 (Ps.「 <strong>alert(1)</strong> 」這是駭客們最常拿來測試 XSS 的語法)
 <!-- raw HTML omitted --></p>
 <p>隨意插入標籤？這麼一來我不就越權了嗎？</p>
@@ -915,38 +969,84 @@
 <p>該類型的 XSS 多半與 <strong>資料庫 (Database)</strong> 有著密切的關聯，上述的反射型是因為伺服端不會去儲存你的攻擊語法，所以不會發生該語法日後被再次觸發的問題，但現在要說的這種「 <strong>預存型</strong> 」就不同了。
 「 <strong>預存型</strong> 」顧名思義就是伺服器將語法給紀錄下來了，並且在某些需要輸出紀錄時的場合被再次觸發到。
 舉個常見的例子 - 「 <strong>貼文系統</strong> 」。以下模擬一個簡易的貼文系統 <strong>HTML + PHP + MYSQL</strong>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic">&lt;!-- index.html --&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>&lt;<span style="color:#7ee787">form</span> action<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;post.php&#34;</span> method<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;POST&#34;</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>	&lt;<span style="color:#7ee787">input</span> type<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;text&#34;</span> name<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;title&#34;</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>	&lt;<span style="color:#7ee787">input</span> type<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;text&#34;</span> name<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;content&#34;</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">5</span><span>	&lt;<span style="color:#7ee787">input</span> type<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;submit&#34;</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">6</span><span>&lt;/<span style="color:#7ee787">form</span>&gt;
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 1</span><span><span style="color:#8b949e;font-style:italic">// post.php
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 2</span><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#79c0ff">$title</span><span style="color:#ff7b72;font-weight:bold">=</span>trim(<span style="color:#79c0ff">$_POST</span>[<span style="color:#a5d6ff">&#39;title&#39;</span>]);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 3</span><span><span style="color:#79c0ff">$content</span><span style="color:#ff7b72;font-weight:bold">=</span>trim(<span style="color:#79c0ff">$_POST</span>[<span style="color:#a5d6ff">&#39;content&#39;</span>]);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 4</span><span><span style="color:#ff7b72">if</span>(<span style="color:#ff7b72">empty</span>(<span style="color:#79c0ff">$title</span>) <span style="color:#ff7b72;font-weight:bold">||</span> <span style="color:#ff7b72">empty</span>(<span style="color:#79c0ff">$content</span>)) <span style="color:#ff7b72">exit</span>();
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 5</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 6</span><span><span style="color:#79c0ff">$connection</span><span style="color:#ff7b72;font-weight:bold">=</span>mysql_connect(<span style="color:#a5d6ff">&#34;localhost&#34;</span>,<span style="color:#a5d6ff">&#34;root&#34;</span>,<span style="color:#a5d6ff">&#34;password&#34;</span>);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 7</span><span>mysql_select_db(<span style="color:#a5d6ff">&#34;post&#34;</span>);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 8</span><span><span style="color:#79c0ff">$sql</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;INSERT INTO `post` (`title`, `content`)
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 9</span><span><span style="color:#a5d6ff">VALUES(&#39;</span><span style="color:#a5d6ff">$title</span><span style="color:#a5d6ff">&#39;, &#39;</span><span style="color:#a5d6ff">$content</span><span style="color:#a5d6ff">&#39;);&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">10</span><span><span style="color:#ff7b72">if</span>(<span style="color:#79c0ff">$result</span> <span style="color:#ff7b72;font-weight:bold">=</span> mysql_query(<span style="color:#79c0ff">$sql</span>, <span style="color:#79c0ff">$connection</span>)){
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">11</span><span>	<span style="color:#ff7b72">echo</span> <span style="color:#a5d6ff">&#34;貼文成功！&#34;</span>;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">12</span><span>}
-</span></span></code></pre></div><p>可以清楚看到 index.html 中所輸入的欄位分別有代表文章標題的「 <strong>title</strong> 」及代表文章內容的「 <strong>content</strong> 」，並且表單傳送至 post.php 中，在 post.php 裡將標題及內容寫入資料庫。
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">&lt;!-- index.html --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#7ee787">form</span> action<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;post.php&#34;</span> method<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;POST&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#7ee787">input</span> type<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;text&#34;</span> name<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;title&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#7ee787">input</span> type<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;text&#34;</span> name<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#7ee787">input</span> type<span style="color:#ff7b72;font-weight:bold">=</span><span style="color:#a5d6ff">&#34;submit&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#7ee787">form</span>&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// post.php
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#79c0ff">$title</span><span style="color:#ff7b72;font-weight:bold">=</span>trim(<span style="color:#79c0ff">$_POST</span>[<span style="color:#a5d6ff">&#39;title&#39;</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">$content</span><span style="color:#ff7b72;font-weight:bold">=</span>trim(<span style="color:#79c0ff">$_POST</span>[<span style="color:#a5d6ff">&#39;content&#39;</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span>(<span style="color:#ff7b72">empty</span>(<span style="color:#79c0ff">$title</span>) <span style="color:#ff7b72;font-weight:bold">||</span> <span style="color:#ff7b72">empty</span>(<span style="color:#79c0ff">$content</span>)) <span style="color:#ff7b72">exit</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">$connection</span><span style="color:#ff7b72;font-weight:bold">=</span>mysql_connect(<span style="color:#a5d6ff">&#34;localhost&#34;</span>,<span style="color:#a5d6ff">&#34;root&#34;</span>,<span style="color:#a5d6ff">&#34;password&#34;</span>);
+</span></span><span style="display:flex;"><span>mysql_select_db(<span style="color:#a5d6ff">&#34;post&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">$sql</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;INSERT INTO `post` (`title`, `content`)
+</span></span></span><span style="display:flex;"><span><span style="color:#a5d6ff">VALUES(&#39;</span><span style="color:#a5d6ff">$title</span><span style="color:#a5d6ff">&#39;, &#39;</span><span style="color:#a5d6ff">$content</span><span style="color:#a5d6ff">&#39;);&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span>(<span style="color:#79c0ff">$result</span> <span style="color:#ff7b72;font-weight:bold">=</span> mysql_query(<span style="color:#79c0ff">$sql</span>, <span style="color:#79c0ff">$connection</span>)){
+</span></span><span style="display:flex;"><span>	<span style="color:#ff7b72">echo</span> <span style="color:#a5d6ff">&#34;貼文成功！&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以清楚看到 index.html 中所輸入的欄位分別有代表文章標題的「 <strong>title</strong> 」及代表文章內容的「 <strong>content</strong> 」，並且表單傳送至 post.php 中，在 post.php 裡將標題及內容寫入資料庫。
 這時候假設貼文標題打上「 <strong>abc213&lt;/p&gt;&lt;script&gt;alert(1)&lt;/script&gt;&lt;p&gt;</strong> 」，內容隨意輸入「 <strong>test</strong> 」，正常來說此語法將會被成功寫入資料庫存放。</p>
 <p>既然是貼文系統，照理來說會有個輸出文章的位置 (不然貼文就沒意義了)：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 1</span><span><span style="color:#8b949e;font-style:italic">// display.php
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 2</span><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#79c0ff">$connection</span><span style="color:#ff7b72;font-weight:bold">=</span>mysql_connect(<span style="color:#a5d6ff">&#34;localhost&#34;</span>,<span style="color:#a5d6ff">&#34;root&#34;</span>,<span style="color:#a5d6ff">&#34;password&#34;</span>);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 3</span><span>mysql_select_db(<span style="color:#a5d6ff">&#34;post&#34;</span>);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 4</span><span><span style="color:#79c0ff">$sql</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;SELECT * FROM `post`;&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 5</span><span><span style="color:#79c0ff">$result</span> <span style="color:#ff7b72;font-weight:bold">=</span> mysql_query(<span style="color:#79c0ff">$sql</span>, <span style="color:#79c0ff">$connection</span>);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 6</span><span><span style="color:#ff7b72">if</span>(<span style="color:#ff7b72;font-weight:bold">!</span><span style="color:#79c0ff">$result</span>) <span style="color:#ff7b72">exit</span>();
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 7</span><span><span style="color:#ff7b72">while</span>(<span style="color:#79c0ff">$row</span><span style="color:#ff7b72;font-weight:bold">=</span>mysql_fetch_row(<span style="color:#79c0ff">$result</span>)){
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 8</span><span>	<span style="color:#ff7b72">echo</span> <span style="color:#79c0ff">$row</span>[<span style="color:#a5d6ff">&#39;title&#39;</span>];
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 9</span><span>	<span style="color:#ff7b72">echo</span> <span style="color:#79c0ff">$row</span>[<span style="color:#a5d6ff">&#39;content&#39;</span>];
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">10</span><span>}
-</span></span></code></pre></div><p>就這樣，資料庫裡存放的 html 標籤被輸出並解釋成標籤作用了。
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// display.php
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#79c0ff">$connection</span><span style="color:#ff7b72;font-weight:bold">=</span>mysql_connect(<span style="color:#a5d6ff">&#34;localhost&#34;</span>,<span style="color:#a5d6ff">&#34;root&#34;</span>,<span style="color:#a5d6ff">&#34;password&#34;</span>);
+</span></span><span style="display:flex;"><span>mysql_select_db(<span style="color:#a5d6ff">&#34;post&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">$sql</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;SELECT * FROM `post`;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">$result</span> <span style="color:#ff7b72;font-weight:bold">=</span> mysql_query(<span style="color:#79c0ff">$sql</span>, <span style="color:#79c0ff">$connection</span>);
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span>(<span style="color:#ff7b72;font-weight:bold">!</span><span style="color:#79c0ff">$result</span>) <span style="color:#ff7b72">exit</span>();
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">while</span>(<span style="color:#79c0ff">$row</span><span style="color:#ff7b72;font-weight:bold">=</span>mysql_fetch_row(<span style="color:#79c0ff">$result</span>)){
+</span></span><span style="display:flex;"><span>	<span style="color:#ff7b72">echo</span> <span style="color:#79c0ff">$row</span>[<span style="color:#a5d6ff">&#39;title&#39;</span>];
+</span></span><span style="display:flex;"><span>	<span style="color:#ff7b72">echo</span> <span style="color:#79c0ff">$row</span>[<span style="color:#a5d6ff">&#39;content&#39;</span>];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>就這樣，資料庫裡存放的 html 標籤被輸出並解釋成標籤作用了。
 任何只要看得到這篇文章的人，畫面上就會彈出我們所植入的「alert(1)」。</p>
 <p>我們僅僅是用「 <strong>alert()</strong> 」來測試 XSS 而已，這還算不上是什麼危害，但是有心人士會透過其他語法來達成非法目的，例如可以利用「 <strong>document.cookie</strong> 」來獲取你的 <a href="https://zh.wikipedia.org/wiki/Cookie"   target="_blank">
     <strong>Cookie</strong></a> ，很多時候明明沒有在其他地方登入過，電腦也沒有中毒，帳號卻莫名被盜，有可能就是你中了 XSS 。</p>

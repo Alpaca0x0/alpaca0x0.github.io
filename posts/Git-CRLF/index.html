@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.82867bf47a612d7462e3555f4fccb5ab28e2bd4b18c37131afdf5ba4d21396ab08ac679cae8e0ae71b26835b657ce022e7aafd352b1ecf7ce672512e5cb25882.js"
-    integrity="sha512-goZ79HphLXRi41VfT8y1qyjivUsYw3Exr99bpNITlqsIrGecro4K5xsmg1tlfOAi56r9NSsez3zmclEuXLJYgg==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
+    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["git ^M","git diff","unix2dos","dos2unix"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "177"
+    "wordCount": "184"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-08-18 16:00:39 &#43;0000 UTC">2023/08/18</time><span class="px-2 text-primary-500">&middot;</span><span>177 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-08-18 16:00:39 &#43;0000 UTC">2023/08/18</time><span class="px-2 text-primary-500">&middot;</span><span>184 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Git-CRLF/index.md" title="views">0</span> 
     
@@ -824,14 +824,27 @@
 依照剛剛所提到的，Windows 的換行符號為「<code>\r\n</code>」，而 Linux 則為「<code>\n</code>」。</p>
 <p>那麼舉例當文字「<code>第一行\r\n第二行</code>」在 Windows 及 Linux 間會如何顯示呢？
 答案是：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># windows</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>第一行
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>第二行
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">5</span><span><span style="color:#8b949e;font-style:italic"># Linux</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">6</span><span>第一行<span style="color:#79c0ff">\r</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">7</span><span>第二行
-</span></span></code></pre></div><p>由於 Windows 的換行符號比 Linux 多出了一個「<code>\r</code>」，因此在 Linux 作業系統當中，依舊會將「<code>\n</code>」解釋成換行，而「<code>\r</code>」則原封不動保留。
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># windows</span>
+</span></span><span style="display:flex;"><span>第一行
+</span></span><span style="display:flex;"><span>第二行
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Linux</span>
+</span></span><span style="display:flex;"><span>第一行<span style="color:#79c0ff">\r</span>
+</span></span><span style="display:flex;"><span>第二行
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>由於 Windows 的換行符號比 Linux 多出了一個「<code>\r</code>」，因此在 Linux 作業系統當中，依舊會將「<code>\n</code>」解釋成換行，而「<code>\r</code>」則原封不動保留。
 這導致幾乎每行文字後方都會跟著一個「<code>\r</code>」(注意，這是特殊符號表示，並不是真的顯示一個「<code>\r</code>」)。</p>
 <p>而這個「<code>\r</code>」ASCII Code 為「<code>0x0D</code>」，也寫作「<code>CR</code>」，在 git 及 vim 當中以「<code>^M</code>」表示。</p>
 <blockquote>
@@ -848,8 +861,15 @@
 </h2>
 <p>在 git 當中有一項設定可以用來自動將「<code>\r\n</code>」當作「<code>\n</code>」看待。
 可以簡單的透過更改<code>git 全域設定</code>來啟用該功能：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>git config --global core.autocrlf true
-</span></span></code></pre></div><p>(p.s. 但在團隊開發上，更推薦的作法是更改「<code>.gitattributes</code>」)</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global core.autocrlf true
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>(p.s. 但在團隊開發上，更推薦的作法是更改「<code>.gitattributes</code>」)</p>
 <hr>
 <div id="unix2dos--dos2unix" class="anchor"></div>
 <h2 class="relative group">unix2dos &amp; dos2unix 

@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.82867bf47a612d7462e3555f4fccb5ab28e2bd4b18c37131afdf5ba4d21396ab08ac679cae8e0ae71b26835b657ce022e7aafd352b1ecf7ce672512e5cb25882.js"
-    integrity="sha512-goZ79HphLXRi41VfT8y1qyjivUsYw3Exr99bpNITlqsIrGecro4K5xsmg1tlfOAi56r9NSsez3zmclEuXLJYgg==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
+    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["PDO","php","mysql","database","pdo connect"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "334"
+    "wordCount": "349"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-07-12 12:18:57 &#43;0000 UTC">2022/07/12</time><span class="px-2 text-primary-500">&middot;</span><span>334 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-07-12 12:18:57 &#43;0000 UTC">2022/07/12</time><span class="px-2 text-primary-500">&middot;</span><span>349 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/PHP-MySql-query-with-PDO/index.md" title="views">0</span> 
     
@@ -820,24 +820,52 @@ But <code>PDO</code> is more than that !
     
 </h2>
 <p>It&rsquo;s needed be the instance.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 1</span><span>define(<span style="color:#a5d6ff">&#39;DB&#39;</span>,[
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 2</span><span>  <span style="color:#a5d6ff">&#39;host&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">&#39;localhost&#39;</span>, <span style="color:#8b949e;font-style:italic"># the host of database server
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 3</span><span><span style="color:#8b949e;font-style:italic"></span>  <span style="color:#a5d6ff">&#39;user&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">&#39;root&#39;</span>, <span style="color:#8b949e;font-style:italic"># the user of database
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 4</span><span><span style="color:#8b949e;font-style:italic"></span>  <span style="color:#a5d6ff">&#39;pass&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">&#39;password&#39;</span>, <span style="color:#8b949e;font-style:italic"># the password of user
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 5</span><span><span style="color:#8b949e;font-style:italic"></span>  <span style="color:#a5d6ff">&#39;name&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">&#39;database&#39;</span>, <span style="color:#8b949e;font-style:italic"># the name of database
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 6</span><span><span style="color:#8b949e;font-style:italic"></span>]);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 7</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 8</span><span><span style="color:#79c0ff">$db_connect</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">new</span> PDO(<span style="color:#a5d6ff">&#34;mysql:host=&#34;</span><span style="color:#ff7b72;font-weight:bold">.</span>DB[<span style="color:#a5d6ff">&#39;host&#39;</span>]<span style="color:#ff7b72;font-weight:bold">.</span><span style="color:#a5d6ff">&#34;;dbname=&#34;</span><span style="color:#ff7b72;font-weight:bold">.</span>DB[<span style="color:#a5d6ff">&#39;name&#39;</span>]<span style="color:#ff7b72;font-weight:bold">.</span><span style="color:#a5d6ff">&#34;;charset=utf8mb4&#34;</span>, DB[<span style="color:#a5d6ff">&#39;user&#39;</span>], DB[<span style="color:#a5d6ff">&#39;pass&#39;</span>]);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 9</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">10</span><span><span style="color:#ff7b72">if</span>(<span style="color:#ff7b72;font-weight:bold">!</span><span style="color:#79c0ff">$db_connect</span>){ <span style="color:#ff7b72">die</span>(<span style="color:#a5d6ff">&#39;Database: failed connection !&#39;</span>); } <span style="color:#8b949e;font-style:italic"># check if connection is failed
-</span></span></span></code></pre></div><p>And also recommend that use the follwing settings (just put it below the code above):</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># Allow to use the &#34;Prepared Statement&#34;.
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span><span style="color:#8b949e;font-style:italic"># It prevents the SQL Injection from happening. (false)
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#79c0ff">$db_connect</span><span style="color:#ff7b72;font-weight:bold">-&gt;</span>setAttribute(PDO<span style="color:#ff7b72;font-weight:bold">::</span>ATTR_EMULATE_PREPARES, <span style="color:#ff7b72">false</span>);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">5</span><span><span style="color:#8b949e;font-style:italic"># Whether to prevent convert numeric values to strings when fetching. (false)
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">6</span><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#79c0ff">$db_connect</span><span style="color:#ff7b72;font-weight:bold">-&gt;</span>setAttribute(PDO<span style="color:#ff7b72;font-weight:bold">::</span>ATTR_STRINGIFY_FETCHES, <span style="color:#ff7b72">false</span>);
-</span></span></code></pre></div><p>For more detail, see the PHP official website <a href="https://www.php.net/manual/en/pdo.setattribute.php"   target="_blank">
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>define(<span style="color:#a5d6ff">&#39;DB&#39;</span>,[
+</span></span><span style="display:flex;"><span>  <span style="color:#a5d6ff">&#39;host&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">&#39;localhost&#39;</span>, <span style="color:#8b949e;font-style:italic"># the host of database server
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>  <span style="color:#a5d6ff">&#39;user&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">&#39;root&#39;</span>, <span style="color:#8b949e;font-style:italic"># the user of database
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>  <span style="color:#a5d6ff">&#39;pass&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">&#39;password&#39;</span>, <span style="color:#8b949e;font-style:italic"># the password of user
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>  <span style="color:#a5d6ff">&#39;name&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">&#39;database&#39;</span>, <span style="color:#8b949e;font-style:italic"># the name of database
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">$db_connect</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">new</span> PDO(<span style="color:#a5d6ff">&#34;mysql:host=&#34;</span><span style="color:#ff7b72;font-weight:bold">.</span>DB[<span style="color:#a5d6ff">&#39;host&#39;</span>]<span style="color:#ff7b72;font-weight:bold">.</span><span style="color:#a5d6ff">&#34;;dbname=&#34;</span><span style="color:#ff7b72;font-weight:bold">.</span>DB[<span style="color:#a5d6ff">&#39;name&#39;</span>]<span style="color:#ff7b72;font-weight:bold">.</span><span style="color:#a5d6ff">&#34;;charset=utf8mb4&#34;</span>, DB[<span style="color:#a5d6ff">&#39;user&#39;</span>], DB[<span style="color:#a5d6ff">&#39;pass&#39;</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span>(<span style="color:#ff7b72;font-weight:bold">!</span><span style="color:#79c0ff">$db_connect</span>){ <span style="color:#ff7b72">die</span>(<span style="color:#a5d6ff">&#39;Database: failed connection !&#39;</span>); } <span style="color:#8b949e;font-style:italic"># check if connection is failed
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>And also recommend that use the follwing settings (just put it below the code above):</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Allow to use the &#34;Prepared Statement&#34;.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># It prevents the SQL Injection from happening. (false)
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#79c0ff">$db_connect</span><span style="color:#ff7b72;font-weight:bold">-&gt;</span>setAttribute(PDO<span style="color:#ff7b72;font-weight:bold">::</span>ATTR_EMULATE_PREPARES, <span style="color:#ff7b72">false</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Whether to prevent convert numeric values to strings when fetching. (false)
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#79c0ff">$db_connect</span><span style="color:#ff7b72;font-weight:bold">-&gt;</span>setAttribute(PDO<span style="color:#ff7b72;font-weight:bold">::</span>ATTR_STRINGIFY_FETCHES, <span style="color:#ff7b72">false</span>);
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>For more detail, see the PHP official website <a href="https://www.php.net/manual/en/pdo.setattribute.php"   target="_blank">
     https://www.php.net/manual/en/pdo.setattribute.php</a></p>
 <hr>
 <div id="pre-query--execute" class="anchor"></div>
@@ -856,9 +884,17 @@ But <code>PDO</code> is more than that !
             style="text-decoration-line: none !important;" href="#pre-query" aria-label="Anchor">#</a></span>        
     
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#79c0ff">$sql</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;SELECT * FROM `table` WHERE `id`=:id OR `name`=:name;&#34;</span>;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span><span style="color:#79c0ff">$query</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff">$db_connect</span><span style="color:#ff7b72;font-weight:bold">-&gt;</span>prepare(<span style="color:#79c0ff">$sql</span>, <span style="color:#ff7b72">array</span>(PDO<span style="color:#ff7b72;font-weight:bold">::</span>ATTR_CURSOR <span style="color:#ff7b72;font-weight:bold">=&gt;</span> PDO<span style="color:#ff7b72;font-weight:bold">::</span>CURSOR_FWDONLY));
-</span></span></code></pre></div><p>Just put the sentence of SQL query to the <code>prepare()</code> function, and the values of sentence are able to use the format <code>:value</code> to represent the value field. (the <code>value</code> in <code>:value</code> can be change the any word you want, <strong>except the few sensitive words</strong>. And it&rsquo;s <strong>NOT allow to use the duplicate name</strong>.)</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#79c0ff">$sql</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;SELECT * FROM `table` WHERE `id`=:id OR `name`=:name;&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">$query</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff">$db_connect</span><span style="color:#ff7b72;font-weight:bold">-&gt;</span>prepare(<span style="color:#79c0ff">$sql</span>, <span style="color:#ff7b72">array</span>(PDO<span style="color:#ff7b72;font-weight:bold">::</span>ATTR_CURSOR <span style="color:#ff7b72;font-weight:bold">=&gt;</span> PDO<span style="color:#ff7b72;font-weight:bold">::</span>CURSOR_FWDONLY));
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Just put the sentence of SQL query to the <code>prepare()</code> function, and the values of sentence are able to use the format <code>:value</code> to represent the value field. (the <code>value</code> in <code>:value</code> can be change the any word you want, <strong>except the few sensitive words</strong>. And it&rsquo;s <strong>NOT allow to use the duplicate name</strong>.)</p>
 <p>(It hasn&rsquo;t not yet be executed from now.)</p>
 <div id="execute" class="anchor"></div>
 <h3 class="relative group">Execute 
@@ -868,15 +904,29 @@ But <code>PDO</code> is more than that !
             style="text-decoration-line: none !important;" href="#execute" aria-label="Anchor">#</a></span>        
     
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#79c0ff">$values</span> <span style="color:#ff7b72;font-weight:bold">=</span> [
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>  <span style="color:#a5d6ff">&#39;:id&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">123</span>,
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>  <span style="color:#a5d6ff">&#39;:name&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">&#39;admin&#39;</span>,
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>];
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">5</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">6</span><span><span style="color:#79c0ff">$result</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff">$query</span><span style="color:#ff7b72;font-weight:bold">-&gt;</span>execute(<span style="color:#79c0ff">$values</span>);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">7</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">8</span><span><span style="color:#ff7b72">if</span>(<span style="color:#79c0ff">$result</span> <span style="color:#ff7b72;font-weight:bold">===</span> <span style="color:#ff7b72">false</span>){ <span style="color:#ff7b72">die</span>(<span style="color:#a5d6ff">&#39;Query Error !&#39;</span>); };
-</span></span></code></pre></div><p>Put the values to the <code>execute()</code> function (using array format), and it will return the result, also possible to return <code>false</code> when the query got the some errors.</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#79c0ff">$values</span> <span style="color:#ff7b72;font-weight:bold">=</span> [
+</span></span><span style="display:flex;"><span>  <span style="color:#a5d6ff">&#39;:id&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">123</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a5d6ff">&#39;:name&#39;</span> <span style="color:#ff7b72;font-weight:bold">=&gt;</span> <span style="color:#a5d6ff">&#39;admin&#39;</span>,
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff">$result</span> <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#79c0ff">$query</span><span style="color:#ff7b72;font-weight:bold">-&gt;</span>execute(<span style="color:#79c0ff">$values</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">if</span>(<span style="color:#79c0ff">$result</span> <span style="color:#ff7b72;font-weight:bold">===</span> <span style="color:#ff7b72">false</span>){ <span style="color:#ff7b72">die</span>(<span style="color:#a5d6ff">&#39;Query Error !&#39;</span>); };
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Put the values to the <code>execute()</code> function (using array format), and it will return the result, also possible to return <code>false</code> when the query got the some errors.</p>
 <hr>
 <div id="reference" class="anchor"></div>
 <h2 class="relative group">Reference 
@@ -1111,7 +1161,7 @@ But <code>PDO</code> is more than that !
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-29 16:46:05 &#43;0000 UTC">2022/01/29</time><span class="px-2 text-primary-500">&middot;</span><span>136 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-29 16:46:05 &#43;0000 UTC">2022/01/29</time><span class="px-2 text-primary-500">&middot;</span><span>153 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/MySQL-8-Change-Root-Password/index.md" title="views">0</span> 
     
@@ -1247,7 +1297,7 @@ But <code>PDO</code> is more than that !
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2021-05-25 17:48:08 &#43;0000 UTC">2021/05/25</time><span class="px-2 text-primary-500">&middot;</span><span>312 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2021-05-25 17:48:08 &#43;0000 UTC">2021/05/25</time><span class="px-2 text-primary-500">&middot;</span><span>330 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/SQL-Basic-03/index.md" title="views">0</span> 
     
@@ -1381,7 +1431,7 @@ But <code>PDO</code> is more than that !
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2021-05-25 17:47:08 &#43;0000 UTC">2021/05/25</time><span class="px-2 text-primary-500">&middot;</span><span>231 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2021-05-25 17:47:08 &#43;0000 UTC">2021/05/25</time><span class="px-2 text-primary-500">&middot;</span><span>239 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/SQL-Basic-02/index.md" title="views">0</span> 
     
@@ -1515,7 +1565,7 @@ But <code>PDO</code> is more than that !
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2021-05-25 17:46:08 &#43;0000 UTC">2021/05/25</time><span class="px-2 text-primary-500">&middot;</span><span>212 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2021-05-25 17:46:08 &#43;0000 UTC">2021/05/25</time><span class="px-2 text-primary-500">&middot;</span><span>228 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/SQL-Basic-01/index.md" title="views">0</span> 
     

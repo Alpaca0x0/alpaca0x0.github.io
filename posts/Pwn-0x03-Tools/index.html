@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.82867bf47a612d7462e3555f4fccb5ab28e2bd4b18c37131afdf5ba4d21396ab08ac679cae8e0ae71b26835b657ce022e7aafd352b1ecf7ce672512e5cb25882.js"
-    integrity="sha512-goZ79HphLXRi41VfT8y1qyjivUsYw3Exr99bpNITlqsIrGecro4K5xsmg1tlfOAi56r9NSsez3zmclEuXLJYgg==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
+    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["Pwn-0x03"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "309"
+    "wordCount": "346"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-03-28 12:59:14 &#43;0000 UTC">2023/03/28</time><span class="px-2 text-primary-500">&middot;</span><span>309 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-03-28 12:59:14 &#43;0000 UTC">2023/03/28</time><span class="px-2 text-primary-500">&middot;</span><span>346 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Pwn-0x03-Tools/index.md" title="views">0</span> 
     
@@ -807,8 +807,15 @@
 </h3>
 <p>了解了什麼是「<code>ELF</code>」後，就來提一個指令 — 「<code>elfread</code>」。
 顧名思義，就是可以讀取<code>ELF</code> 相關 info 的指令，實際操作範例如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>readelf ./binary -x .text
-</span></span></code></pre></div><p>參數「<code>-x, --hex-dump</code>」</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>readelf ./binary -x .text
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>參數「<code>-x, --hex-dump</code>」</p>
 </blockquote>
 <blockquote>
 <div id="file" class="anchor"></div>
@@ -820,9 +827,17 @@
     
 </h3>
 <p>輸入<code>file &lt;program&gt;</code>指令即可查看該檔案的一些訊息：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>$ file ./binary
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>hello-world: ELF 64-bit LSB shared object, x86-64, version <span style="color:#a5d6ff">1</span> <span style="color:#ff7b72;font-weight:bold">(</span>SYSV<span style="color:#ff7b72;font-weight:bold">)</span>, dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID<span style="color:#ff7b72;font-weight:bold">[</span>sha1<span style="color:#ff7b72;font-weight:bold">]=</span>aa3701cef10f8698f43d0972300359a60fcb09e3, <span style="color:#ff7b72">for</span> GNU/Linux 3.2.0, stripped
-</span></span></code></pre></div><p>P.s. 如果是自己編譯的朋友，所看到的資訊有不同是正常的，這取決於編譯器或 OS 等多項因素。</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ file ./binary
+</span></span><span style="display:flex;"><span>hello-world: ELF 64-bit LSB shared object, x86-64, version <span style="color:#a5d6ff">1</span> <span style="color:#ff7b72;font-weight:bold">(</span>SYSV<span style="color:#ff7b72;font-weight:bold">)</span>, dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID<span style="color:#ff7b72;font-weight:bold">[</span>sha1<span style="color:#ff7b72;font-weight:bold">]=</span>aa3701cef10f8698f43d0972300359a60fcb09e3, <span style="color:#ff7b72">for</span> GNU/Linux 3.2.0, stripped
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>P.s. 如果是自己編譯的朋友，所看到的資訊有不同是正常的，這取決於編譯器或 OS 等多項因素。</p>
 </blockquote>
 <blockquote>
 <div id="objdump" class="anchor"></div>
@@ -835,9 +850,17 @@
 </h3>
 <p>可以用來將 binary 反組譯成 assembly 的程式。(當然它還有其他功能，但本系列文章著重使用該功能)
 範例使用該應用以 intel 格式反組譯二進制檔案「<code>./binary</code>」：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># 建議搭配 less 指令以方便觀看</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>objdump -d -M intel ./binary | less
-</span></span></code></pre></div><p><code>-d</code> 參數為「<code>disassemble</code>」；
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 建議搭配 less 指令以方便觀看</span>
+</span></span><span style="display:flex;"><span>objdump -d -M intel ./binary | less
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>-d</code> 參數為「<code>disassemble</code>」；
 <code>-M</code> 參數指定程式以何種格式讀取及顯示檔案，如 <code>intel</code>、<code>att</code>、<code>i386</code>、<code>amd64</code>&hellip; 等。</p>
 </blockquote>
 <blockquote>
@@ -853,15 +876,34 @@
 而我們也在「<strong><a href="/posts/Pwn-0x02-Compile-and-ELF/">《Pwn - 0x02》What did the &#34;Compilation&#34; do? And what is ELF?</a></strong>」這篇文章中提到，程式的執行會仰賴<code>loader</code>程式，也時常因「<code>lazy binding</code>」的特性，依賴於 libc 的版本。</p>
 <p>這部份可以透過「<code>ldd</code>」指令來查看當前程式的<code>loader</code>及<code>libc</code>檔案的路徑。使用方式為「<code>ldd ./binary</code>」。</p>
 <p>雖然說 libc 在不同版本中或許使用上感覺不出影響，但實際在底層的運作可能會因為版本而有所不同，因此有時候不得以需要手動指定應用的<code>loader</code>及<code>libc</code>版本。而「<code>patchelf</code>」就可以很方便的做到這點：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># 置換成指定的 loader 檔案</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>patchelf --set-interpreter /path/to/loader ./binary
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span><span style="color:#8b949e;font-style:italic"># 將原有的 libc 至換成指定的 libc 檔案，大多數情況為「libc.so.6」，請使用「ldd」確認後自行調整</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>patchelf --replace-needed libc.so.6 /path/to/libc ./binary
-</span></span></code></pre></div><p>需要注意的是，該指令會<strong>竄改</strong>到檔案本身，建議操作前先對檔案進行備份：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>cp ./binary ./binary.bak
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>patchelf --set-interpreter /path/to/loader ./binary
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>patchelf --replace-needed libc.so.6 /path/to/libc ./binary
-</span></span></code></pre></div><p>這種更動檔案以使其更貼近所期望環境的作法稱作「<code>patch</code>」。</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 置換成指定的 loader 檔案</span>
+</span></span><span style="display:flex;"><span>patchelf --set-interpreter /path/to/loader ./binary
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 將原有的 libc 至換成指定的 libc 檔案，大多數情況為「libc.so.6」，請使用「ldd」確認後自行調整</span>
+</span></span><span style="display:flex;"><span>patchelf --replace-needed libc.so.6 /path/to/libc ./binary
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>需要注意的是，該指令會<strong>竄改</strong>到檔案本身，建議操作前先對檔案進行備份：</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp ./binary ./binary.bak
+</span></span><span style="display:flex;"><span>patchelf --set-interpreter /path/to/loader ./binary
+</span></span><span style="display:flex;"><span>patchelf --replace-needed libc.so.6 /path/to/libc ./binary
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>這種更動檔案以使其更貼近所期望環境的作法稱作「<code>patch</code>」。</p>
 </blockquote>
 <hr>
 <p>其常見的分析軟體有<a href="https://zh.wikipedia.org/zh-tw/IDA_Pro"   target="_blank">
@@ -888,9 +930,17 @@
             style="text-decoration-line: none !important;" href="#ubuntu" aria-label="Anchor">#</a></span>        
     
 </h4>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>apt-get update -y
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>apt-get install -y gdb
-</span></span></code></pre></div><div id="source-code" class="anchor"></div>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get update -y
+</span></span><span style="display:flex;"><span>apt-get install -y gdb
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div id="source-code" class="anchor"></div>
 <h4 class="relative group">Source code 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
@@ -901,18 +951,35 @@
 <p>可以在官方站點上選擇不同版本的原始碼壓縮檔 <a href="http://ftp.gnu.org/gnu/gdb"   target="_blank">
     http://ftp.gnu.org/gnu/gdb</a>
 以下示範安裝版本<code>12.1</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 1</span><span><span style="color:#8b949e;font-style:italic"># For example, install version 12.1</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 2</span><span><span style="color:#8b949e;font-style:italic"># Get file</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 3</span><span>wget <span style="color:#a5d6ff">&#34;http://ftp.gnu.org/gnu/gdb/gdb-12.1.tar.gz&#34;</span> 
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 4</span><span><span style="color:#8b949e;font-style:italic"># Extract</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 5</span><span>tar -xvzf gdb-12.1.tar.gz
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 6</span><span>cd ./gdb-12.1
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 7</span><span><span style="color:#8b949e;font-style:italic"># Compile</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 8</span><span>./configure
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 9</span><span>make
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">10</span><span><span style="color:#8b949e;font-style:italic"># Install</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">11</span><span>make install
-</span></span></code></pre></div></blockquote>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># For example, install version 12.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Get file</span>
+</span></span><span style="display:flex;"><span>wget <span style="color:#a5d6ff">&#34;http://ftp.gnu.org/gnu/gdb/gdb-12.1.tar.gz&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Extract</span>
+</span></span><span style="display:flex;"><span>tar -xvzf gdb-12.1.tar.gz
+</span></span><span style="display:flex;"><span>cd ./gdb-12.1
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Compile</span>
+</span></span><span style="display:flex;"><span>./configure
+</span></span><span style="display:flex;"><span>make
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Install</span>
+</span></span><span style="display:flex;"><span>make install
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
 <blockquote>
 <div id="how-to-use" class="anchor"></div>
 <h4 class="relative group">How to use? 
@@ -937,31 +1004,79 @@
 </h3>
 <p>這是一個 python 的套件，其顧名思義就是為打 pwn 而生的工具。
 直接透過 pip 安裝即可：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>pip install pwntools
-</span></span></code></pre></div></blockquote>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install pwntools
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
 <blockquote>
 <p>接著創建一個 python 檔案，並引用 <code>pwntools</code> 套件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#ff7b72">from</span> <span style="color:#ff7b72">pwn</span> <span style="color:#ff7b72">import</span> <span style="color:#ff7b72;font-weight:bold">*</span>
-</span></span></code></pre></div></blockquote>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff7b72">from</span> <span style="color:#ff7b72">pwn</span> <span style="color:#ff7b72">import</span> <span style="color:#ff7b72;font-weight:bold">*</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
 <p>其開啟程式的模式有常見的以下幾種：</p>
 <blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># 創建一個本地程序</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>r <span style="color:#ff7b72;font-weight:bold">=</span> process(<span style="color:#a5d6ff">&#39;./binary&#39;</span>)
-</span></span></code></pre></div></blockquote>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 創建一個本地程序</span>
+</span></span><span style="display:flex;"><span>r <span style="color:#ff7b72;font-weight:bold">=</span> process(<span style="color:#a5d6ff">&#39;./binary&#39;</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
 <blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># 創建一個遠端連線</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>r <span style="color:#ff7b72;font-weight:bold">=</span> remote(<span style="color:#a5d6ff">&#39;./binary&#39;</span>)
-</span></span></code></pre></div></blockquote>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 創建一個遠端連線</span>
+</span></span><span style="display:flex;"><span>r <span style="color:#ff7b72;font-weight:bold">=</span> remote(<span style="color:#a5d6ff">&#39;./binary&#39;</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
 <blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># 使用 gdb 啟動本地程序，參數二可以放 gdb 指令，指令部份之後會介紹到</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>r <span style="color:#ff7b72;font-weight:bold">=</span> gdb<span style="color:#ff7b72;font-weight:bold">.</span>debug(<span style="color:#a5d6ff">&#39;./binary&#39;</span>, <span style="color:#a5d6ff">&#39;b main&#39;</span>)
-</span></span></code></pre></div></blockquote>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 使用 gdb 啟動本地程序，參數二可以放 gdb 指令，指令部份之後會介紹到</span>
+</span></span><span style="display:flex;"><span>r <span style="color:#ff7b72;font-weight:bold">=</span> gdb<span style="color:#ff7b72;font-weight:bold">.</span>debug(<span style="color:#a5d6ff">&#39;./binary&#39;</span>, <span style="color:#a5d6ff">&#39;b main&#39;</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
 <blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># 創建一個程序，並用 gdb attach 上該程序進行動態分析</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span><span style="color:#8b949e;font-style:italic"># 與上者還是有些許差異，不過這部份就是「坑」了，日後踩到再說</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>r <span style="color:#ff7b72;font-weight:bold">=</span> process(<span style="color:#a5d6ff">&#39;./binary&#39;</span>)
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>gdb<span style="color:#ff7b72;font-weight:bold">.</span>attach(r, <span style="color:#a5d6ff">&#39;b main&#39;</span>)
-</span></span></code></pre></div></blockquote>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 創建一個程序，並用 gdb attach 上該程序進行動態分析</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 與上者還是有些許差異，不過這部份就是「坑」了，日後踩到再說</span>
+</span></span><span style="display:flex;"><span>r <span style="color:#ff7b72;font-weight:bold">=</span> process(<span style="color:#a5d6ff">&#39;./binary&#39;</span>)
+</span></span><span style="display:flex;"><span>gdb<span style="color:#ff7b72;font-weight:bold">.</span>attach(r, <span style="color:#a5d6ff">&#39;b main&#39;</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div></blockquote>
 <p>本系列文章將以「<code>gdb.debug()</code>」進行動態分析；
 以「<code>r.process()</code>」進行最後的 payload 測試；
 以「<code>r.remote()</code>」進行實際攻擊。</p>
@@ -1204,7 +1319,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-10-13 14:11:28 &#43;0000 UTC">2022/10/13</time><span class="px-2 text-primary-500">&middot;</span><span>2146 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-10-13 14:11:28 &#43;0000 UTC">2022/10/13</time><span class="px-2 text-primary-500">&middot;</span><span>2234 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Pwn-0x02-Compile-and-ELF/index.md" title="views">0</span> 
     

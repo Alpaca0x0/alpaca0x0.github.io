@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.82867bf47a612d7462e3555f4fccb5ab28e2bd4b18c37131afdf5ba4d21396ab08ac679cae8e0ae71b26835b657ce022e7aafd352b1ecf7ce672512e5cb25882.js"
-    integrity="sha512-goZ79HphLXRi41VfT8y1qyjivUsYw3Exr99bpNITlqsIrGecro4K5xsmg1tlfOAi56r9NSsez3zmclEuXLJYgg==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
+    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["ssh","tunnel","proxy"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "344"
+    "wordCount": "364"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2021-08-29 23:57:57 &#43;0000 UTC">2021/08/29</time><span class="px-2 text-primary-500">&middot;</span><span>344 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2021-08-29 23:57:57 &#43;0000 UTC">2021/08/29</time><span class="px-2 text-primary-500">&middot;</span><span>364 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/SSH-Proxy/index.md" title="views">0</span> 
     
@@ -784,11 +784,21 @@
     
 </h2>
 <p>Connecte to the remote host with SSH:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># ssh &lt;user-name&gt;@&lt;host-ip&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span><span style="color:#8b949e;font-style:italic"># example</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>ssh alpaca@192.168.0.2
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span><span style="color:#8b949e;font-style:italic"># the default port of SSH is 22, or you can use the parameter &#34;-p&#34; to specify the ssh port of the remote host.</span>
-</span></span></code></pre></div><hr>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># ssh &lt;user-name&gt;@&lt;host-ip&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># example</span>
+</span></span><span style="display:flex;"><span>ssh alpaca@192.168.0.2
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># the default port of SSH is 22, or you can use the parameter &#34;-p&#34; to specify the ssh port of the remote host.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <div id="local-port-forwarding-tcp-port--unix-socket-forward" class="anchor"></div>
 <h2 class="relative group">Local port forwarding (TCP port / Unix socket forward) 
     <span
@@ -798,16 +808,34 @@
     
 </h2>
 <p>Forward local TCP Port or Unix Socket with parameter &ldquo;-L&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>-L <span style="color:#ff7b72;font-weight:bold">[</span>bind_address:<span style="color:#ff7b72;font-weight:bold">]</span>port:host:hostport
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>-L <span style="color:#ff7b72;font-weight:bold">[</span>bind_address:<span style="color:#ff7b72;font-weight:bold">]</span>port:remote_socket
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>-L local_socket:host:hostport
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>-L local_socket:remote_socket
-</span></span></code></pre></div><blockquote>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>-L <span style="color:#ff7b72;font-weight:bold">[</span>bind_address:<span style="color:#ff7b72;font-weight:bold">]</span>port:host:hostport
+</span></span><span style="display:flex;"><span>-L <span style="color:#ff7b72;font-weight:bold">[</span>bind_address:<span style="color:#ff7b72;font-weight:bold">]</span>port:remote_socket
+</span></span><span style="display:flex;"><span>-L local_socket:host:hostport
+</span></span><span style="display:flex;"><span>-L local_socket:remote_socket
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>Specifies that connections to the given TCP port or Unix socket on the local (client) host are to be for-warded to the given host and port, or Unix socket, on the remote side.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># example</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>ssh -L 8877:192.168.0.101:7766 alpaca@192.168.0.102
-</span></span></code></pre></div><p>In the example above, it will forward the connections that given in arg(<code>192.168.0.102</code>) from local port <code>8877</code> to remote server port <code>7766</code> , and compelete the progress.</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># example</span>
+</span></span><span style="display:flex;"><span>ssh -L 8877:192.168.0.101:7766 alpaca@192.168.0.102
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>In the example above, it will forward the connections that given in arg(<code>192.168.0.102</code>) from local port <code>8877</code> to remote server port <code>7766</code> , and compelete the progress.</p>
 <hr>
 <div id="reverse-tunneling" class="anchor"></div>
 <h2 class="relative group">Reverse tunneling 
@@ -818,17 +846,36 @@
     
 </h2>
 <p>It&rsquo;s used in the same way as <strong>Local port forwarding (-L)</strong>, just reverse.</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>-R <span style="color:#ff7b72;font-weight:bold">[</span>bind_address:<span style="color:#ff7b72;font-weight:bold">]</span>port:host:hostport
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>-R <span style="color:#ff7b72;font-weight:bold">[</span>bind_address:<span style="color:#ff7b72;font-weight:bold">]</span>port:local_socket
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>-R remote_socket:host:hostport
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>-R remote_socket:local_socket
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">5</span><span>-R <span style="color:#ff7b72;font-weight:bold">[</span>bind_address:<span style="color:#ff7b72;font-weight:bold">]</span>port
-</span></span></code></pre></div><blockquote>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>-R <span style="color:#ff7b72;font-weight:bold">[</span>bind_address:<span style="color:#ff7b72;font-weight:bold">]</span>port:host:hostport
+</span></span><span style="display:flex;"><span>-R <span style="color:#ff7b72;font-weight:bold">[</span>bind_address:<span style="color:#ff7b72;font-weight:bold">]</span>port:local_socket
+</span></span><span style="display:flex;"><span>-R remote_socket:host:hostport
+</span></span><span style="display:flex;"><span>-R remote_socket:local_socket
+</span></span><span style="display:flex;"><span>-R <span style="color:#ff7b72;font-weight:bold">[</span>bind_address:<span style="color:#ff7b72;font-weight:bold">]</span>port
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>Specifies that connections to the given TCP port or Unix socket on the remote (server) host are to be forwarded to the local side.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># example</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>ssh -R 192.168.0.101:7766:localhost:8085 alpaca@192.168.0.102
-</span></span></code></pre></div><p>It will forward the traffic from <code>192.168.0.101:7766</code> to <code>localhost:8085</code>.</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># example</span>
+</span></span><span style="display:flex;"><span>ssh -R 192.168.0.101:7766:localhost:8085 alpaca@192.168.0.102
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>It will forward the traffic from <code>192.168.0.101:7766</code> to <code>localhost:8085</code>.</p>
 <div id="if-its-not-working" class="anchor"></div>
 <h4 class="relative group">If it&rsquo;s not working 
     <span
@@ -855,10 +902,19 @@
 <p>Specifies a local “dynamic” application-level port forwarding.</p>
 </blockquote>
 <p>For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#8b949e;font-style:italic"># ssh &lt;user-name&gt;@&lt;host-ip&gt; [-D [bind_address:]port]</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span><span style="color:#8b949e;font-style:italic"># example</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>ssh alpaca@123.123.123.123 -D <span style="color:#a5d6ff">1234</span>
-</span></span></code></pre></div><p>We made a tunnel that connects host <code>123.123.123.123</code>, and port of tunnel is <code>1234</code>.</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># ssh &lt;user-name&gt;@&lt;host-ip&gt; [-D [bind_address:]port]</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># example</span>
+</span></span><span style="display:flex;"><span>ssh alpaca@123.123.123.123 -D <span style="color:#a5d6ff">1234</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>We made a tunnel that connects host <code>123.123.123.123</code>, and port of tunnel is <code>1234</code>.</p>
 <p>Now, we can take <code>localhost:1234</code> as a proxy server. (That can forward for our connection to <code>123.123.123.123:22</code>.)</p>
         </div>
                 
