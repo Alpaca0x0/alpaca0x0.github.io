@@ -783,7 +783,7 @@
         
 
 
-        <div class="max-w-prose mb-20">
+        <div class="max-w-max mb-20" style="word-wrap:break-word;">
           <p>用 GnuPG 簽署、驗證、加密、解密 你的檔案及訊息。</p>
 <hr>
 <div id="how-to-get-the-keypair" class="anchor"></div>
@@ -807,7 +807,7 @@
 <p>假設要簽章的文件「<code>hello.txt</code>」其內容為：</p>
 <pre tabindex="0"><code>Hello World!
 </code></pre><p>可以使用該指令來簽署檔案：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e"># gpg --armor --sign --sign-with &lt;Key-ID&gt; &lt;File-Name&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#78787e"># gpg --armor --sign --sign-with &lt;Key-ID&gt; &lt;File-Name&gt;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gpg --armor --sign --sign-with 36EECBC209A936F5AF9B25A469219C5CB53AF7C3 hello.txt
 </span></span></code></pre></div><p>之後會得出簽章後的檔案「<code>hello.txt.asc</code>」
 後綴「<code>.asc</code>」表示此檔案為「<code>ASCII</code>」格式，當然如果你不想要，也可以不使用「<code>--armor, -a</code>」參數。</p>
@@ -856,7 +856,7 @@ oOJR/GGBNGRHSQ==
     
 </h2>
 <p>要驗證檔案只需要在擁有該檔案相對應<strong>公鑰</strong>的情況下，輸入指令：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e"># gpg --verify &lt;File-Name&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#78787e"># gpg --verify &lt;File-Name&gt;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gpg --verify hello.txt.asc
 </span></span></code></pre></div><ul>
 <li>不需要指定解密金鑰嗎？
@@ -866,10 +866,10 @@ oOJR/GGBNGRHSQ==
 </li>
 </ul>
 <p>若是有著相對應金鑰的情況下，應該可以正常驗證該檔案：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>gpg: Signature made Mon Jul <span style="color:#ae81ff">19</span> 10:31:53 <span style="color:#ae81ff">2021</span> CST
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>gpg: Signature made Mon Jul <span style="color:#ff9f43">19</span> 10:31:53 <span style="color:#ff9f43">2021</span> CST
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gpg:                using RSA key 36EECBC209A936F5AF9B25A469219C5CB53AF7C3
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>gpg: Good signature from <span style="color:#e6db74">&#34;Alpaca0x0 &lt;alpaca0x0@example.com&gt;&#34;</span> <span style="color:#f92672">[</span>ultimate<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>gpg: WARNING: not a detached signature; file <span style="color:#e6db74">&#39;hello.txt&#39;</span> was NOT verified!
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>gpg: Good signature from <span style="color:#5af78e">&#34;Alpaca0x0 &lt;alpaca0x0@example.com&gt;&#34;</span> <span style="color:#ff6ac1">[</span>ultimate<span style="color:#ff6ac1">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>gpg: WARNING: not a detached signature; file <span style="color:#5af78e">&#39;hello.txt&#39;</span> was NOT verified!
 </span></span></code></pre></div><ul>
 <li>最後一行怎麼有個 <code>WARNING</code>？
 <ul>
@@ -889,13 +889,13 @@ oOJR/GGBNGRHSQ==
 <p>上述的簽章得出的檔案「<code>hello.txt.asc</code>」是<strong>涵蓋原始資訊</strong>的，因此你指需要提供該 <strong><code>檔案</code></strong> 及 <strong><code>公鑰</code></strong>，他人便可以<strong>驗證</strong>並<strong>查看</strong>內容。
 不過若是你想將<code>簽名</code>及<code>檔案</code>分開存放，那麼可以加上「<code>--detach-sign</code>」參數。</p>
 <p>若是簽章檔案時使用參數「<code>--detach-sign</code>」則表示使用「<code>分離式簽章</code>」：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e"># e.g.</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#78787e"># e.g.</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gpg --armor --detach-sign --sign --sign-with 36EECBC209A936F5AF9B25A469219C5CB53AF7C3 hello.txt
 </span></span></code></pre></div><p>這麼一來，產生出的「<code>hello.txt.asc</code>」檔案僅僅是<code>簽名</code>，而不包含原始檔案的內容，因此你必須將<code>公鑰</code>、<code>原始檔案</code>、<code>簽名</code>一並提供，他人才能驗證及查看。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>gpg: assuming signed data in <span style="color:#e6db74">&#39;hello.txt&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gpg: Signature made Mon Jul <span style="color:#ae81ff">19</span> 11:04:55 <span style="color:#ae81ff">2021</span> CST
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>gpg: assuming signed data in <span style="color:#5af78e">&#39;hello.txt&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gpg: Signature made Mon Jul <span style="color:#ff9f43">19</span> 11:04:55 <span style="color:#ff9f43">2021</span> CST
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>gpg:                using RSA key 36EECBC209A936F5AF9B25A469219C5CB53AF7C3
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>gpg: Good signature from <span style="color:#e6db74">&#34;Alpaca0x0 &lt;alpaca0x0@example.com&gt;&#34;</span> <span style="color:#f92672">[</span>ultimate<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>gpg: Good signature from <span style="color:#5af78e">&#34;Alpaca0x0 &lt;alpaca0x0@example.com&gt;&#34;</span> <span style="color:#ff6ac1">[</span>ultimate<span style="color:#ff6ac1">]</span>
 </span></span></code></pre></div><p>也可以注意到底下不會出現「<code>gpg: WARNING: not a detached signature; file 'hello.txt' was NOT verified!</code>」的訊息了，因為這時候的「<code>hello.txt</code>」是受到「<code>hello.txt.asc</code>」認證過的檔案，可以確保沒有受到竄改。</p>
 <hr>
 <div id="decrypting-files" class="anchor"></div>
@@ -907,19 +907,19 @@ oOJR/GGBNGRHSQ==
     
 </h2>
 <p>上述的都是簽章及驗證，若是要查看內容則需要用到解密指令：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e"># gpg --decrypt &lt;File-Name&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#78787e"># gpg --decrypt &lt;File-Name&gt;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gpg --decrypt hello.txt.asc
 </span></span></code></pre></div><p>與「<code>--verify</code>」一樣，不需要指定解密公鑰</p>
 <p>若是有對應的公鑰，就可以看到內容及簽章資訊了：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Hello World!
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gpg: Signature made Mon Jul <span style="color:#ae81ff">19</span> 12:30:52 <span style="color:#ae81ff">2021</span> CST
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>Hello World!
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gpg: Signature made Mon Jul <span style="color:#ff9f43">19</span> 12:30:52 <span style="color:#ff9f43">2021</span> CST
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>gpg:                using RSA key 36EECBC209A936F5AF9B25A469219C5CB53AF7C3
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>gpg: Good signature from <span style="color:#e6db74">&#34;Alpaca0x0 &lt;alpaca0x0@example.com&gt;&#34;</span> <span style="color:#f92672">[</span>ultimate<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>gpg: Good signature from <span style="color:#5af78e">&#34;Alpaca0x0 &lt;alpaca0x0@example.com&gt;&#34;</span> <span style="color:#ff6ac1">[</span>ultimate<span style="color:#ff6ac1">]</span>
 </span></span></code></pre></div><p>當然也可以將結果輸出到指定檔案：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e"># gpg --output &lt;Output-File-Name&gt; --decrypt &lt;Input-File-Name&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#75715e"># gpg --decrypt &lt;Input-File-Name&gt; &gt; &lt;Output-File-Name&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#78787e"># gpg --output &lt;Output-File-Name&gt; --decrypt &lt;Input-File-Name&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#78787e"># gpg --decrypt &lt;Input-File-Name&gt; &gt; &lt;Output-File-Name&gt;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>gpg --output hello.txt.dec --decrypt hello.txt.asc
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#75715e"># or</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#78787e"># or</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>gpg --decrypt hello.txt.asc
 </span></span></code></pre></div><hr>
 <div id="encrypting" class="anchor"></div>
@@ -938,7 +938,7 @@ oOJR/GGBNGRHSQ==
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e"># gpg --armor --encrypt --recipient &lt;Key-ID&gt; &lt;File-Name&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#78787e"># gpg --armor --encrypt --recipient &lt;Key-ID&gt; &lt;File-Name&gt;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gpg --armor --encrypt --recipient 36EECBC209A936F5AF9B25A469219C5CB53AF7C3 hello.txt
 </span></span></code></pre></div><p>p.s. 參數「<code>--recipient, -r</code>」為指定對象，如例子中指定要執行<code>encrypt</code>的公鑰，即「<code>36EECBC209A936F5AF9B25A469219C5CB53AF7C3</code>」。</p>
 <hr>
@@ -952,7 +952,7 @@ oOJR/GGBNGRHSQ==
 </h2>
 <p>在使用「<code>--sign</code>」簽名時，可以搭配「<code>--encrypt</code>」使用。</p>
 <p>若我要將檔案「<code>hello.txt</code>」簽名，並且我希望僅能由我的好友 Bob 接收該檔案，因此我使用 Bob 提供給我的公鑰「<code>CEE24977933B19A42EEA8CB96DC577B036FDDE87</code>」來<strong>將簽名後的檔案加密</strong>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e"># gpg --armor --sign --encrypt --sign-with &lt;Your-Private-Key-ID&gt; --recipient &lt;Recipient-Public-Key-ID&gt; --encrypt &lt;File-Name&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#78787e"># gpg --armor --sign --encrypt --sign-with &lt;Your-Private-Key-ID&gt; --recipient &lt;Recipient-Public-Key-ID&gt; --encrypt &lt;File-Name&gt;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gpg --armor --sign --sign-with 36EECBC209A936F5AF9B25A469219C5CB53AF7C3 --recipient CEE24977933B19A42EEA8CB96DC577B036FDDE87 hello.txt
 </span></span></code></pre></div><p>則檔案「<code>hello.txt.asc</code>」僅能讓<strong>同時擁有</strong> <code>我的公鑰</code> 及 <code>Bob 的私鑰</code> 兩把鑰匙的人解密。</p>
 <p>p.s. 用「<code>--recipient, -r</code>」參數來指定<code>--encrypt</code>的對象，也就是欲用來加密的公鑰。</p>

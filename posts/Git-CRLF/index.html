@@ -757,7 +757,7 @@
         
 
 
-        <div class="max-w-prose mb-20">
+        <div class="max-w-max mb-20" style="word-wrap:break-word;">
           <p>在不同 OS 底下共同編輯一個 git repository 時，可能就會出現這個問題，要解決該問題其實也很簡單，其原理及解決方法敬請聽我娓娓道來。</p>
 <hr>
 <div id="碰到的情況" class="anchor"></div>
@@ -824,12 +824,12 @@
 依照剛剛所提到的，Windows 的換行符號為「<code>\r\n</code>」，而 Linux 則為「<code>\n</code>」。</p>
 <p>那麼舉例當文字「<code>第一行\r\n第二行</code>」在 Windows 及 Linux 間會如何顯示呢？
 答案是：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e"># windows</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#78787e"># windows</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>第一行
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>第二行
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#75715e"># Linux</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>第一行<span style="color:#ae81ff">\r</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#78787e"># Linux</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>第一行<span style="color:#5af78e">\r</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>第二行
 </span></span></code></pre></div><p>由於 Windows 的換行符號比 Linux 多出了一個「<code>\r</code>」，因此在 Linux 作業系統當中，依舊會將「<code>\n</code>」解釋成換行，而「<code>\r</code>」則原封不動保留。
 這導致幾乎每行文字後方都會跟著一個「<code>\r</code>」(注意，這是特殊符號表示，並不是真的顯示一個「<code>\r</code>」)。</p>
@@ -848,7 +848,7 @@
 </h2>
 <p>在 git 當中有一項設定可以用來自動將「<code>\r\n</code>」當作「<code>\n</code>」看待。
 可以簡單的透過更改<code>git 全域設定</code>來啟用該功能：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git config --global core.autocrlf true
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git config --global core.autocrlf <span style="color:#ff5c57">true</span>
 </span></span></code></pre></div><p>(p.s. 但在團隊開發上，更推薦的作法是更改「<code>.gitattributes</code>」)</p>
 <hr>
 <div id="unix2dos--dos2unix" class="anchor"></div>

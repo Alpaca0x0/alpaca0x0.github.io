@@ -780,7 +780,7 @@
         
 
 
-        <div class="max-w-prose mb-20">
+        <div class="max-w-max mb-20" style="word-wrap:break-word;">
           <p>使用 git push 推送檔案到 Github 上時，被告知<strong>檔案太大</strong>無法推送！？馬上教你怎麼解決！</p>
 <hr>
 <div id="報錯" class="anchor"></div>
@@ -793,10 +793,10 @@
 </h2>
 <p>當你嘗試使用 <code>git push</code> 推送超過<code>100 MB</code>的檔案時，沒意外就會收到這樣的錯誤。
 這是因為 Github <strong>一個檔案最大上傳限制</strong>就是<code>100 MB</code>。(ps. 分開上傳可以，但不能同個檔案 100 MB)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ remote: error: GH001: Large files detected.
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ remote: error: GH001: Large files detected.
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>$ remote: error: Trace: xxxxxxxxxxxxxxxxxxxx
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>$ remote: error: See http://git.io/iEPt8g <span style="color:#66d9ef">for</span> more information.
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>$ remote: error: File xxxxxxxxxxxxx is 101.00 MB; this exceeds GitHub<span style="color:#960050;background-color:#1e0010">&#39;</span>s file size limit of <span style="color:#ae81ff">100</span> MB
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>$ remote: error: See http://git.io/iEPt8g <span style="color:#ff6ac1">for</span> more information.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>$ remote: error: File xxxxxxxxxxxxx is 101.00 MB; this exceeds GitHub<span style="color:#ff5c57">&#39;</span>s file size limit of <span style="color:#ff9f43">100</span> MB
 </span></span></code></pre></div><hr>
 <div id="安裝-git-lfs-解決" class="anchor"></div>
 <h2 class="relative group">安裝 Git-LFS 解決！ 
@@ -815,7 +815,7 @@
             style="text-decoration-line: none !important;" href="#debian-and-ubuntu" aria-label="Anchor">#</a></span>        
     
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sudo apt-get install git-lfs
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git lfs install
 </span></span></code></pre></div><hr>
@@ -827,7 +827,7 @@
             style="text-decoration-line: none !important;" href="#mac-osx" aria-label="Anchor">#</a></span>        
     
 </h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>brew update
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>brew update
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>brew install git-lfs
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git lfs install
 </span></span></code></pre></div><hr>
@@ -869,7 +869,7 @@ b. <code>sudo yum install git2u</code></p>
             style="text-decoration-line: none !important;" href="#step2-%e5%ae%89%e8%a3%9d-git-lfs" aria-label="Anchor">#</a></span>        
     
 </h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sudo yum install git-lfs
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git lfs install
 </span></span></code></pre></div><hr>
@@ -919,12 +919,12 @@ b. <code>sudo yum install git2u</code></p>
 <blockquote>
 <p>在下 git 指令時，你只需要將追蹤大檔案(超過 100 MB)的指令 <code>git add</code> 改成 <code>git lfs track</code>。
 舉例來說，如果要追蹤副檔名為<code>.psd</code>的大檔案，那請使用</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git lfs track <span style="color:#e6db74">&#34;*.psd&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git lfs track <span style="color:#5af78e">&#34;*.psd&#34;</span>
 </span></span></code></pre></div><p>而<strong>不是</strong> <code>git add &quot;*.psd&quot;</code> ！</p>
 </blockquote>
 <blockquote>
 <p>並且確保檔案 <code>.gitattributes</code> 有被追蹤。 (這是用來告知 github 此為大型檔案的文件)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git add .gitattributes
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git add .gitattributes
 </span></span></code></pre></div></blockquote>
 <p>之後的指令照舊， <code>git add</code> &gt; <code>git commit</code> &gt; <code>git push</code> ！
 回到 Github Repository 就可以發現成功被推送了。</p>
@@ -945,10 +945,10 @@ b. <code>sudo yum install git2u</code></p>
 另外也請確保檔案「<strong><code>.gitattributes</code></strong>」不再被追蹤。(建議如果不需要，請直接下 <strong><code>git rm .gitattributes</code></strong> 刪除它)</li>
 </ul>
 <p>範例:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git lfs uninstall
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>git lfs uninstall
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>git rm .gitattributes
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>git add .
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git commit <span style="color:#e6db74">&#34;Uninstall LFS&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>git commit <span style="color:#5af78e">&#34;Uninstall LFS&#34;</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>git push origin main
 </span></span></code></pre></div><hr>
 <div id="參考資料" class="anchor"></div>

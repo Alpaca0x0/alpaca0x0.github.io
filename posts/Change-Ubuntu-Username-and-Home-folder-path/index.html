@@ -751,7 +751,7 @@
         
 
 
-        <div class="max-w-prose mb-20">
+        <div class="max-w-max mb-20" style="word-wrap:break-word;">
           <hr>
 <div id="permission" class="anchor"></div>
 <h2 class="relative group">Permission 
@@ -775,12 +775,12 @@
 </h2>
 <p>You need to logout the user before change username.</p>
 <p>Change user and group name, for example, change username from <code>older</code> to <code>newer</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>usermod -l newer older
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>usermod -l newer older
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>groupmod -n newer older
 </span></span></code></pre></div><p>If system show the message <code>usermod: user older is currently used by process xxxx</code> when you trying to enter the commands above, it means that you have not fully logged out all of this user.</p>
 <p>You can check what process is hogging the user by <code>htop</code>(or <code>top</code>), and kill the process.
 Or just kill the all processes which is run on this user, for example, to kill the all processes running by user <code>older</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>killall -u older
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>killall -u older
 </span></span></code></pre></div><p>Btw, you can also use the <code>w</code>(or <code>who</code>) command to check which users are logged in.</p>
 <hr>
 <div id="change-home-holder" class="anchor"></div>
@@ -792,7 +792,7 @@ Or just kill the all processes which is run on this user, for example, to kill t
     
 </h2>
 <p>For example, the new username is <code>newer</code>, enter the command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>usermod -d /home/newer -m newer
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>usermod -d /home/newer -m newer
 </span></span></code></pre></div><p>If nothing else, the home folder of the user <code>newer</code> has been changed to <code>/home/newer</code>.</p>
 <hr>
 <div id="reference" class="anchor"></div>

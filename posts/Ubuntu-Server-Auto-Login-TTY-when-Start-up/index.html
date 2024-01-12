@@ -747,7 +747,7 @@
         
 
 
-        <div class="max-w-prose mb-20">
+        <div class="max-w-max mb-20" style="word-wrap:break-word;">
           <hr>
 <div id="edit-server-config" class="anchor"></div>
 <h2 class="relative group">Edit server config 
@@ -758,13 +758,13 @@
     
 </h2>
 <p>於終端輸入指令：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo systemctl edit getty@tty1.service
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo systemctl edit getty@tty1.service
 </span></span></code></pre></div><p>若是要自動登入於其他 tty，如<code>tty 2</code>則將<code>getty@tty1.service</code>修改為<code>getty@tty2.service</code>，以此類推。</p>
 <p>接著在該檔案中新增如下資訊：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#f92672">[</span>Service<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ExecStart<span style="color:#f92672">=</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>ExecStart<span style="color:#f92672">=</span>-/sbin/agetty --noissue --autologin root %I $TERM
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Type<span style="color:#f92672">=</span>idle
+<div class="highlight"><pre tabindex="0" style="color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#ff6ac1">[</span>Service<span style="color:#ff6ac1">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#ff5c57">ExecStart</span><span style="color:#ff6ac1">=</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#ff5c57">ExecStart</span><span style="color:#ff6ac1">=</span>-/sbin/agetty --noissue --autologin root %I <span style="color:#ff5c57">$TERM</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#ff5c57">Type</span><span style="color:#ff6ac1">=</span>idle
 </span></span></code></pre></div><p>其中的<code>root</code>為欲自動登入的使用者，可依需求自行修改。
 接著儲存檔案，在重新開機後便可以發現自動在 tty 1 登入方才所設定的使用者。</p>
 <p>如果檔案寫入失敗，那可能需要自行創建資料夾<code>/etc/systemd/system/getty@tty1.service.d/</code>及檔案<code>/etc/systemd/system/getty@tty1.service.d/override.conf</code>。(若非<code>tty 1</code>請自行修改路徑名稱)</p>
