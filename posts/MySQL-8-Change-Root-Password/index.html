@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
-    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a0bd0923148e5b8ed42b57178d2183323d74e56cee3f69794f98a1b2d89a02566fd45d4a2ddddda9a2311b9c98ad0758ff99f3d8a8bd6ed8cb3b83bc81eb33ce.js"
+    integrity="sha512-oL0JIxSOW47UK1cXjSGDMj105WzuP2l5T5ihstiaAlZv1F1KLd3dqaIxG5yYrQdY/5nz2Ki9btjLO4O8geszzg==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["mysql","root password","change password"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "153"
+    "wordCount": "136"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-29 16:46:05 &#43;0000 UTC">2022/01/29</time><span class="px-2 text-primary-500">&middot;</span><span>153 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-29 16:46:05 &#43;0000 UTC">2022/01/29</time><span class="px-2 text-primary-500">&middot;</span><span>136 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/MySQL-8-Change-Root-Password/index.md" title="views">0</span> 
     
@@ -772,45 +772,18 @@
     
 </h2>
 <p>You maybe need <code>sudo</code> in your case.</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># turn off mysqld</span>
-</span></span><span style="display:flex;"><span>/etc/init.d/mysql stop
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># use safe mode</span>
-</span></span><span style="display:flex;"><span>mysqld_safe --skip-grant-tables &amp;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>If it show the error message:</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysqld_safe Logging to <span style="color:#a5d6ff">&#39;/var/log/mysql/error.log&#39;</span>.
-</span></span><span style="display:flex;"><span>mysqld_safe Directory <span style="color:#a5d6ff">&#39;/var/run/mysqld&#39;</span> <span style="color:#ff7b72">for</span> UNIX socket file don<span style="color:#f85149">&#39;</span>t exists.
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Try this before run the safe mode of mysqld:</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p /var/run/mysqld
-</span></span><span style="display:flex;"><span>chown mysql:mysql /var/run/mysqld
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e"># turn off mysqld</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>/etc/init.d/mysql stop
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#75715e"># use safe mode</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>mysqld_safe --skip-grant-tables &amp;
+</span></span></code></pre></div><p>If it show the error message:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mysqld_safe Logging to <span style="color:#e6db74">&#39;/var/log/mysql/error.log&#39;</span>.
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>mysqld_safe Directory <span style="color:#e6db74">&#39;/var/run/mysqld&#39;</span> <span style="color:#66d9ef">for</span> UNIX socket file don<span style="color:#960050;background-color:#1e0010">&#39;</span>t exists.
+</span></span></code></pre></div><p>Try this before run the safe mode of mysqld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkdir -p /var/run/mysqld
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>chown mysql:mysql /var/run/mysqld
+</span></span></code></pre></div><hr>
 <div id="change-password" class="anchor"></div>
 <h2 class="relative group">Change password 
     <span
@@ -820,53 +793,20 @@
     
 </h2>
 <p>In this mode, you can login root without password.</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql -u root
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>In the <strong>old</strong> version(MySQL version lower than <code>8</code>), you may use <code>SET PASSWORD=PASSWORD('password');</code> to change password.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mysql -u root
+</span></span></code></pre></div><p>In the <strong>old</strong> version(MySQL version lower than <code>8</code>), you may use <code>SET PASSWORD=PASSWORD('password');</code> to change password.</p>
 <p>But in <code>version 8</code>, you need to change the method:</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#ff7b72">USE</span><span style="color:#6e7681"> </span>mysql;<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">ALTER</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">USER</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;root&#39;</span><span style="color:#ff7b72;font-weight:bold">@</span><span style="color:#a5d6ff">&#39;localhost&#39;</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">IDENTIFIED</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">WITH</span><span style="color:#6e7681"> </span>mysql_native_password<span style="color:#6e7681"> </span><span style="color:#ff7b72">BY</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;password&#39;</span>;<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">FLUSH</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">PRIVILEGES</span>;<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">exit</span>;<span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>Start the service</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>killall mysqld
-</span></span><span style="display:flex;"><span>/etc/init.d/mysqld start
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Try it</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql -u root -p
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># type password</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#66d9ef">USE</span> mysql;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">USER</span> <span style="color:#e6db74">&#39;root&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span> <span style="color:#66d9ef">IDENTIFIED</span> <span style="color:#66d9ef">WITH</span> mysql_native_password <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;password&#39;</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#66d9ef">FLUSH</span> <span style="color:#66d9ef">PRIVILEGES</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span><span style="color:#66d9ef">exit</span>;
+</span></span></code></pre></div><p>Start the service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>killall mysqld
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>/etc/init.d/mysqld start
+</span></span></code></pre></div><p>Try it</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mysql -u root -p
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#75715e"># type password</span>
+</span></span></code></pre></div>
         </div>
                 
         

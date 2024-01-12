@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
-    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a0bd0923148e5b8ed42b57178d2183323d74e56cee3f69794f98a1b2d89a02566fd45d4a2ddddda9a2311b9c98ad0758ff99f3d8a8bd6ed8cb3b83bc81eb33ce.js"
+    integrity="sha512-oL0JIxSOW47UK1cXjSGDMj105WzuP2l5T5ihstiaAlZv1F1KLd3dqaIxG5yYrQdY/5nz2Ki9btjLO4O8geszzg==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["ubuntu","change home folder","language"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "63"
+    "wordCount": "54"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-07-07 13:40:42 &#43;0000 UTC">2022/07/07</time><span class="px-2 text-primary-500">&middot;</span><span>63 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-07-07 13:40:42 &#43;0000 UTC">2022/07/07</time><span class="px-2 text-primary-500">&middot;</span><span>54 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-Change-Home-Folder-Language/index.md" title="views">0</span> 
     
@@ -766,36 +766,17 @@
 </h2>
 <p>可以透過查看變數「<code>$LANG</code>」來得知當前系統所使用的語系。
 直接在終端輸入「<code>echo $LANG</code>」列印：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ echo <span style="color:#79c0ff">$LANG</span>
-</span></span><span style="display:flex;"><span>en_US.UTF-8
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如上例子顯示「<code>en_US.UTF-8</code>」。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ echo $LANG
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>en_US.UTF-8
+</span></span></code></pre></div><p>如上例子顯示「<code>en_US.UTF-8</code>」。</p>
 <p>可以改變該變數來更換系統所使用的語系，變更方式為「<code>export LANG=&lt;語系&gt;</code>」。
 例如想要變更成「<code>en_US</code>」且為「<code>UTF-8</code>」，則輸入：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ export <span style="color:#79c0ff">LANG</span><span style="color:#ff7b72;font-weight:bold">=</span>en_US.UTF-8
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 接著印出變數就可以看到成功更改了</span>
-</span></span><span style="display:flex;"><span>$ echo <span style="color:#79c0ff">$LANG</span>
-</span></span><span style="display:flex;"><span>en_US.UTF-8
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ export LANG<span style="color:#f92672">=</span>en_US.UTF-8
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#75715e"># 接著印出變數就可以看到成功更改了</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>$ echo $LANG
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>en_US.UTF-8
+</span></span></code></pre></div><hr>
 <div id="更換家目錄語系" class="anchor"></div>
 <h2 class="relative group">更換家目錄語系 
     <span
@@ -805,15 +786,8 @@
     
 </h2>
 <p>可以使用指令「<code>xdg-user-dirs-gtk-update</code>」來讓系統自動偵測語系的變更：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xdg-user-dirs-gtk-update
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>接著會跳出詢問是否更改的視窗，這邊<strong>建議</strong>將「<code>Don't ask me this again</code>」選項勾選，否則每次啟動都會彈出詢問。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>xdg-user-dirs-gtk-update
+</span></span></code></pre></div><p>接著會跳出詢問是否更改的視窗，這邊<strong>建議</strong>將「<code>Don't ask me this again</code>」選項勾選，否則每次啟動都會彈出詢問。
 然後按下「<code>Update Nmaes</code>」按鈕即可。</p>
 <hr>
 <div id="變更後舊資料夾仍存在" class="anchor"></div>
@@ -837,24 +811,10 @@
 </h2>
 <p>當然也可以透過手動修改！
 自行將目錄更名後，接著只需要修改檔案「<code>~/.config/user-dirs.dirs</code>」對應即可：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim ~/.config/user-dirs.dirs
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>接著重啟服務「<code>/etc/init.d/gdm</code>」：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo /etc/init.d/gdm restart
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>vim ~/.config/user-dirs.dirs
+</span></span></code></pre></div><p>接著重啟服務「<code>/etc/init.d/gdm</code>」：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo /etc/init.d/gdm restart
+</span></span></code></pre></div><hr>
 <div id="reference" class="anchor"></div>
 <h2 class="relative group">Reference 
     <span
@@ -1090,7 +1050,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-27 13:26:21 &#43;0000 UTC">2022/01/27</time><span class="px-2 text-primary-500">&middot;</span><span>236 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-27 13:26:21 &#43;0000 UTC">2022/01/27</time><span class="px-2 text-primary-500">&middot;</span><span>215 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-Move-Home-To-New-Disk/index.md" title="views">0</span> 
     
@@ -1224,7 +1184,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-21 16:55:18 &#43;0000 UTC">2022/01/21</time><span class="px-2 text-primary-500">&middot;</span><span>78 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-21 16:55:18 &#43;0000 UTC">2022/01/21</time><span class="px-2 text-primary-500">&middot;</span><span>64 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-PPPoE-Connection/index.md" title="views">0</span> 
     
@@ -1358,7 +1318,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-19 15:11:57 &#43;0000 UTC">2022/01/19</time><span class="px-2 text-primary-500">&middot;</span><span>145 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-19 15:11:57 &#43;0000 UTC">2022/01/19</time><span class="px-2 text-primary-500">&middot;</span><span>142 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/index.md" title="views">0</span> 
     
@@ -1503,7 +1463,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2021-09-24 23:27:14 &#43;0000 UTC">2021/09/24</time><span class="px-2 text-primary-500">&middot;</span><span>356 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2021-09-24 23:27:14 &#43;0000 UTC">2021/09/24</time><span class="px-2 text-primary-500">&middot;</span><span>338 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Dual-Boot-with-Grub/index.md" title="views">0</span> 
     

@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
-    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a0bd0923148e5b8ed42b57178d2183323d74e56cee3f69794f98a1b2d89a02566fd45d4a2ddddda9a2311b9c98ad0758ff99f3d8a8bd6ed8cb3b83bc81eb33ce.js"
+    integrity="sha512-oL0JIxSOW47UK1cXjSGDMj105WzuP2l5T5ihstiaAlZv1F1KLd3dqaIxG5yYrQdY/5nz2Ki9btjLO4O8geszzg==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["connect wifi","wifi command","wifi scan"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "100"
+    "wordCount": "93"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-09-07 09:40:59 &#43;0000 UTC">2023/09/07</time><span class="px-2 text-primary-500">&middot;</span><span>100 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-09-07 09:40:59 &#43;0000 UTC">2023/09/07</time><span class="px-2 text-primary-500">&middot;</span><span>93 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Wifi-Connect-with-Command/index.md" title="views">0</span> 
     
@@ -772,26 +772,12 @@
             style="text-decoration-line: none !important;" href="#nmcli" aria-label="Anchor">#</a></span>        
     
 </h2>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmcli dev wifi connect &lt;SSID&gt; password &lt;PASS&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>把上方的「<code>&lt;SSID&gt;</code>」與「<code>&lt;PASS&gt;</code>」更換成 Wifi 的 SSID 與密碼。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>nmcli dev wifi connect &lt;SSID&gt; password &lt;PASS&gt;
+</span></span></code></pre></div><p>把上方的「<code>&lt;SSID&gt;</code>」與「<code>&lt;PASS&gt;</code>」更換成 Wifi 的 SSID 與密碼。
 若 Wifi 沒有設置密碼，則不需要設定 password：<code>nmcli dev wifi connect &lt;SSID&gt;</code></p>
 <p>日後若是要連接，則不用重複輸入密碼：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmcli con up &lt;SSID&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>nmcli con up &lt;SSID&gt;
+</span></span></code></pre></div><hr>
 <div id="ifconfig--iwconfig" class="anchor"></div>
 <h2 class="relative group">ifconfig &amp; iwconfig 
     <span
@@ -801,52 +787,17 @@
     
 </h2>
 <p>首先先啟動網卡(將下方的 <code>&lt;NIC&gt;</code> 換成無線網卡名稱)：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ifconfig &lt;NIC&gt; up
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>例如我的網卡叫做「<code>wlp1s0</code>」，則：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ifconfig wlp1s0 up
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果不知道自己的網卡名稱，可以透過指令查看：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ifconfig
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然後尋找無線網卡，通常會以「<code>wl</code>」開頭(但不一定)。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ifconfig &lt;NIC&gt; up
+</span></span></code></pre></div><p>例如我的網卡叫做「<code>wlp1s0</code>」，則：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ifconfig wlp1s0 up
+</span></span></code></pre></div><p>如果不知道自己的網卡名稱，可以透過指令查看：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ifconfig
+</span></span></code></pre></div><p>然後尋找無線網卡，通常會以「<code>wl</code>」開頭(但不一定)。</p>
 <p>接著嘗試用該網卡掃描 Wifi：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iwlist &lt;NIC&gt; scan
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>連接 Wifi：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iwconfig &lt;NIC&gt; essid &lt;SSID&gt; key s:&lt;PASS&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>更改上方的「<code>&lt;NIC&gt;</code>」為網卡名稱；「<code>&lt;SSID&gt;</code>」為 Wifi SSID；「<code>&lt;PASS&gt;</code>」為密碼。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>iwlist &lt;NIC&gt; scan
+</span></span></code></pre></div><p>連接 Wifi：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>iwconfig &lt;NIC&gt; essid &lt;SSID&gt; key s:&lt;PASS&gt;
+</span></span></code></pre></div><p>更改上方的「<code>&lt;NIC&gt;</code>」為網卡名稱；「<code>&lt;SSID&gt;</code>」為 Wifi SSID；「<code>&lt;PASS&gt;</code>」為密碼。
 (p.s. 密碼前方注意加上「<code>s:</code>」)</p>
 <hr>
 <div id="reference" class="anchor"></div>
@@ -1084,7 +1035,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-19 15:11:57 &#43;0000 UTC">2022/01/19</time><span class="px-2 text-primary-500">&middot;</span><span>145 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-19 15:11:57 &#43;0000 UTC">2022/01/19</time><span class="px-2 text-primary-500">&middot;</span><span>142 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/index.md" title="views">0</span> 
     

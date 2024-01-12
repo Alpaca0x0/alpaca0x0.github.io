@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
-    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a0bd0923148e5b8ed42b57178d2183323d74e56cee3f69794f98a1b2d89a02566fd45d4a2ddddda9a2311b9c98ad0758ff99f3d8a8bd6ed8cb3b83bc81eb33ce.js"
+    integrity="sha512-oL0JIxSOW47UK1cXjSGDMj105WzuP2l5T5ihstiaAlZv1F1KLd3dqaIxG5yYrQdY/5nz2Ki9btjLO4O8geszzg==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["auto login","tty"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "55"
+    "wordCount": "50"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-10-25 14:17:40 &#43;0000 UTC">2022/10/25</time><span class="px-2 text-primary-500">&middot;</span><span>55 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-10-25 14:17:40 &#43;0000 UTC">2022/10/25</time><span class="px-2 text-primary-500">&middot;</span><span>50 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-Server-Auto-Login-TTY-when-Start-up/index.md" title="views">0</span> 
     
@@ -758,31 +758,14 @@
     
 </h2>
 <p>於終端輸入指令：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl edit getty@tty1.service
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>若是要自動登入於其他 tty，如<code>tty 2</code>則將<code>getty@tty1.service</code>修改為<code>getty@tty2.service</code>，以此類推。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo systemctl edit getty@tty1.service
+</span></span></code></pre></div><p>若是要自動登入於其他 tty，如<code>tty 2</code>則將<code>getty@tty1.service</code>修改為<code>getty@tty2.service</code>，以此類推。</p>
 <p>接著在該檔案中新增如下資訊：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ff7b72;font-weight:bold">[</span>Service<span style="color:#ff7b72;font-weight:bold">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#79c0ff">ExecStart</span><span style="color:#ff7b72;font-weight:bold">=</span>
-</span></span><span style="display:flex;"><span><span style="color:#79c0ff">ExecStart</span><span style="color:#ff7b72;font-weight:bold">=</span>-/sbin/agetty --noissue --autologin root %I <span style="color:#79c0ff">$TERM</span>
-</span></span><span style="display:flex;"><span><span style="color:#79c0ff">Type</span><span style="color:#ff7b72;font-weight:bold">=</span>idle
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>其中的<code>root</code>為欲自動登入的使用者，可依需求自行修改。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#f92672">[</span>Service<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>ExecStart<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>ExecStart<span style="color:#f92672">=</span>-/sbin/agetty --noissue --autologin root %I $TERM
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>Type<span style="color:#f92672">=</span>idle
+</span></span></code></pre></div><p>其中的<code>root</code>為欲自動登入的使用者，可依需求自行修改。
 接著儲存檔案，在重新開機後便可以發現自動在 tty 1 登入方才所設定的使用者。</p>
 <p>如果檔案寫入失敗，那可能需要自行創建資料夾<code>/etc/systemd/system/getty@tty1.service.d/</code>及檔案<code>/etc/systemd/system/getty@tty1.service.d/override.conf</code>。(若非<code>tty 1</code>請自行修改路徑名稱)</p>
 <hr>
@@ -1019,7 +1002,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-10-20 15:01:44 &#43;0000 UTC">2022/10/20</time><span class="px-2 text-primary-500">&middot;</span><span>447 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-10-20 15:01:44 &#43;0000 UTC">2022/10/20</time><span class="px-2 text-primary-500">&middot;</span><span>414 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-Crontab/index.md" title="views">0</span> 
     
@@ -1142,7 +1125,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-08-24 13:17:53 &#43;0000 UTC">2022/08/24</time><span class="px-2 text-primary-500">&middot;</span><span>197 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-08-24 13:17:53 &#43;0000 UTC">2022/08/24</time><span class="px-2 text-primary-500">&middot;</span><span>184 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-Set-Timezone/index.md" title="views">0</span> 
     
@@ -1265,7 +1248,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-07-07 13:40:42 &#43;0000 UTC">2022/07/07</time><span class="px-2 text-primary-500">&middot;</span><span>63 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-07-07 13:40:42 &#43;0000 UTC">2022/07/07</time><span class="px-2 text-primary-500">&middot;</span><span>54 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-Change-Home-Folder-Language/index.md" title="views">0</span> 
     
@@ -1388,7 +1371,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-27 13:26:21 &#43;0000 UTC">2022/01/27</time><span class="px-2 text-primary-500">&middot;</span><span>236 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-27 13:26:21 &#43;0000 UTC">2022/01/27</time><span class="px-2 text-primary-500">&middot;</span><span>215 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-Move-Home-To-New-Disk/index.md" title="views">0</span> 
     
@@ -1522,7 +1505,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-21 16:55:18 &#43;0000 UTC">2022/01/21</time><span class="px-2 text-primary-500">&middot;</span><span>78 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-21 16:55:18 &#43;0000 UTC">2022/01/21</time><span class="px-2 text-primary-500">&middot;</span><span>64 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-PPPoE-Connection/index.md" title="views">0</span> 
     
@@ -1656,7 +1639,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-19 15:11:57 &#43;0000 UTC">2022/01/19</time><span class="px-2 text-primary-500">&middot;</span><span>145 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-19 15:11:57 &#43;0000 UTC">2022/01/19</time><span class="px-2 text-primary-500">&middot;</span><span>142 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/index.md" title="views">0</span> 
     

@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
-    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a0bd0923148e5b8ed42b57178d2183323d74e56cee3f69794f98a1b2d89a02566fd45d4a2ddddda9a2311b9c98ad0758ff99f3d8a8bd6ed8cb3b83bc81eb33ce.js"
+    integrity="sha512-oL0JIxSOW47UK1cXjSGDMj105WzuP2l5T5ihstiaAlZv1F1KLd3dqaIxG5yYrQdY/5nz2Ki9btjLO4O8geszzg==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["SQL","MySQL","database","SQL grammar","SQL 語法","SQL 教學","SQL 教程","SQL 教学","SQL server","SQL create","database create","create table","create database","mysql insert","insert into","新增"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "228"
+    "wordCount": "212"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2021-05-25 17:46:08 &#43;0000 UTC">2021/05/25</time><span class="px-2 text-primary-500">&middot;</span><span>228 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2021-05-25 17:46:08 &#43;0000 UTC">2021/05/25</time><span class="px-2 text-primary-500">&middot;</span><span>212 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/SQL-Basic-01/index.md" title="views">0</span> 
     
@@ -800,15 +800,8 @@
     
 </h3>
 <p>創建使用的是「<strong><code>CREATE</code></strong>」語法：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">DATABASE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">資料庫名稱</span><span style="color:#ff7b72;font-weight:bold">`</span>;<span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><div id="創建資料表及欄位" class="anchor"></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> <span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">資料庫名稱</span><span style="color:#f92672">`</span>;
+</span></span></code></pre></div><div id="創建資料表及欄位" class="anchor"></div>
 <h3 class="relative group">創建資料表及欄位 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
@@ -817,32 +810,14 @@
     
 </h3>
 <p>由於要先指定資料庫才能使用裡面的資料表，所以先選擇資料庫：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>USE<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">資料庫名稱</span><span style="color:#ff7b72;font-weight:bold">`</span>;<span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>之後創建資料表，創建格式如下：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">資料表名稱</span><span style="color:#ff7b72;font-weight:bold">`</span>(<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">	</span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">欄位</span><span style="color:#a5d6ff">1</span><span style="color:#f85149">名稱</span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#6e7681"> </span><span style="color:#f85149">資料型態</span>(<span style="color:#f85149">長度</span>)<span style="color:#6e7681"> </span><span style="color:#f85149">屬性</span><span style="color:#a5d6ff">1</span><span style="color:#6e7681"> </span><span style="color:#f85149">屬性</span><span style="color:#a5d6ff">2</span>...,<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">	</span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">欄位</span><span style="color:#a5d6ff">2</span><span style="color:#f85149">名稱</span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#6e7681"> </span><span style="color:#f85149">資料型態</span>(<span style="color:#f85149">長度</span>)<span style="color:#6e7681"> </span><span style="color:#f85149">屬性</span><span style="color:#a5d6ff">1</span><span style="color:#6e7681"> </span><span style="color:#f85149">屬性</span><span style="color:#a5d6ff">2</span>...,<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">	</span>...<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>);<span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><div id="範例" class="anchor"></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>USE <span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">資料庫名稱</span><span style="color:#f92672">`</span>;
+</span></span></code></pre></div><p>之後創建資料表，創建格式如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">資料表名稱</span><span style="color:#f92672">`</span>(
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">欄位</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">名稱</span><span style="color:#f92672">`</span> <span style="color:#960050;background-color:#1e0010">資料型態</span>(<span style="color:#960050;background-color:#1e0010">長度</span>) <span style="color:#960050;background-color:#1e0010">屬性</span><span style="color:#ae81ff">1</span> <span style="color:#960050;background-color:#1e0010">屬性</span><span style="color:#ae81ff">2</span>...,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>	<span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">欄位</span><span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">名稱</span><span style="color:#f92672">`</span> <span style="color:#960050;background-color:#1e0010">資料型態</span>(<span style="color:#960050;background-color:#1e0010">長度</span>) <span style="color:#960050;background-color:#1e0010">屬性</span><span style="color:#ae81ff">1</span> <span style="color:#960050;background-color:#1e0010">屬性</span><span style="color:#ae81ff">2</span>...,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>	...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>);
+</span></span></code></pre></div><div id="範例" class="anchor"></div>
 <h3 class="relative group">範例 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
@@ -850,25 +825,13 @@
             style="text-decoration-line: none !important;" href="#%e7%af%84%e4%be%8b" aria-label="Anchor">#</a></span>        
     
 </h3>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">資料表名稱</span><span style="color:#ff7b72;font-weight:bold">`</span>(<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">	</span><span style="color:#ff7b72;font-weight:bold">`</span>id<span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#6e7681"> </span>int<span style="color:#6e7681"> </span>AUTO_INCREMENT<span style="color:#6e7681"> </span><span style="color:#ff7b72">PRIMARY</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">KEY</span>,<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">	</span><span style="color:#ff7b72;font-weight:bold">`</span>phone<span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#6e7681"> </span>char(<span style="color:#a5d6ff">10</span>),<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">	</span><span style="color:#ff7b72;font-weight:bold">`</span>name<span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#6e7681"> </span>varchar(<span style="color:#a5d6ff">20</span>)<span style="color:#6e7681"> </span><span style="color:#ff7b72">DEFAULT</span><span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#39;Anonymous&#39;</span>,<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">	</span><span style="color:#ff7b72;font-weight:bold">`</span>age<span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#6e7681"> </span>int(<span style="color:#a5d6ff">3</span>)<span style="color:#6e7681"> </span><span style="color:#ff7b72">NOT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">NULL</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>);<span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><div id="語法說明" class="anchor"></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">資料表名稱</span><span style="color:#f92672">`</span>(
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#f92672">`</span>id<span style="color:#f92672">`</span> int AUTO_INCREMENT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>	<span style="color:#f92672">`</span>phone<span style="color:#f92672">`</span> char(<span style="color:#ae81ff">10</span>),
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>	<span style="color:#f92672">`</span>name<span style="color:#f92672">`</span> varchar(<span style="color:#ae81ff">20</span>) <span style="color:#66d9ef">DEFAULT</span> <span style="color:#e6db74">&#39;Anonymous&#39;</span>,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>	<span style="color:#f92672">`</span>age<span style="color:#f92672">`</span> int(<span style="color:#ae81ff">3</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>);
+</span></span></code></pre></div><div id="語法說明" class="anchor"></div>
 <h3 class="relative group">語法說明 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
@@ -897,23 +860,12 @@
 </li>
 </ul>
 <p>另外，你也可以將欄位格式寫好後，在最後才將其定義為主鍵：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">CREATE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">TABLE</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">資料表名稱</span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#6e7681"> </span>(<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">	</span><span style="color:#ff7b72;font-weight:bold">`</span>id<span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#6e7681"> </span>int<span style="color:#6e7681"> </span>AUTO_INCREMENT,<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">	</span>...<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">	</span><span style="color:#ff7b72">PRIMARY</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">KEY</span>(<span style="color:#ff7b72;font-weight:bold">`</span>id<span style="color:#ff7b72;font-weight:bold">`</span>)<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span>);<span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">資料表名稱</span><span style="color:#f92672">`</span> (
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	<span style="color:#f92672">`</span>id<span style="color:#f92672">`</span> int AUTO_INCREMENT,
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>	...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>	<span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>(<span style="color:#f92672">`</span>id<span style="color:#f92672">`</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>);
+</span></span></code></pre></div><hr>
 <div id="新增" class="anchor"></div>
 <h2 class="relative group">新增 
     <span
@@ -923,17 +875,9 @@
     
 </h2>
 <p>想要在資料表內新增資料筆，則需要用到「<strong><code>INSERT</code></strong>」語法：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">INSERT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">INTO</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">資料表名稱</span><span style="color:#ff7b72;font-weight:bold">`</span>(<span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">欄位</span><span style="color:#a5d6ff">1</span><span style="color:#ff7b72;font-weight:bold">`</span>,<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">欄位</span><span style="color:#a5d6ff">2</span><span style="color:#ff7b72;font-weight:bold">`</span>,...)<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">VALUES</span><span style="color:#6e7681"> </span>(<span style="color:#f85149">欄位</span><span style="color:#a5d6ff">1</span><span style="color:#f85149">的值</span>,<span style="color:#6e7681"> </span><span style="color:#f85149">欄位</span><span style="color:#a5d6ff">2</span><span style="color:#f85149">的值</span>...);<span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>填寫<strong>值的順序</strong>是對應前面<strong>欄位順序</strong>的。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">資料表名稱</span><span style="color:#f92672">`</span>(<span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">欄位</span><span style="color:#ae81ff">1</span><span style="color:#f92672">`</span>, <span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">欄位</span><span style="color:#ae81ff">2</span><span style="color:#f92672">`</span>,...)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#66d9ef">VALUES</span> (<span style="color:#960050;background-color:#1e0010">欄位</span><span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">的值</span>, <span style="color:#960050;background-color:#1e0010">欄位</span><span style="color:#ae81ff">2</span><span style="color:#960050;background-color:#1e0010">的值</span>...);
+</span></span></code></pre></div><p>填寫<strong>值的順序</strong>是對應前面<strong>欄位順序</strong>的。</p>
 <p>這邊要特別注意的是，兩行之間並<strong>沒有</strong>「<code>,</code>」或「<code>;</code>」區隔。
 本質上它算是一行，只是為了提高<code>可讀性</code>，所以習慣寫作兩行或以上。</p>
 <p>(ps. 另外，舉上述例子，我們不需要在新增時手動寫入「<code>id</code>」欄位，因為「<code>AUTO_INCREMENT</code>」會自動寫入。)</p>
@@ -946,17 +890,9 @@
     
 </h3>
 <p>舉上述<code>創建</code>例子中的資料表為例：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">INSERT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">INTO</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">資料表名稱</span><span style="color:#ff7b72;font-weight:bold">`</span>(<span style="color:#ff7b72;font-weight:bold">`</span>phone<span style="color:#ff7b72;font-weight:bold">`</span>,<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span>name<span style="color:#ff7b72;font-weight:bold">`</span>,<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span>age<span style="color:#ff7b72;font-weight:bold">`</span>)<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">VALUES</span><span style="color:#6e7681"> </span>(<span style="color:#a5d6ff">&#34;0123456789&#34;</span>,<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#34;新之助&#34;</span>,<span style="color:#6e7681"> </span><span style="color:#a5d6ff">5</span>);<span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>會寫入以下資料：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">資料表名稱</span><span style="color:#f92672">`</span>(<span style="color:#f92672">`</span>phone<span style="color:#f92672">`</span>, <span style="color:#f92672">`</span>name<span style="color:#f92672">`</span>, <span style="color:#f92672">`</span>age<span style="color:#f92672">`</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#34;0123456789&#34;</span>, <span style="color:#e6db74">&#34;新之助&#34;</span>, <span style="color:#ae81ff">5</span>);
+</span></span></code></pre></div><p>會寫入以下資料：</p>
 <table>
 <thead>
 <tr>
@@ -976,17 +912,9 @@
 </tbody>
 </table>
 <p>再寫入一筆，但這次只指定必要的欄位「<code>age</code>」：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">INSERT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">INTO</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">資料表名稱</span><span style="color:#ff7b72;font-weight:bold">`</span>(<span style="color:#ff7b72;font-weight:bold">`</span>age<span style="color:#ff7b72;font-weight:bold">`</span>)<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">VALUES</span><span style="color:#6e7681"> </span>(<span style="color:#a5d6ff">19</span>);<span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>目前資料為：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">資料表名稱</span><span style="color:#f92672">`</span>(<span style="color:#f92672">`</span>age<span style="color:#f92672">`</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">19</span>);
+</span></span></code></pre></div><p>目前資料為：</p>
 <table>
 <thead>
 <tr>
@@ -1018,17 +946,9 @@
 <li>欄位 <code>age</code> 指定為 <code>19</code> 。</li>
 </ul>
 <p>但如果這麼寫：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ff7b72">INSERT</span><span style="color:#6e7681"> </span><span style="color:#ff7b72">INTO</span><span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span><span style="color:#f85149">資料表名稱</span><span style="color:#ff7b72;font-weight:bold">`</span>(<span style="color:#ff7b72;font-weight:bold">`</span>name<span style="color:#ff7b72;font-weight:bold">`</span>,<span style="color:#6e7681"> </span><span style="color:#ff7b72;font-weight:bold">`</span>phone<span style="color:#ff7b72;font-weight:bold">`</span>)<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#ff7b72">VALUES</span><span style="color:#6e7681"> </span>(<span style="color:#a5d6ff">&#34;小葵&#34;</span>,<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#34;0987654321&#34;</span>);<span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>會發生什麼事情？</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">資料表名稱</span><span style="color:#f92672">`</span>(<span style="color:#f92672">`</span>name<span style="color:#f92672">`</span>, <span style="color:#f92672">`</span>phone<span style="color:#f92672">`</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#34;小葵&#34;</span>, <span style="color:#e6db74">&#34;0987654321&#34;</span>);
+</span></span></code></pre></div><p><strong>會發生什麼事情？</strong></p>
 <p>答案是噴一個錯誤 - <code>Field 'age' doesn't have a default value</code>
 還記得剛剛創建資料表時，設置了 <code>age</code> 欄位為「<code>NOT NULL</code>」屬性嗎？
 而在此並未給予 <code>age</code> 值，而 <code>age</code> 又不存在「<code>DEFAULT</code>」預設值，因此出錯。</p>

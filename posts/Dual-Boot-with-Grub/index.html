@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
-    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a0bd0923148e5b8ed42b57178d2183323d74e56cee3f69794f98a1b2d89a02566fd45d4a2ddddda9a2311b9c98ad0758ff99f3d8a8bd6ed8cb3b83bc81eb33ce.js"
+    integrity="sha512-oL0JIxSOW47UK1cXjSGDMj105WzuP2l5T5ihstiaAlZv1F1KLd3dqaIxG5yYrQdY/5nz2Ki9btjLO4O8geszzg==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["dual boot with grub","開機選單","grub","not found grub","雙系統","linux windows","cannot find efi directory"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "356"
+    "wordCount": "338"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2021-09-24 23:27:14 &#43;0000 UTC">2021/09/24</time><span class="px-2 text-primary-500">&middot;</span><span>356 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2021-09-24 23:27:14 &#43;0000 UTC">2021/09/24</time><span class="px-2 text-primary-500">&middot;</span><span>338 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Dual-Boot-with-Grub/index.md" title="views">0</span> 
     
@@ -925,29 +925,15 @@
 </h3>
 <p>接著掛載原有的 Ubuntu 安裝區。
 使用 <code>fdisk -l</code> 指令查看當前磁區狀況。記得使用 root 權限執行。</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">8
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo fdisk -l
-</span></span><span style="display:flex;"><span>......
-</span></span><span style="display:flex;"><span>Device          Start        End   Sectors   Size Type
-</span></span><span style="display:flex;"><span>/dev/sda1        <span style="color:#a5d6ff">2048</span>     <span style="color:#a5d6ff">624639</span>    <span style="color:#a5d6ff">622592</span>   304M EFI System
-</span></span><span style="display:flex;"><span>......
-</span></span><span style="display:flex;"><span>/dev/sda4   <span style="color:#a5d6ff">173963264</span>  <span style="color:#a5d6ff">886562815</span> <span style="color:#a5d6ff">712599552</span> 339.8G Linux filesystem
-</span></span><span style="display:flex;"><span>/dev/sda5   <span style="color:#a5d6ff">886562816</span>  <span style="color:#a5d6ff">891875327</span>   <span style="color:#a5d6ff">5312512</span>   2.5G Linux filesystem
-</span></span><span style="display:flex;"><span>......
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>每個人的磁區編號不同，以上面例子來說：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ sudo fdisk -l
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>......
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>Device          Start        End   Sectors   Size Type
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>/dev/sda1        <span style="color:#ae81ff">2048</span>     <span style="color:#ae81ff">624639</span>    <span style="color:#ae81ff">622592</span>   304M EFI System
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>......
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>/dev/sda4   <span style="color:#ae81ff">173963264</span>  <span style="color:#ae81ff">886562815</span> <span style="color:#ae81ff">712599552</span> 339.8G Linux filesystem
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>/dev/sda5   <span style="color:#ae81ff">886562816</span>  <span style="color:#ae81ff">891875327</span>   <span style="color:#ae81ff">5312512</span>   2.5G Linux filesystem
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>......
+</span></span></code></pre></div><p>每個人的磁區編號不同，以上面例子來說：</p>
 <ul>
 <li><code>/dev/sda1</code> 為 <code>EFI System</code>。EFI 的磁區編號不重要，記得是在哪個硬碟就好，如上述為 <code>/dev/sda</code>。</li>
 <li>而 <code>Ubuntu</code> 則是裝在 <code>/dev/sda4</code>。</li>
@@ -965,17 +951,9 @@
 </h3>
 <p>確認完計算機上的磁區後，就可以開始操作了。
 首先先將 <code>Ubuntu</code> mount 起來，以下的磁區請依個人在 <code>Step. 3</code> 所見更改。</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mount /dev/sda4 /mnt
-</span></span><span style="display:flex;"><span>sudo mount /dev/sda5 /mnt/boot/efi <span style="color:#8b949e;font-style:italic"># 若 Boot 有獨立分割才需要</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo mount /dev/sda4 /mnt
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>sudo mount /dev/sda5 /mnt/boot/efi <span style="color:#75715e"># 若 Boot 有獨立分割才需要</span>
+</span></span></code></pre></div></blockquote>
 <blockquote>
 <div id="step-5---安裝-grub" class="anchor"></div>
 <h3 class="relative group">Step. 5 - 安裝 Grub 
@@ -985,23 +963,12 @@
             style="text-decoration-line: none !important;" href="#step-5---%e5%ae%89%e8%a3%9d-grub" aria-label="Anchor">#</a></span>        
     
 </h3>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo chroot /mnt
-</span></span><span style="display:flex;"><span>$ grub-install /dev/sda <span style="color:#8b949e;font-style:italic"># 請自行依照個人在 `Step. 3` 所見的 EFI 磁碟編號更改。</span>
-</span></span><span style="display:flex;"><span>......
-</span></span><span style="display:flex;"><span>$ update-grub
-</span></span><span style="display:flex;"><span>......
-</span></span></code></pre></td></tr></table>
-</div>
-</div></blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>$ sudo chroot /mnt
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>$ grub-install /dev/sda <span style="color:#75715e"># 請自行依照個人在 `Step. 3` 所見的 EFI 磁碟編號更改。</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>......
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>$ update-grub
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>......
+</span></span></code></pre></div></blockquote>
 <blockquote>
 <div id="step-6---重新開機迎接-grub-的到來-" class="anchor"></div>
 <h3 class="relative group">Step. 6 - 重新開機，迎接 Grub 的到來 :) 
@@ -1011,15 +978,8 @@
             style="text-decoration-line: none !important;" href="#step-6---%e9%87%8d%e6%96%b0%e9%96%8b%e6%a9%9f%e8%bf%8e%e6%8e%a5-grub-%e7%9a%84%e5%88%b0%e4%be%86-" aria-label="Anchor">#</a></span>        
     
 </h3>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>reboot
-</span></span></code></pre></td></tr></table>
-</div>
-</div></blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>reboot
+</span></span></code></pre></div></blockquote>
 <hr>
 <div id="安裝過程報錯" class="anchor"></div>
 <h2 class="relative group">安裝過程報錯 
@@ -1037,15 +997,8 @@
 </li>
 </ul>
 <p>若還有其他錯誤，那麼請試著將路徑參數手動指定 (請自行確認計算機上的路徑)：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>grub-install --boot-directory<span style="color:#ff7b72;font-weight:bold">=</span>/mnt/boot --efi-directory<span style="color:#ff7b72;font-weight:bold">=</span>/mnt/boot/efi --target<span style="color:#ff7b72;font-weight:bold">=</span>x86_64-efi
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>若錯誤依舊無法解決，那麼可能是在前面幾個步驟出錯，請自行再檢查一次，或者將錯誤訊息丟上 Google，以及到 Ubuntu 社群「<a href="https://askubuntu.com"   target="_blank">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>grub-install --boot-directory<span style="color:#f92672">=</span>/mnt/boot --efi-directory<span style="color:#f92672">=</span>/mnt/boot/efi --target<span style="color:#f92672">=</span>x86_64-efi
+</span></span></code></pre></div><p>若錯誤依舊無法解決，那麼可能是在前面幾個步驟出錯，請自行再檢查一次，或者將錯誤訊息丟上 Google，以及到 Ubuntu 社群「<a href="https://askubuntu.com"   target="_blank">
     askubuntu.com</a>」看看大家的討論。</p>
 <hr>
 <div id="不再自動進入-windows改為自動進入-ubuntu-開機選單呢" class="anchor"></div>
@@ -1057,15 +1010,8 @@
     
 </h2>
 <p>編輯以下檔案：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo vim /etc/default/grub 
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>找到「<code>GRUB_TIMEOUT_STYLE=hidden</code>」在前方加上「<code>#</code>」註解掉，即「<code>#GRUB_TIMEOUT_STYLE=hidden</code>」，保存並關閉。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>sudo vim /etc/default/grub 
+</span></span></code></pre></div><p>找到「<code>GRUB_TIMEOUT_STYLE=hidden</code>」在前方加上「<code>#</code>」註解掉，即「<code>#GRUB_TIMEOUT_STYLE=hidden</code>」，保存並關閉。</p>
 <p>在更早的版本中則是「<code>GRUB_HIDDEN_TIMEOUT=0</code>」，一樣將其註解為「<code>#GRUB_HIDDEN_TIMEOUT=0</code>」後保存。</p>
 <p>沒意外的話就可以在 Reboot 之後看見 Grub 選單了！</p>
         </div>

@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
-    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a0bd0923148e5b8ed42b57178d2183323d74e56cee3f69794f98a1b2d89a02566fd45d4a2ddddda9a2311b9c98ad0758ff99f3d8a8bd6ed8cb3b83bc81eb33ce.js"
+    integrity="sha512-oL0JIxSOW47UK1cXjSGDMj105WzuP2l5T5ihstiaAlZv1F1KLd3dqaIxG5yYrQdY/5nz2Ki9btjLO4O8geszzg==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["crontab","rc.local","auto start","工作排程","start up","schedule"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "447"
+    "wordCount": "414"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-10-20 15:01:44 &#43;0000 UTC">2022/10/20</time><span class="px-2 text-primary-500">&middot;</span><span>447 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-10-20 15:01:44 &#43;0000 UTC">2022/10/20</time><span class="px-2 text-primary-500">&middot;</span><span>414 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-Crontab/index.md" title="views">0</span> 
     
@@ -775,19 +775,10 @@
             style="text-decoration-line: none !important;" href="#edit-list-remove" aria-label="Anchor">#</a></span>        
     
 </h2>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crontab -e <span style="color:#8b949e;font-style:italic"># 編輯排程</span>
-</span></span><span style="display:flex;"><span>crontab -l <span style="color:#8b949e;font-style:italic"># 列出清單</span>
-</span></span><span style="display:flex;"><span>crontab -r <span style="color:#8b949e;font-style:italic"># 刪除排程</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果權限允許，那也可以在上面所述的指令下，加上<code>-u &lt;user&gt;</code>參數指定欲更動何使用者的排程。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>crontab -e <span style="color:#75715e"># 編輯排程</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>crontab -l <span style="color:#75715e"># 列出清單</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>crontab -r <span style="color:#75715e"># 刪除排程</span>
+</span></span></code></pre></div><p>如果權限允許，那也可以在上面所述的指令下，加上<code>-u &lt;user&gt;</code>參數指定欲更動何使用者的排程。</p>
 <hr>
 <div id="format" class="anchor"></div>
 <h2 class="relative group">Format 
@@ -797,59 +788,30 @@
             style="text-decoration-line: none !important;" href="#format" aria-label="Anchor">#</a></span>        
     
 </h2>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">22
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">23
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Edit this file to introduce tasks to be run by cron.</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># </span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Each task to run has to be defined through a single line</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># indicating with different fields when the task will be run</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># and what command to run for the task</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># </span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># To define the time you can provide concrete values for</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># minute (m), hour (h), day of month (dom), month (mon),</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># and day of week (dow) or use &#39;*&#39; in these fields (for &#39;any&#39;).</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># </span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Notice that tasks will be started based on the cron&#39;s system</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># daemon&#39;s notion of time and timezones.</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># </span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># Output of the crontab jobs (including errors) is sent through</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># email to the user the crontab file belongs to (unless redirected).</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># </span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># For example, you can run a backup of all your user accounts</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># at 5 a.m every week with:</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># </span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># For more information see the manual pages of crontab(5) and cron(8)</span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># </span>
-</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># m h  dom mon dow   command</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在使用編輯參數「<code>-e</code>」後，會用預設編輯器編輯一個如上的暫存檔案。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#75715e"># Edit this file to introduce tasks to be run by cron.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#75715e"># Each task to run has to be defined through a single line</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#75715e"># indicating with different fields when the task will be run</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#75715e"># and what command to run for the task</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#75715e"># To define the time you can provide concrete values for</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#75715e"># minute (m), hour (h), day of month (dom), month (mon),</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#75715e"># and day of week (dow) or use &#39;*&#39; in these fields (for &#39;any&#39;).</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#75715e"># Notice that tasks will be started based on the cron&#39;s system</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#75715e"># daemon&#39;s notion of time and timezones.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#75715e"># Output of the crontab jobs (including errors) is sent through</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#75715e"># email to the user the crontab file belongs to (unless redirected).</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#75715e"># For example, you can run a backup of all your user accounts</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#75715e"># at 5 a.m every week with:</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#75715e"># 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span><span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span><span style="color:#75715e"># For more information see the manual pages of crontab(5) and cron(8)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#75715e"># </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#75715e"># m h  dom mon dow   command</span>
+</span></span></code></pre></div><p>在使用編輯參數「<code>-e</code>」後，會用預設編輯器編輯一個如上的暫存檔案。
 檔案中預設是沒有排程的，但有一些註解。</p>
 <p>直接在註解下方新增一行，照著格式輸入設定即可。
 可以在最後一行看到其使用格式「<code>m h dom mon dow command</code>」，其含意如下：</p>
@@ -927,15 +889,8 @@
 </tbody>
 </table>
 <p>僅在開機時執行則使用「<code>@reboot</code>」，範例每次開機執行<code>echo 'hello' &gt; /tmp/hi</code>：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>@reboot echo <span style="color:#a5d6ff">&#39;hello&#39;</span> &gt; /tmp/hi
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>@reboot echo <span style="color:#e6db74">&#39;hello&#39;</span> &gt; /tmp/hi
+</span></span></code></pre></div><hr>
 <div id="permission" class="anchor"></div>
 <h2 class="relative group">Permission 
     <span
@@ -953,32 +908,14 @@
 <p>程式的判定會先查看是否存在<code>White List</code>的檔案<code>/etc/crontab.allow</code>
 若不存在，則會查看<code>Black List</code>的檔案<code>/etc/crontab.deny</code></p>
 <p>例如僅允許使用者<code>admin</code>及<code>admin2</code>執行 crontab 指令，則編輯<code>/etc/crontab.allow</code>：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># /etc/crontab.allow</span>
-</span></span><span style="display:flex;"><span>admin
-</span></span><span style="display:flex;"><span>admin2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>若僅不允許使用者<code>guest</code>及<code>guest2</code>執行 crontab 指令，則先確保<code>/etc/crontab.allow</code>不存在，接著編輯<code>/etc/crontab.deny</code>：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># /etc/crontab.deny</span>
-</span></span><span style="display:flex;"><span>guest
-</span></span><span style="display:flex;"><span>guest2
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e"># /etc/crontab.allow</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>admin
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>admin2
+</span></span></code></pre></div><p>若僅不允許使用者<code>guest</code>及<code>guest2</code>執行 crontab 指令，則先確保<code>/etc/crontab.allow</code>不存在，接著編輯<code>/etc/crontab.deny</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e"># /etc/crontab.deny</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>guest
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>guest2
+</span></span></code></pre></div><hr>
 <div id="etcinitdcron" class="anchor"></div>
 <h2 class="relative group">/etc/init.d/cron 
     <span
@@ -1223,7 +1160,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-08-24 13:17:53 &#43;0000 UTC">2022/08/24</time><span class="px-2 text-primary-500">&middot;</span><span>197 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-08-24 13:17:53 &#43;0000 UTC">2022/08/24</time><span class="px-2 text-primary-500">&middot;</span><span>184 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-Set-Timezone/index.md" title="views">0</span> 
     
@@ -1346,7 +1283,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-07-07 13:40:42 &#43;0000 UTC">2022/07/07</time><span class="px-2 text-primary-500">&middot;</span><span>63 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-07-07 13:40:42 &#43;0000 UTC">2022/07/07</time><span class="px-2 text-primary-500">&middot;</span><span>54 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-Change-Home-Folder-Language/index.md" title="views">0</span> 
     
@@ -1469,7 +1406,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-27 13:26:21 &#43;0000 UTC">2022/01/27</time><span class="px-2 text-primary-500">&middot;</span><span>236 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-27 13:26:21 &#43;0000 UTC">2022/01/27</time><span class="px-2 text-primary-500">&middot;</span><span>215 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-Move-Home-To-New-Disk/index.md" title="views">0</span> 
     
@@ -1603,7 +1540,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-21 16:55:18 &#43;0000 UTC">2022/01/21</time><span class="px-2 text-primary-500">&middot;</span><span>78 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-21 16:55:18 &#43;0000 UTC">2022/01/21</time><span class="px-2 text-primary-500">&middot;</span><span>64 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Ubuntu-PPPoE-Connection/index.md" title="views">0</span> 
     
@@ -1737,7 +1674,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2022-01-19 15:11:57 &#43;0000 UTC">2022/01/19</time><span class="px-2 text-primary-500">&middot;</span><span>145 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2022-01-19 15:11:57 &#43;0000 UTC">2022/01/19</time><span class="px-2 text-primary-500">&middot;</span><span>142 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/index.md" title="views">0</span> 
     
@@ -1882,7 +1819,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2021-09-24 23:27:14 &#43;0000 UTC">2021/09/24</time><span class="px-2 text-primary-500">&middot;</span><span>356 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2021-09-24 23:27:14 &#43;0000 UTC">2021/09/24</time><span class="px-2 text-primary-500">&middot;</span><span>338 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Dual-Boot-with-Grub/index.md" title="views">0</span> 
     

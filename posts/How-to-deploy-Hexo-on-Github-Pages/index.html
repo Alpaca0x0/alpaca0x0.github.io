@@ -46,8 +46,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.f16c3fa727f5c9cba0adc6977e1e0a736f587f632880c195fbdd1125b42c886548342ddd3d3f1c7f19b6d7bb9a1cf67707b25e5ca5d1102c0f3bb7bade7775dd.js"
-    integrity="sha512-8Ww/pyf1ycugrcaXfh4Kc29Yf2MogMGV&#43;90RJbQsiGVINC3dPT8cfxm217uaHPZ3B7JeXKXRECwPO7e63nd13Q==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a0bd0923148e5b8ed42b57178d2183323d74e56cee3f69794f98a1b2d89a02566fd45d4a2ddddda9a2311b9c98ad0758ff99f3d8a8bd6ed8cb3b83bc81eb33ce.js"
+    integrity="sha512-oL0JIxSOW47UK1cXjSGDMj105WzuP2l5T5ihstiaAlZv1F1KLd3dqaIxG5yYrQdY/5nz2Ki9btjLO4O8geszzg==" data-copy="" data-copied=""></script>
   
   <script src="/js/zoom.min.js"></script>
   
@@ -101,7 +101,7 @@
     "keywords": ["hexo","blog","部落格","github","github pages","hexo github","hexo deploy to github pages","如何使用hexo在github上部署部落格","how to deploy hexo blog to gitHub pages"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "578"
+    "wordCount": "537"
   }]
   </script>
 
@@ -514,7 +514,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2021-05-15 15:57:36 &#43;0000 UTC">2021/05/15</time><span class="px-2 text-primary-500">&middot;</span><span>578 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2021-05-15 15:57:36 &#43;0000 UTC">2021/05/15</time><span class="px-2 text-primary-500">&middot;</span><span>537 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/How-to-deploy-Hexo-on-Github-Pages/index.md" title="views">0</span> 
     
@@ -907,37 +907,15 @@ Node.js 為大多數平台提供了官方的 <a href="https://nodejs.org/en/down
     
 </h3>
 <p>使用 Node.js 進行下載</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install -g hexo-cli
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>沒意外的話，將會進行好一段時間的安裝過程，請耐心等候。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>npm install -g hexo-cli
+</span></span></code></pre></div><p>沒意外的話，將會進行好一段時間的安裝過程，請耐心等候。
 若安裝成功，應該可以使用以下指令顯示 Hexo 的版本：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hexo -v
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>若在安裝時顯示<code>不存在 npm 指令</code>，則表示可能你並未安裝成功 <code>Node.js</code>。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hexo -v
+</span></span></code></pre></div><p>若在安裝時顯示<code>不存在 npm 指令</code>，則表示可能你並未安裝成功 <code>Node.js</code>。
 試試以下指令來嘗試顯示 Node.js 版本，以此檢查是否有成功安裝：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node -v
-</span></span><span style="display:flex;"><span>npm -v
-</span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>node -v
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>npm -v
+</span></span></code></pre></div><hr>
 <div id="step3-初始化-hexo" class="anchor"></div>
 <h3 class="relative group">Step.3 初始化 Hexo 
     <span
@@ -947,41 +925,17 @@ Node.js 為大多數平台提供了官方的 <a href="https://nodejs.org/en/down
     
 </h3>
 <p>安裝完 Hexo 之後，請先創建一個<code>部落格目錄</code>，進入該目錄中使用指令 <code>npm install</code> 將 Node.js 安裝在此以方便管理套件，之後使用 <code>hexo init</code> 初始化 Hexo 於該目錄。(所有<code>部落格文件(包括插件)</code>，將會存放在該資料夾中)</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir ~/MyBlog
-</span></span><span style="display:flex;"><span>cd ~/MyBlog
-</span></span><span style="display:flex;"><span>npm install
-</span></span><span style="display:flex;"><span>hexo init
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在 Hexo 初始化完畢後，應該會看到該目錄已經自動產生許多檔案。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mkdir ~/MyBlog
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>cd ~/MyBlog
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>npm install
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>hexo init
+</span></span></code></pre></div><p>在 Hexo 初始化完畢後，應該會看到該目錄已經自動產生許多檔案。
 其中設定檔名為「<strong><code>_config.yml</code></strong>」。
 不過呢，暫時不動這些檔案，先嘗試將本地服務開啟：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hexo server
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>或者使用</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hexo s
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>預設的 <code>Port</code> 為 <code>4000</code>，若成功運行，我們可以直接在瀏覽器訪問「<strong><code>localhost:4000</code></strong>」即可看到 Hexo 部落格頁面，及預設主題「<strong>Landscape</strong>」。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hexo server
+</span></span></code></pre></div><p>或者使用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hexo s
+</span></span></code></pre></div><p>預設的 <code>Port</code> 為 <code>4000</code>，若成功運行，我們可以直接在瀏覽器訪問「<strong><code>localhost:4000</code></strong>」即可看到 Hexo 部落格頁面，及預設主題「<strong>Landscape</strong>」。</p>
 <p><a href="https://hexo.io/"   target="_blank">
     
 
@@ -1023,33 +977,17 @@ Node.js 為大多數平台提供了官方的 <a href="https://nodejs.org/en/down
 </h3>
 <p>接著就可以開始自訂自己的<code>部落格資訊</code>及<code>Hexo 主題</code>了！</p>
 <p>編輯目錄下的 <code>_config.yml</code> ：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#_config.yml</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">title</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">Alpaca-Tech</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">subtitle</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">AlpacaBlog</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">description</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">這是一個 Hexo 部落格</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">keywords</span>:<span style="color:#6e7681"> 
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"> </span>- <span style="color:#a5d6ff">alpaca</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"> </span>- <span style="color:#a5d6ff">blog</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">author</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">Alpaca0x0</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">language</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">zh</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">timezone</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">Asia/Taipei</span><span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#75715e">#_config.yml</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">Alpaca-Tech</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#f92672">subtitle</span>: <span style="color:#ae81ff">AlpacaBlog</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#f92672">description</span>: <span style="color:#ae81ff">這是一個 Hexo 部落格</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#f92672">keywords</span>: 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span> - <span style="color:#ae81ff">alpaca</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span> - <span style="color:#ae81ff">blog</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#f92672">author</span>: <span style="color:#ae81ff">Alpaca0x0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#f92672">language</span>: <span style="color:#ae81ff">zh</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#f92672">timezone</span>: <span style="color:#ae81ff">Asia/Taipei</span>
+</span></span></code></pre></div><table>
 <thead>
 <tr>
 <th>Option</th>
@@ -1132,26 +1070,11 @@ Node.js 為大多數平台提供了官方的 <a href="https://nodejs.org/en/down
 
 </p>
 <p>將<code>下載的主題</code>放在<code>部落格根目錄</code>下的「<code>themes/</code>」目錄中。</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv ~/Download/butterfly/ ./themes/ <span style="color:#8b949e;font-style:italic">#移動主題至 themes/ 目錄下 (ex. butterfly)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>並且記得在 <code>_config.yml</code> 中設定使用的主題名稱 (下載的檔案名稱)：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#_config.yml</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">theme</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">butterfly</span><span style="color:#6e7681"> </span><span style="color:#8b949e;font-style:italic">#主題名稱 (ex. butterfly)</span><span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>再回到瀏覽器重新整理，應該就可以看到新的主題囉！</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>mv ~/Download/butterfly/ ./themes/ <span style="color:#75715e">#移動主題至 themes/ 目錄下 (ex. butterfly)</span>
+</span></span></code></pre></div><p>並且記得在 <code>_config.yml</code> 中設定使用的主題名稱 (下載的檔案名稱)：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e">#_config.yml</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#f92672">theme</span>: <span style="color:#ae81ff">butterfly</span> <span style="color:#75715e">#主題名稱 (ex. butterfly)</span>
+</span></span></code></pre></div><p>再回到瀏覽器重新整理，應該就可以看到新的主題囉！</p>
 <p>ps. 若是終端顯示<code>錯誤訊息</code>，很多時候是因為你<strong>沒有依照主題作者規定</strong><code>設定主題設定檔</code>。
 主題設定檔通常位於目錄「<strong><code>themes/&lt;主題名稱&gt;/_config.yml</code></strong>」。
 不同主題<strong>設定檔檔名可能不同</strong>，再請自行前往該主題文檔查閱使用方式。</p>
@@ -1165,73 +1088,34 @@ Node.js 為大多數平台提供了官方的 <a href="https://nodejs.org/en/down
     
 </h3>
 <p>於<code>部落格根目錄</code>下使用以下指令可以<code>創建新文章</code>：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hexo new <span style="color:#a5d6ff">&#34;&lt;文章名稱&gt;&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>值得注意的是，<code>文章名稱</code>要盡量<code>避免特殊符號</code>，以免<strong>渲染過程</strong>出現<strong>錯誤</strong>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hexo new <span style="color:#e6db74">&#34;&lt;文章名稱&gt;&#34;</span>
+</span></span></code></pre></div><p>值得注意的是，<code>文章名稱</code>要盡量<code>避免特殊符號</code>，以免<strong>渲染過程</strong>出現<strong>錯誤</strong>。</p>
 <p>而文章會生成在目錄「<strong><code>source/_posts/&lt;文章名稱&gt;.md</code></strong>」。
 附檔名為「<strong>.md</strong>」，開啟該檔案會發現這是一個「<code>Markdown</code>」檔。</p>
 <p>前面有提到，Hexo 部落格的文章是以「<code>Markdown</code>」來撰寫的。
 可以在<code>文章的開頭</code>設定一些<code>基本資訊</code>，例如<code>標題</code>、<code>分類</code>、<code>標籤</code>&hellip;等</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#7ee787">title</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">如何使用 Hexo 在 Github 上部署部落格？</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">categories</span>:<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#a5d6ff">教學</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">tags</span>:<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#a5d6ff">Hexo</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#a5d6ff">Blog</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">keywords</span>:<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#a5d6ff">hexo</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#a5d6ff">blog</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#a5d6ff">部落格</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#a5d6ff">github</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">date</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">2021-05-13 15:38:36</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">description</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">&#34;這是一則關於文章的簡要說明&#34;</span><span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>開始撰寫文章內容：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">7
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#79c0ff">## 標題
-</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff"></span>這是一則內容...
-</span></span><span style="display:flex;"><span>第二行...
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#79c0ff">### 更小的標題
-</span></span></span><span style="display:flex;"><span><span style="color:#79c0ff"></span>插入一張圖片
-</span></span><span style="display:flex;"><span>![<span style="color:#7ee787">圖片說明</span>](image.png)
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>更多 <code>Markdown</code> 語法請查閱 <strong><a href="https://markdown.tw/"   target="_blank">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">如何使用 Hexo 在 Github 上部署部落格？</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#f92672">categories</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  - <span style="color:#ae81ff">教學</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#f92672">tags</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>  - <span style="color:#ae81ff">Hexo</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>  - <span style="color:#ae81ff">Blog</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#f92672">keywords</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>  - <span style="color:#ae81ff">hexo</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>  - <span style="color:#ae81ff">blog</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>  - <span style="color:#ae81ff">部落格</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>  - <span style="color:#ae81ff">github</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2021-05-13 15:38:36</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;這是一則關於文章的簡要說明&#34;</span>
+</span></span></code></pre></div><p>開始撰寫文章內容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e">## 標題
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#75715e"></span>這是一則內容...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>第二行...
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#75715e">### 更小的標題
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span><span style="color:#75715e"></span>插入一張圖片
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>![<span style="color:#f92672">圖片說明</span>](<span style="color:#a6e22e">image.png</span>)
+</span></span></code></pre></div><p>更多 <code>Markdown</code> 語法請查閱 <strong><a href="https://markdown.tw/"   target="_blank">
     https://markdown.tw/</a></strong> 。</p>
 <hr>
 <div id="step7-創建-github-pages" class="anchor"></div>
@@ -1265,57 +1149,27 @@ Node.js 為大多數平台提供了官方的 <a href="https://nodejs.org/en/down
 </h3>
 <p>首先要先安裝 Hexo 的 <code>hexo-deployer-git</code> 插件。
 於部落格根目錄輸入以下指令安裝：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install hexo-deployer-git --save
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>安裝完畢後編輯設定檔「<code>_config.yml</code>」：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">#_config.yml</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">deploy</span>:<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">type</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">git</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">repo</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">http://github.com/alpaca0x0/alpaca0x0.github.io</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">branch</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">dev</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">message: Site updated</span>:<span style="color:#6e7681"> </span>{{<span style="color:#6e7681"> </span><span style="color:#a5d6ff">now(&#39;YYYY-MM-DD HH:mm:ss&#39;) }})</span><span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>npm install hexo-deployer-git --save
+</span></span></code></pre></div><p>安裝完畢後編輯設定檔「<code>_config.yml</code>」：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#75715e">#_config.yml</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">git</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>  <span style="color:#f92672">repo</span>: <span style="color:#ae81ff">http://github.com/alpaca0x0/alpaca0x0.github.io</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>  <span style="color:#f92672">branch</span>: <span style="color:#ae81ff">dev</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>  <span style="color:#f92672">message: Site updated</span>: {{ <span style="color:#ae81ff">now(&#39;YYYY-MM-DD HH:mm:ss&#39;) }})</span>
+</span></span></code></pre></div><ul>
 <li>由於我們要推送至「Github Pages」，因此 <code>type</code> 設定為 「<code>git</code>」。</li>
 <li>其中 <code>repo</code> 為 「<code>Repositories</code>」，此指要部署的目的地。</li>
 <li>而 <code>branch</code> 則是分支，可以不做此設定(使用預設分支)。</li>
 <li>最後 <code>message</code> 則是提交訊息，此項同樣可以不做設定。</li>
 </ul>
 <p>另外，這是允許一次部署多個站點的(如果有需要的話)：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#7ee787">deploy</span>:<span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"> </span>- <span style="color:#7ee787">type</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">git</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">   </span><span style="color:#7ee787">repo</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">............</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"> </span>- <span style="color:#7ee787">type</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">heroku</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">   </span><span style="color:#7ee787">repo</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">............</span><span style="color:#6e7681">
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span> - <span style="color:#f92672">type</span>: <span style="color:#ae81ff">git</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>   <span style="color:#f92672">repo</span>: <span style="color:#ae81ff">............</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span> - <span style="color:#f92672">type</span>: <span style="color:#ae81ff">heroku</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>   <span style="color:#f92672">repo</span>: <span style="color:#ae81ff">............</span>
+</span></span></code></pre></div><hr>
 <div id="step9-佈署到-github-pages" class="anchor"></div>
 <h3 class="relative group">Step.9 佈署到 Github Pages 
     <span
@@ -1325,38 +1179,17 @@ Node.js 為大多數平台提供了官方的 <a href="https://nodejs.org/en/down
     
 </h3>
 <p>渲染靜態網頁：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hexo generate <span style="color:#8b949e;font-style:italic">#或者使用縮寫 hexo g</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>生成完之後就可以部署站點了：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hexo deploy <span style="color:#8b949e;font-style:italic">#或者使用縮寫 hexo d</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>接著輸入 Github 帳號密碼即可成功部署。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hexo generate <span style="color:#75715e">#或者使用縮寫 hexo g</span>
+</span></span></code></pre></div><p>生成完之後就可以部署站點了：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hexo deploy <span style="color:#75715e">#或者使用縮寫 hexo d</span>
+</span></span></code></pre></div><p>接著輸入 Github 帳號密碼即可成功部署。
 如果嫌每次都要<strong>輸入帳號密碼很麻煩</strong>，也可以使用 Github 提供的 <code>SSH</code> 方法來連接。
 更據官方格式將 <code>_config.yml</code> 中的佈署設定 <code>deploy</code> 裡面的 <code>repo</code> 改為對應的 <code>SSH</code> 連結。</p>
 <p>詳情請見 <a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh"   target="_blank">
     <strong>Github 官方文檔</strong></a></p>
 <p>你也可以直接輸入以下指令來 <code>渲染檔案並部署站點</code>：</p>
-<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hexo g -d
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>這麼一來就大功告成啦～</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hexo g -d
+</span></span></code></pre></div><p>這麼一來就大功告成啦～</p>
 <p>另外 <code>hexo clean</code> 可以清理暫存檔案，使站點重新抓取資料及設定。</p>
 <hr>
 <div id="參考資料" class="anchor"></div>
@@ -1592,7 +1425,7 @@ Node.js 為大多數平台提供了官方的 <a href="https://nodejs.org/en/down
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2021-03-28 12:54:04 &#43;0000 UTC">2021/03/28</time><span class="px-2 text-primary-500">&middot;</span><span>309 words</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2021-03-28 12:54:04 &#43;0000 UTC">2021/03/28</time><span class="px-2 text-primary-500">&middot;</span><span>289 words</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="views_posts/Git-LFS/index.md" title="views">0</span> 
     
