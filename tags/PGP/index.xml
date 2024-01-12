@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PGP on Alpaca&#39;s Notes</title>
-    <link>http://blog.alpaca.tw/tags/PGP/</link>
+    <link>https://blog.alpaca.tw/tags/PGP/</link>
     <description>Recent content in PGP on Alpaca&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>版權所有 翻印必究 
  Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 19 Jul 2021 09:55:09 +0000</lastBuildDate><atom:link href="http://blog.alpaca.tw/tags/PGP/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jul 2021 09:55:09 +0000</lastBuildDate><atom:link href="https://blog.alpaca.tw/tags/PGP/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to use GnuPG to sign files and messages？</title>
-      <link>http://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/</link>
+      <link>https://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/</link>
       <pubDate>Mon, 19 Jul 2021 09:55:09 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/</guid>
+      <guid>https://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/</guid>
       <description>&lt;p&gt;用 GnuPG 簽署、驗證、加密、解密 你的檔案及訊息。&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/cover.jpg" />
     </item>
     
     <item>
       <title>How to use GnuPG to generate PGP key？</title>
-      <link>http://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/</link>
+      <link>https://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/</link>
       <pubDate>Fri, 16 Jul 2021 17:55:09 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/</guid>
+      <guid>https://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/</guid>
       <description>&lt;p&gt;怎麼使用 GnuPG 生成 PGP 金鑰？&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/cover.jpg" />
     </item>
     
   </channel>

@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on Alpaca&#39;s Notes</title>
-    <link>http://blog.alpaca.tw/tags/Ubuntu/</link>
+    <link>https://blog.alpaca.tw/tags/Ubuntu/</link>
     <description>Recent content in Ubuntu on Alpaca&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>版權所有 翻印必究 
  Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 16 May 2023 22:23:37 +0000</lastBuildDate><atom:link href="http://blog.alpaca.tw/tags/Ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 May 2023 22:23:37 +0000</lastBuildDate><atom:link href="https://blog.alpaca.tw/tags/Ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Change username and home folder in ubuntu</title>
-      <link>http://blog.alpaca.tw/posts/Change-Ubuntu-Username-and-Home-folder-path/</link>
+      <link>https://blog.alpaca.tw/posts/Change-Ubuntu-Username-and-Home-folder-path/</link>
       <pubDate>Tue, 16 May 2023 22:23:37 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Change-Ubuntu-Username-and-Home-folder-path/</guid>
+      <guid>https://blog.alpaca.tw/posts/Change-Ubuntu-Username-and-Home-folder-path/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Change-Ubuntu-Username-and-Home-folder-path/cover.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Change-Ubuntu-Username-and-Home-folder-path/cover.png" />
     </item>
     
     <item>
       <title>Ubuntu Server Auto Login TTY when Start up</title>
-      <link>http://blog.alpaca.tw/posts/Ubuntu-Server-Auto-Login-TTY-when-Start-up/</link>
+      <link>https://blog.alpaca.tw/posts/Ubuntu-Server-Auto-Login-TTY-when-Start-up/</link>
       <pubDate>Tue, 25 Oct 2022 14:17:40 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Ubuntu-Server-Auto-Login-TTY-when-Start-up/</guid>
+      <guid>https://blog.alpaca.tw/posts/Ubuntu-Server-Auto-Login-TTY-when-Start-up/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Ubuntu-Server-Auto-Login-TTY-when-Start-up/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Ubuntu-Server-Auto-Login-TTY-when-Start-up/cover.jpg" />
     </item>
     
     <item>
       <title>Ubuntu &#34;Crontab&#34; 工作排程</title>
-      <link>http://blog.alpaca.tw/posts/Ubuntu-Crontab/</link>
+      <link>https://blog.alpaca.tw/posts/Ubuntu-Crontab/</link>
       <pubDate>Thu, 20 Oct 2022 15:01:44 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Ubuntu-Crontab/</guid>
+      <guid>https://blog.alpaca.tw/posts/Ubuntu-Crontab/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Ubuntu-Crontab/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Ubuntu-Crontab/cover.jpg" />
     </item>
     
     <item>
       <title>How to set timezone on ubuntu?</title>
-      <link>http://blog.alpaca.tw/posts/Ubuntu-Set-Timezone/</link>
+      <link>https://blog.alpaca.tw/posts/Ubuntu-Set-Timezone/</link>
       <pubDate>Wed, 24 Aug 2022 13:17:53 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Ubuntu-Set-Timezone/</guid>
+      <guid>https://blog.alpaca.tw/posts/Ubuntu-Set-Timezone/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Ubuntu-Set-Timezone/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Ubuntu-Set-Timezone/cover.jpg" />
     </item>
     
     <item>
       <title>Ubuntu 更改家目錄語言</title>
-      <link>http://blog.alpaca.tw/posts/Ubuntu-Change-Home-Folder-Language/</link>
+      <link>https://blog.alpaca.tw/posts/Ubuntu-Change-Home-Folder-Language/</link>
       <pubDate>Thu, 07 Jul 2022 13:40:42 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Ubuntu-Change-Home-Folder-Language/</guid>
+      <guid>https://blog.alpaca.tw/posts/Ubuntu-Change-Home-Folder-Language/</guid>
       <description>&lt;p&gt;簡單幾步變更家目錄的語言&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Ubuntu-Change-Home-Folder-Language/cover.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Ubuntu-Change-Home-Folder-Language/cover.png" />
     </item>
     
     <item>
       <title>Ubuntu 更換 /Home 到新硬碟</title>
-      <link>http://blog.alpaca.tw/posts/Ubuntu-Move-Home-To-New-Disk/</link>
+      <link>https://blog.alpaca.tw/posts/Ubuntu-Move-Home-To-New-Disk/</link>
       <pubDate>Thu, 27 Jan 2022 13:26:21 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Ubuntu-Move-Home-To-New-Disk/</guid>
+      <guid>https://blog.alpaca.tw/posts/Ubuntu-Move-Home-To-New-Disk/</guid>
       <description>&lt;p&gt;如果發現當初掛載好的空間不夠用了，那麼擴充硬碟上去，然後照著步驟一步步的將檔案們搬家吧。&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Ubuntu-Move-Home-To-New-Disk/cover.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Ubuntu-Move-Home-To-New-Disk/cover.png" />
     </item>
     
     <item>
       <title>How to use PPPoE to connect network on Ubuntu?</title>
-      <link>http://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/</link>
+      <link>https://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/</link>
       <pubDate>Fri, 21 Jan 2022 16:55:18 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/</guid>
+      <guid>https://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/</guid>
       <description>&lt;p&gt;在 Ubuntu 用 PPPoE 連線中華電信固定 IP。&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Ubuntu-PPPoE-Connection/cover.jpg" />
     </item>
     
     <item>
       <title>Raspberry Pi 4 (Ubuntu) configure auto connect to wifi</title>
-      <link>http://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/</link>
+      <link>https://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/</link>
       <pubDate>Wed, 19 Jan 2022 15:11:57 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/</guid>
+      <guid>https://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/</guid>
       <description>&lt;p&gt;How to make ubuntu auto connect to wifi in raspberry pi 4?&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Raspberry-Pi4-Ubuntu-Wifi-Configure/cover.jpg" />
     </item>
     
     <item>
       <title>Linux &#43; Win 雙系統卻不見 Grub 開機選單？</title>
-      <link>http://blog.alpaca.tw/posts/Dual-Boot-with-Grub/</link>
+      <link>https://blog.alpaca.tw/posts/Dual-Boot-with-Grub/</link>
       <pubDate>Fri, 24 Sep 2021 23:27:14 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Dual-Boot-with-Grub/</guid>
+      <guid>https://blog.alpaca.tw/posts/Dual-Boot-with-Grub/</guid>
       <description>&lt;p&gt;安裝了 Linux + Windows 的雙系統，但卻不見開機選單？放心，很多人跟你一樣。&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Dual-Boot-with-Grub/cover.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Dual-Boot-with-Grub/cover.png" />
     </item>
     
   </channel>

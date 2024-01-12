@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Computer Science on Alpaca&#39;s Notes</title>
-    <link>http://blog.alpaca.tw/categories/Computer-Science/</link>
+    <link>https://blog.alpaca.tw/categories/Computer-Science/</link>
     <description>Recent content in Computer Science on Alpaca&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>版權所有 翻印必究 
  Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 29 Jan 2022 16:46:05 +0000</lastBuildDate><atom:link href="http://blog.alpaca.tw/categories/Computer-Science/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jan 2022 16:46:05 +0000</lastBuildDate><atom:link href="https://blog.alpaca.tw/categories/Computer-Science/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Change root password in MySQL 8</title>
-      <link>http://blog.alpaca.tw/posts/MySQL-8-Change-Root-Password/</link>
+      <link>https://blog.alpaca.tw/posts/MySQL-8-Change-Root-Password/</link>
       <pubDate>Sat, 29 Jan 2022 16:46:05 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/MySQL-8-Change-Root-Password/</guid>
+      <guid>https://blog.alpaca.tw/posts/MySQL-8-Change-Root-Password/</guid>
       <description>&lt;p&gt;Change the password of root in mysql version 8&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/MySQL-8-Change-Root-Password/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/MySQL-8-Change-Root-Password/cover.jpg" />
     </item>
     
     <item>
       <title>Build a FTP Server with 「vsftpd」</title>
-      <link>http://blog.alpaca.tw/posts/FTP-Server-vsftpd/</link>
+      <link>https://blog.alpaca.tw/posts/FTP-Server-vsftpd/</link>
       <pubDate>Wed, 19 Jan 2022 21:03:36 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/FTP-Server-vsftpd/</guid>
+      <guid>https://blog.alpaca.tw/posts/FTP-Server-vsftpd/</guid>
       <description>&lt;p&gt;How to build the FTP Server quicly with 「vsftpd」?&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/FTP-Server-vsftpd/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/FTP-Server-vsftpd/cover.jpg" />
     </item>
     
     <item>
       <title>Simply setting up a Proxy Server with SSH</title>
-      <link>http://blog.alpaca.tw/posts/SSH-Proxy/</link>
+      <link>https://blog.alpaca.tw/posts/SSH-Proxy/</link>
       <pubDate>Sun, 29 Aug 2021 23:57:57 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/SSH-Proxy/</guid>
+      <guid>https://blog.alpaca.tw/posts/SSH-Proxy/</guid>
       <description>&lt;p&gt;Did you know that SSH can make your host as a proxy server?&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/SSH-Proxy/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/SSH-Proxy/cover.jpg" />
     </item>
     
     <item>
       <title>How to use GnuPG to sign files and messages？</title>
-      <link>http://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/</link>
+      <link>https://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/</link>
       <pubDate>Mon, 19 Jul 2021 09:55:09 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/</guid>
+      <guid>https://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/</guid>
       <description>&lt;p&gt;用 GnuPG 簽署、驗證、加密、解密 你的檔案及訊息。&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/GnuPG-Signing-Files-and-Messages/cover.jpg" />
     </item>
     
     <item>
       <title>How to use GnuPG to generate PGP key？</title>
-      <link>http://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/</link>
+      <link>https://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/</link>
       <pubDate>Fri, 16 Jul 2021 17:55:09 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/</guid>
+      <guid>https://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/</guid>
       <description>&lt;p&gt;怎麼使用 GnuPG 生成 PGP 金鑰？&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/GnuPG-Generating-PGP-Key/cover.jpg" />
     </item>
     
     <item>
       <title>如何使用 Hexo 在 Github Pages 上部署部落格？</title>
-      <link>http://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/</link>
+      <link>https://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/</link>
       <pubDate>Sat, 15 May 2021 15:57:36 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/</guid>
+      <guid>https://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/</guid>
       <description>&lt;p&gt;想要創建部落格，但又不想要一堆複雜又用不到的功能，輕盈的靜態頁面及 Git 版本控制，使用 Markdown 來撰寫文章，用 Hexo 架設部落格並發布在 Github Pages 這一切就是那麼容易且方便。&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/How-to-deploy-Hexo-on-Github-Pages/cover.jpg" />
     </item>
     
     <item>
       <title>Encode、Encrypt and Hash are different！</title>
-      <link>http://blog.alpaca.tw/posts/Encode-Encrypt-Hash/</link>
+      <link>https://blog.alpaca.tw/posts/Encode-Encrypt-Hash/</link>
       <pubDate>Tue, 20 Apr 2021 00:55:42 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Encode-Encrypt-Hash/</guid>
+      <guid>https://blog.alpaca.tw/posts/Encode-Encrypt-Hash/</guid>
       <description>&lt;p&gt;Encode (編碼)、Encrypt (加密)、Hash (雜湊) 一直令許多新手們搞混，雖然說可能運算後的結果看起來都是一串亂碼，但原理及使用場合卻天差地遠，千萬不要再分不清處了！&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Encode-Encrypt-Hash/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Encode-Encrypt-Hash/cover.jpg" />
     </item>
     
     <item>
       <title>Github 檔案太大無法推送！？安裝「Git-LFS」馬上解決！</title>
-      <link>http://blog.alpaca.tw/posts/Git-LFS/</link>
+      <link>https://blog.alpaca.tw/posts/Git-LFS/</link>
       <pubDate>Sun, 28 Mar 2021 12:54:04 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Git-LFS/</guid>
+      <guid>https://blog.alpaca.tw/posts/Git-LFS/</guid>
       <description>&lt;p&gt;使用 git push 推送檔案到 Github 上時，被告知&lt;strong&gt;檔案太大&lt;/strong&gt;無法推送！？馬上教你怎麼解決！&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Git-LFS/cover.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Git-LFS/cover.png" />
     </item>
     
     <item>
       <title>進階 Google 搜尋技巧 - Google Hacking</title>
-      <link>http://blog.alpaca.tw/posts/Google-Hacking/</link>
+      <link>https://blog.alpaca.tw/posts/Google-Hacking/</link>
       <pubDate>Fri, 05 Mar 2021 18:01:51 +0000</pubDate>
       
-      <guid>http://blog.alpaca.tw/posts/Google-Hacking/</guid>
+      <guid>https://blog.alpaca.tw/posts/Google-Hacking/</guid>
       <description>&lt;p&gt;這個被稱作「&lt;strong&gt;Google Hacking&lt;/strong&gt;」的技巧，不僅可以快速找到你要的資料，甚至常被拿來&amp;hellip; &lt;strong&gt;肉搜&lt;/strong&gt;。&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://blog.alpaca.tw/posts/Google-Hacking/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/Google-Hacking/cover.jpg" />
     </item>
     
   </channel>
