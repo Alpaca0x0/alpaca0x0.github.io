@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cyber Security on Alpaca News</title>
+    <link>https://blog.alpaca.tw/tags/cyber-security/</link>
+    <description>Recent content in Cyber Security on Alpaca News</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>版權所有 翻印必究 
+ Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 04 Sep 2020 22:07:10 +0000</lastBuildDate><atom:link href="https://blog.alpaca.tw/tags/cyber-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>匿名安全的通訊 - 「XMPP」</title>
+      <link>https://blog.alpaca.tw/posts/xmpp/</link>
+      <pubDate>Fri, 04 Sep 2020 22:07:10 +0000</pubDate>
+      
+      <guid>https://blog.alpaca.tw/posts/xmpp/</guid>
+      <description>駭客猖獗的網絡世界，匿名、安全成了通訊不可或缺的必要條件！本文將為你介紹安全性極高的協定 - 「XMPP」</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/xmpp/feature.jpg" />
+    </item>
+    
+  </channel>
+</rss>

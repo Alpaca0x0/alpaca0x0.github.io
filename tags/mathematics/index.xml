@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematics on Alpaca News</title>
+    <link>https://blog.alpaca.tw/tags/mathematics/</link>
+    <description>Recent content in Mathematics on Alpaca News</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>版權所有 翻印必究 
+ Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 09 Jun 2021 16:09:07 +0000</lastBuildDate><atom:link href="https://blog.alpaca.tw/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>「𝝿」到底是什麼？度、弧度又是...？</title>
+      <link>https://blog.alpaca.tw/posts/pi/</link>
+      <pubDate>Wed, 09 Jun 2021 16:09:07 +0000</pubDate>
+      
+      <guid>https://blog.alpaca.tw/posts/pi/</guid>
+      <description>圓周率「𝝿」是什麼？而熟悉的一圈為 360度 是怎麼被訂定的？ 弧度又是什麼？</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.alpaca.tw/posts/pi/feature.jpg" />
+    </item>
+    
+  </channel>
+</rss>

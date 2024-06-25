@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deep Learning (深度學習) on Alpaca News</title>
+    <link>http://localhost:1313/tags/deep-learning-%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92/</link>
+    <description>Recent content in Deep Learning (深度學習) on Alpaca News</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>版權所有 翻印必究 
+ Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 12 Dec 2019 23:32:11 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/deep-learning-%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>淺談AI人工智慧的深度學習概念 (新手也能理解的基礎)</title>
+      <link>http://localhost:1313/posts/%E6%B7%BA%E8%AB%87ai%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Thu, 12 Dec 2019 23:32:11 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/%E6%B7%BA%E8%AB%87ai%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92%E6%A6%82%E5%BF%B5/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/%E6%B7%BA%E8%AB%87ai%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92%E6%A6%82%E5%BF%B5/feature.jpg" />
+    </item>
+    
+  </channel>
+</rss>
