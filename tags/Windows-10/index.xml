@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows 10 on Alpaca News</title>
+    <link>https://news.alpaca.tw/tags/Windows-10/</link>
+    <description>Recent content in Windows 10 on Alpaca News</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>版權所有 翻印必究 
+ Copyright © 2020 - Now, Alpaca. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 06 Apr 2021 10:48:46 +0000</lastBuildDate><atom:link href="https://news.alpaca.tw/tags/Windows-10/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一招啟動 Windows 10 「終極效能」！讓你的電腦瞬間活起來！</title>
+      <link>https://news.alpaca.tw/posts/Windows10-Ultimate-Performance/</link>
+      <pubDate>Tue, 06 Apr 2021 10:48:46 +0000</pubDate>
+      
+      <guid>https://news.alpaca.tw/posts/Windows10-Ultimate-Performance/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://news.alpaca.tw/posts/Windows10-Ultimate-Performance/feature.jpg" />
+    </item>
+    
+  </channel>
+</rss>
