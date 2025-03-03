@@ -15,12 +15,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/lvm-change-size/</loc>
-    <lastmod>2025-03-02T05:02:28+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/posts/lvm/</loc>
     <lastmod>2025-03-02T04:51:48+08:00</lastmod>
     <changefreq>daily</changefreq>
